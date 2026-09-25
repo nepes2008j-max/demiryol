@@ -23,6 +23,13 @@ missing from the project — `windows/` is present and correct.
 
 There are two ways to get the .exe. Pick one.
 
+> **You never install Visual Studio, and neither do your users.**
+>
+> Every application you download — Chrome, Word, anything — was compiled once
+> by its developer on a machine with a compiler. You received the finished
+> file. RailSim is the same. The only question is *whose* machine does that one
+> compile, and the answer below is: GitHub's, for free.
+
 ## 1. No Windows PC needed — build it in the cloud
 
 `.github/workflows/windows-exe.yml` builds it on GitHub's own Windows machine.
