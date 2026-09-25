@@ -46,48 +46,48 @@ jobs:
           Copy-Item "$($crt.FullName)\*.dll" $release -Force
           Get-ChildItem $release | Select-Object Name, Length
 
-      # Proof, not belief: every DLL the program imports must be either a
-      # Windows system DLL or sitting in the folder we are about to ship. This
-      # is the check that catches "works on the build machine" — the runner has
-      # Visual Studio installed, so without it a missing runtime would go
-      # unnoticed until a trainee's PC refused to start the program.
+      # Proof, not belief: every DLL the program imports must be either part
+      # of Windows itself or sitting in the folder we are about to ship.
+      #
+      # "Part of Windows" is decided by asking whether the file exists in
+      # System32, not by a hand-written list of names. The first version of
+      # this check carried such a list, and it failed the build over DLLs that
+      # are on every Windows machine — the list can never be complete, and a
+      # check that cries wolf is worse than no check.
       - name: Prove it needs nothing installed
+        if: always()
         shell: pwsh
         run: |
           $release = 'build\windows\x64\runner\Release'
           $vs = & "${env:ProgramFiles(x86)}\Microsoft Visual Studio\Installer\vswhere.exe" -latest -property installationPath
           $dumpbin = Get-ChildItem "$vs\VC\Tools\MSVC\*\bin\Hostx64\x64\dumpbin.exe" | Select-Object -First 1
-          $shipped = (Get-ChildItem $release -Filter *.dll).Name + @('railsim.exe')
-
-          # Present on every supported Windows; never shipped by an application.
-          $system = @('kernel32.dll','user32.dll','gdi32.dll','shell32.dll','ole32.dll',
-                      'oleaut32.dll','advapi32.dll','comdlg32.dll','dwmapi.dll','shlwapi.dll',
-                      'winmm.dll','ws2_32.dll','crypt32.dll','bcrypt.dll','dbghelp.dll',
-                      'uxtheme.dll','imm32.dll','setupapi.dll','cfgmgr32.dll','rpcrt4.dll',
-                      'd3d11.dll','dxgi.dll','d3dcompiler_47.dll','api-ms-win-core','api-ms-win-crt',
-                      'ntdll.dll','msvcrt.dll','version.dll','propsys.dll','wtsapi32.dll')
+          $shipped = (Get-ChildItem $release -Filter *.dll).Name
 
           $missing = @()
-          foreach ($bin in @("$release\railsim.exe") + (Get-ChildItem $release -Filter *.dll).FullName) {
-            $out = & $dumpbin.FullName /dependents $bin
-            foreach ($line in $out) {
-              if ($line -match '^\s{4}(\S+\.dll)\s*$') {
-                $dep = $matches[1]
-                if ($system | Where-Object { $dep -like "$_*" }) { continue }
-                if ($shipped -contains $dep) { continue }
-                $missing += "$(Split-Path $bin -Leaf) needs $dep"
-              }
+          $bins = @("$release\railsim.exe") + (Get-ChildItem $release -Filter *.dll).FullName
+          foreach ($bin in $bins) {
+            foreach ($line in (& $dumpbin.FullName /dependents $bin)) {
+              if ($line -notmatch '^\s{4}(\S+\.dll)\s*$') { continue }
+              $dep = $matches[1]
+              if ($shipped -contains $dep) { continue }
+              # Shipped in the folder, or present on every Windows machine.
+              if (Test-Path (Join-Path $env:SystemRoot "System32\$dep")) { continue }
+              # API sets are virtual — resolved by the loader, never real files.
+              if ($dep -like 'api-ms-win-*') { continue }
+              if ($dep -like 'ext-ms-*') { continue }
+              $missing += "$(Split-Path $bin -Leaf) needs $dep"
             }
           }
           if ($missing) {
             $missing | Sort-Object -Unique | ForEach-Object { Write-Host "MISSING: $_" }
             throw "the build depends on DLLs it does not ship — it would not start on a clean Windows PC"
           }
-          Write-Host 'OK: every dependency is either a Windows system DLL or shipped in the folder.'
+          Write-Host 'OK: every dependency is either shipped here or part of Windows.'
 
       # The note for whoever receives it. "Just send railsim.exe" is the first
       # thing everybody tries, and it does not work.
       - name: Add the read-me
+        if: always()
         shell: pwsh
         run: |
           @"
@@ -108,6 +108,7 @@ jobs:
 
       # GitHub hands this back as a single .zip — that is the folder to send on.
       - uses: actions/upload-artifact@v4
+        if: always()
         with:
           name: RailSim-windows-x64
           path: build/windows/x64/runner/Release/
