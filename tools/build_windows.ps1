@@ -46,6 +46,33 @@ Copy-Item "$($crt.FullName)\*.dll" $release -Force
 Write-Host "  from $($crt.FullName)"
 Get-ChildItem $release -Filter '*140*.dll' | ForEach-Object { Write-Host "  + $($_.Name)" }
 
+# A note for whoever receives the folder, because "just send railsim.exe" is
+# the first thing everybody tries and it does not work: the program is an
+# executable, its DLLs and a data\ tree, and it needs all three.
+@"
+RailSim — harby demir ýol ýükleme simulýatory
+
+IŞLETMEK / TO RUN
+  Bu bukjany doly göçüriň we railsim.exe faýlyny açyň.
+  Copy this WHOLE folder, then run railsim.exe.
+
+MÖHÜM / IMPORTANT
+  railsim.exe faýlyny ýeke özi göçürmäň — işlemez.
+  Do NOT copy railsim.exe on its own. It will not start without the
+  .dll files and the data\ folder that sit beside it here.
+
+  Hiç zat gurnamak gerek däl — Visual Studio hem, Flutter hem gerek däl.
+  Nothing needs to be installed. No Visual Studio, no Flutter, no runtime.
+"@ | Set-Content -Path (Join-Path $release 'READ ME - OKAŇ.txt') -Encoding UTF8
+
+# The whole folder as one zip, which is what actually gets sent to somebody.
+Write-Host '== zipping the folder ==' -ForegroundColor Cyan
+New-Item -ItemType Directory -Force -Path dist | Out-Null
+$zipOut = 'dist\RailSim-windows-x64.zip'
+if (Test-Path $zipOut) { Remove-Item $zipOut }
+Compress-Archive -Path "$release\*" -DestinationPath $zipOut
+Write-Host "  $zipOut ($([math]::Round((Get-Item $zipOut).Length/1MB)) MB)"
+
 # One real .exe, built with IExpress — which has shipped inside Windows since
 # XP, so the packing step needs nothing installed either. A .ps1 would have been
 # fewer lines and is the wrong answer: Windows opens .ps1 in Notepad on a
@@ -111,6 +138,7 @@ Remove-Item $stage -Recurse -Force -ErrorAction SilentlyContinue
 
 Write-Host ''
 Write-Host "Portable folder : $release"  -ForegroundColor Green
+Write-Host "Zip to send     : dist\RailSim-windows-x64.zip" -ForegroundColor Green
 Write-Host "Single file     : dist\RailSim-windows-x64.exe" -ForegroundColor Green
 Write-Host ''
 Write-Host 'Ship either. Neither needs anything installed on the machine that'

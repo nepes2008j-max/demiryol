@@ -74,3 +74,35 @@ You get both:
 
 `tools/make_single_file.sh` does the same job for Linux and has been run:
 `dist/RailSim-linux-x86_64.run`, one double-clickable file, verified working.
+
+
+## Sending it to somebody
+
+**`railsim.exe` on its own does not work.** A Flutter Windows build is three
+things that must stay together:
+
+```
+railsim.exe          the program
+*.dll                the Flutter engine, the plugins, the Microsoft runtime
+data\               the fonts, the 160-vehicle catalogue, the plates, the 3-D models
+```
+
+The exe alone starts and immediately dies — it cannot find its engine or its
+data. Send the **whole folder**, zipped. Both build routes produce that zip for
+you, with a bilingual `READ ME - OKAŇ.txt` inside saying the same thing to
+whoever opens it.
+
+### Email will probably refuse it
+
+The folder is roughly **60-70 MB zipped**. Gmail caps attachments at 25 MB and
+most mail servers at 20-25 MB, so it will bounce. Use one of these instead:
+
+| how | notes |
+|---|---|
+| **Google Drive / Ýandex Disk link** | Gmail offers this automatically when a file is too big |
+| **USB stick** | no size limit, no network, and these are desk machines anyway |
+| **GitHub release** | if the repo is up, attach the zip to a release and send the link |
+
+`dist\RailSim-windows-x64.exe` — the IExpress single file — is the one thing
+that *is* a single file, but it is the same 60-70 MB and email will refuse it
+just the same. It is for a USB stick or a download link, not for a mailbox.

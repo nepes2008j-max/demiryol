@@ -85,6 +85,28 @@ jobs:
           }
           Write-Host 'OK: every dependency is either a Windows system DLL or shipped in the folder.'
 
+      # The note for whoever receives it. "Just send railsim.exe" is the first
+      # thing everybody tries, and it does not work.
+      - name: Add the read-me
+        shell: pwsh
+        run: |
+          @"
+          RailSim — harby demir ýol ýükleme simulýatory
+
+          IŞLETMEK / TO RUN
+            Bu bukjany doly göçüriň we railsim.exe faýlyny açyň.
+            Copy this WHOLE folder, then run railsim.exe.
+
+          MÖHÜM / IMPORTANT
+            railsim.exe faýlyny ýeke özi göçürmäň — işlemez.
+            Do NOT copy railsim.exe on its own. It will not start without
+            the .dll files and the data\ folder beside it.
+
+            Hiç zat gurnamak gerek däl.
+            Nothing needs to be installed — no Visual Studio, no Flutter.
+          "@ | Set-Content 'build\windows\x64\runner\Release\READ ME - OKAŇ.txt' -Encoding UTF8
+
+      # GitHub hands this back as a single .zip — that is the folder to send on.
       - uses: actions/upload-artifact@v4
         with:
           name: RailSim-windows-x64
