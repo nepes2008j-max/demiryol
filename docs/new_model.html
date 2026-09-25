@@ -1,0 +1,774 @@
+<title>RailSim Plate</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+  /* ---- Tokens -----------------------------------------------------------
+     Light is the primary world: the handbook this trainer is built from is
+     printed plates on paper, and the current application inverted that into
+     dark military software. Every token is declared here first; the theme
+     blocks below only redefine them. */
+  :root {
+    --paper:      #E8EAE3;
+    --surface:    #F4F5F0;
+    --surface-2:  #DDE0D6;
+    --ink:        #16190F;
+    --ink-soft:   #565B49;
+    --ink-faint:  #868B78;
+    --rule:       #C3C6B8;
+    --rule-soft:  #D5D8CC;
+    --olive:      #48551F;
+    --olive-lift: #5E6E2A;
+    --oxide:      #A6392A;
+    --amber:      #9A6510;
+    --verdant:    #43702A;
+
+    --display: 'Archivo', 'Helvetica Neue', Arial, sans-serif;
+    --body: 'IBM Plex Sans', 'Segoe UI', system-ui, sans-serif;
+    --data: 'IBM Plex Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+
+    --gutter: clamp(20px, 5vw, 76px);
+    --measure: 62ch;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper:     #101208;
+      --surface:   #191C11;
+      --surface-2: #23271A;
+      --ink:       #E7E9DB;
+      --ink-soft:  #A2A791;
+      --ink-faint: #767B67;
+      --rule:      #333828;
+      --rule-soft: #262B1D;
+      --olive:     #9DB253;
+      --olive-lift:#B4C86A;
+      --oxide:     #DE7061;
+      --amber:     #DCA43C;
+      --verdant:   #86B95E;
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper:     #101208;
+    --surface:   #191C11;
+    --surface-2: #23271A;
+    --ink:       #E7E9DB;
+    --ink-soft:  #A2A791;
+    --ink-faint: #767B67;
+    --rule:      #333828;
+    --rule-soft: #262B1D;
+    --olive:     #9DB253;
+    --olive-lift:#B4C86A;
+    --oxide:     #DE7061;
+    --amber:     #DCA43C;
+    --verdant:   #86B95E;
+  }
+
+  /* ---- Base ---- */
+  * { box-sizing: border-box; }
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--body);
+    font-size: 17px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3 { font-family: var(--display); text-wrap: balance; margin: 0; line-height: 1.02; }
+  p { margin: 0; }
+  :focus-visible { outline: 2px solid var(--olive); outline-offset: 3px; }
+
+  .wrap { max-width: 1280px; margin: 0 auto; padding-inline: var(--gutter); }
+
+  /* ---- The signature device: a dimension callout ------------------------
+     Tick, extension line, monospaced value. It is how every plate in the
+     source handbook names a measurement, and here it names a section. */
+  .callout {
+    display: flex; align-items: center; gap: 12px;
+    font-family: var(--data); font-size: 12px; font-weight: 500;
+    letter-spacing: .16em; text-transform: uppercase; color: var(--ink-faint);
+    margin-bottom: 22px;
+  }
+  .callout::before {
+    content: ""; width: 1px; height: 15px; background: var(--ink-faint); flex: none;
+  }
+  .callout::after {
+    content: ""; height: 1px; background: var(--rule); flex: 1 1 auto; min-width: 24px;
+  }
+  .callout .val { color: var(--olive); }
+
+  /* ---- Sections ---- */
+  .plate { padding-block: clamp(56px, 9vw, 116px); border-top: 1px solid var(--rule); }
+  .plate:first-of-type { border-top: 0; }
+
+  .lede {
+    font-size: clamp(19px, 2vw, 23px); line-height: 1.5;
+    color: var(--ink-soft); max-width: var(--measure);
+  }
+
+  /* ---- Hero ---- */
+  .hero { padding-block: clamp(44px, 7vw, 84px) clamp(36px, 5vw, 64px); }
+  .hero-kicker {
+    font-family: var(--data); font-size: 12px; letter-spacing: .2em;
+    text-transform: uppercase; color: var(--ink-faint);
+    display: flex; flex-wrap: wrap; gap: 8px 20px; margin-bottom: 30px;
+  }
+  .hero-kicker b { color: var(--olive); font-weight: 600; }
+  .hero h1 {
+    font-size: clamp(46px, 9.2vw, 132px); font-weight: 800;
+    letter-spacing: -.035em; margin-bottom: 26px;
+  }
+  .hero h1 em { font-style: normal; color: var(--olive); }
+  .hero-sub {
+    display: grid; gap: 26px 60px; grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
+    align-items: end; margin-bottom: 46px;
+  }
+  @media (max-width: 820px) { .hero-sub { grid-template-columns: 1fr; align-items: start; } }
+  .hero-note {
+    font-family: var(--data); font-size: 13px; line-height: 1.75; color: var(--ink-soft);
+    border-left: 2px solid var(--olive); padding-left: 18px;
+  }
+
+  /* ---- The drawing ---- */
+  .drawing {
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    padding: clamp(14px, 2.4vw, 30px);
+    overflow-x: auto;
+  }
+  .drawing svg { display: block; width: 100%; min-width: 660px; height: auto; }
+  .drawing-cap {
+    display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 24px;
+    font-family: var(--data); font-size: 11.5px; letter-spacing: .1em;
+    text-transform: uppercase; color: var(--ink-faint);
+    margin-top: 16px; padding-top: 13px; border-top: 1px solid var(--rule-soft);
+  }
+
+  /* ---- Generic grid ---- */
+  .cols { display: grid; gap: clamp(22px, 3vw, 44px); }
+  .c2 { grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); }
+  .c3 { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+
+  h2.title {
+    font-size: clamp(30px, 4.4vw, 58px); font-weight: 700;
+    letter-spacing: -.028em; margin-bottom: 20px;
+  }
+  h3.sub {
+    font-size: 19px; font-weight: 700; letter-spacing: -.01em; margin-bottom: 8px;
+  }
+
+  /* ---- Spec sheet ---- */
+  .spec { border-top: 1px solid var(--rule); }
+  .spec-row {
+    display: grid; grid-template-columns: 150px minmax(0, 1fr);
+    gap: 8px 28px; padding: 17px 0; border-bottom: 1px solid var(--rule-soft);
+  }
+  @media (max-width: 640px) { .spec-row { grid-template-columns: 1fr; } }
+  .spec-key {
+    font-family: var(--data); font-size: 11.5px; letter-spacing: .14em;
+    text-transform: uppercase; color: var(--ink-faint); padding-top: 5px;
+  }
+
+  .swatches { display: flex; flex-wrap: wrap; gap: 10px; }
+  .sw { flex: 1 1 118px; min-width: 108px; }
+  .sw-chip { height: 62px; border: 1px solid var(--rule); }
+  .sw-name {
+    font-family: var(--data); font-size: 11px; letter-spacing: .06em;
+    color: var(--ink-soft); margin-top: 7px; display: block;
+  }
+  .sw-hex { font-family: var(--data); font-size: 11px; color: var(--ink-faint); }
+
+  .typerow { display: flex; align-items: baseline; flex-wrap: wrap; gap: 6px 16px; }
+  .typerow + .typerow { margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--rule-soft); }
+  .typerow .spec-key { padding-top: 0; flex: none; width: 92px; }
+
+  /* ---- Step sequence: genuinely ordered, so it is genuinely numbered ---- */
+  .steps { border-top: 1px solid var(--rule); }
+  .step {
+    display: grid; grid-template-columns: 74px minmax(0, 1fr) minmax(0, .85fr);
+    gap: 10px 30px; padding: 22px 0; border-bottom: 1px solid var(--rule-soft);
+    align-items: baseline;
+  }
+  @media (max-width: 760px) { .step { grid-template-columns: 60px minmax(0, 1fr); } }
+  .step-n {
+    font-family: var(--data); font-size: 13px; font-weight: 600;
+    color: var(--olive); letter-spacing: .08em;
+  }
+  .step-tk { font-weight: 600; font-size: 17.5px; letter-spacing: -.005em; }
+  .step-en { color: var(--ink-soft); font-size: 15.5px; }
+  .step.now { background: color-mix(in srgb, var(--olive) 8%, transparent); }
+  .step.now .step-tk { color: var(--olive); }
+
+  /* ---- Screen mockups ---- */
+  .screen {
+    background: var(--surface); border: 1px solid var(--rule);
+    display: flex; flex-direction: column; overflow: hidden;
+  }
+  .screen-bar {
+    display: flex; align-items: center; gap: 14px; flex-wrap: wrap;
+    padding: 14px 18px; border-bottom: 1px solid var(--rule);
+    background: var(--surface-2);
+  }
+  .screen-bar h4 {
+    margin: 0; font-family: var(--display); font-size: 15px; font-weight: 700;
+    letter-spacing: .06em; text-transform: uppercase;
+  }
+  .crumbs {
+    display: flex; gap: 5px; margin-left: auto;
+    font-family: var(--data); font-size: 10.5px; letter-spacing: .1em; color: var(--ink-faint);
+  }
+  .crumbs span { padding: 2px 7px; border: 1px solid var(--rule); }
+  .crumbs span.on { background: var(--olive); border-color: var(--olive); color: var(--paper); }
+  :root[data-theme="dark"] .crumbs span.on,
+  :root:not([data-theme="light"]) .crumbs span.on { color: #101208; }
+  .screen-body { padding: 20px; display: grid; gap: 18px; }
+
+  /* verdict chip — colour never carries the state alone */
+  .chip {
+    display: inline-flex; align-items: center; gap: 7px;
+    font-family: var(--data); font-size: 12px; font-weight: 600; letter-spacing: .07em;
+    padding: 6px 11px; border: 1px solid currentColor; border-radius: 2px;
+    background: color-mix(in srgb, currentColor 12%, transparent);
+  }
+  .chip svg { flex: none; }
+  .chip.pass { color: var(--verdant); }
+  .chip.warn { color: var(--amber); }
+  .chip.fail { color: var(--oxide); }
+  .chip.idle { color: var(--ink-faint); }
+
+  /* equipment card — status on the leading edge */
+  .eq {
+    position: relative; background: var(--paper); border: 1px solid var(--rule);
+    padding: 14px 16px 14px 19px; overflow: hidden;
+  }
+  .eq::before {
+    content: ""; position: absolute; inset: 0 auto 0 0; width: 3px; background: var(--rule);
+  }
+  .eq.pass::before { background: var(--verdant); }
+  .eq.warn::before { background: var(--amber); }
+  .eq.fail::before { background: var(--oxide); }
+  .eq-top { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+  .eq-name { font-weight: 600; font-size: 16px; }
+  .eq-ref {
+    font-family: var(--data); font-size: 10.5px; letter-spacing: .08em;
+    color: var(--ink-faint); border: 1px solid var(--rule); padding: 2px 6px;
+  }
+  .eq-val {
+    font-family: var(--data); font-size: 14px; color: var(--ink-soft);
+    margin-top: 7px; font-variant-numeric: tabular-nums;
+  }
+  .eq-val b { color: var(--ink); font-weight: 600; }
+
+  .sect-head {
+    display: flex; align-items: center; gap: 13px;
+    font-family: var(--display); font-size: 13px; font-weight: 700;
+    letter-spacing: .13em; text-transform: uppercase; color: var(--olive);
+  }
+  .sect-head::after { content: ""; flex: 1; height: 1px; background: var(--rule); }
+
+  .palette-strip { display: flex; flex-wrap: wrap; gap: 8px; }
+  .piece {
+    font-family: var(--data); font-size: 11.5px; letter-spacing: .04em;
+    border: 1px solid var(--rule); background: var(--paper);
+    padding: 7px 10px; color: var(--ink-soft); white-space: nowrap;
+    display: flex; align-items: center; gap: 7px;
+  }
+  .piece i { width: 9px; height: 9px; flex: none; display: block; }
+  .piece.on { border-color: var(--olive); color: var(--olive); background: color-mix(in srgb, var(--olive) 10%, transparent); }
+
+  table.data { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+  table.data th, table.data td {
+    text-align: left; padding: 11px 14px 11px 0; border-bottom: 1px solid var(--rule-soft);
+  }
+  table.data th {
+    font-family: var(--data); font-size: 11px; letter-spacing: .13em;
+    text-transform: uppercase; color: var(--ink-faint); font-weight: 500;
+  }
+  table.data td { font-size: 15.5px; }
+  table.data td.num { font-family: var(--data); font-size: 14px; }
+  .tablewrap { overflow-x: auto; }
+
+  .note {
+    font-family: var(--data); font-size: 12.5px; line-height: 1.7;
+    color: var(--ink-soft); border-left: 2px solid var(--rule);
+    padding-left: 16px;
+  }
+  .note b { color: var(--olive); font-weight: 600; }
+
+  footer.plate { padding-bottom: clamp(60px, 8vw, 110px); }
+  .foot-grid { display: grid; gap: 12px 40px; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .eq, .piece { transition: border-color .18s ease, background-color .18s ease; }
+  }
+</style>
+
+<div class="wrap">
+
+  <!-- ================= HERO ================= -->
+  <header class="hero">
+    <div class="hero-kicker">
+      <span>Harby demir ýol ýükleme simulýatory</span>
+      <span>·</span>
+      <span>Gollanma: <b>Goşundy 14</b></span>
+      <span>·</span>
+      <span>Täze görnüş / <b>New model</b></span>
+    </div>
+
+    <h1>Ölçeg <em>subutnama</em>.</h1>
+
+    <div class="hero-sub">
+      <p class="lede">
+        A redesign of the railway loading trainer, taken back to the thing it teaches
+        from: the printed plate. Every figure on screen is a figure off a table, and
+        the interface says which table. Nothing is drawn to a size the handbook does
+        not give.
+      </p>
+      <p class="hero-note">
+        Ground inverted — plates are printed on paper.<br>
+        Olive demoted from field to accent.<br>
+        Every measurement carries its citation.
+      </p>
+    </div>
+
+    <!-- The most characteristic object in this subject's world, drawn to scale. -->
+    <div class="drawing">
+      <svg viewBox="0 0 1200 400" role="img"
+           aria-label="Scale side elevation of a T-72 secured to an open flatcar, with stop blocks and dimension callouts">
+        <defs>
+          <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5"
+                  markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <path d="M 0 1 L 9 5 L 0 9 z" fill="var(--ink-faint)"/>
+          </marker>
+          <pattern id="hatch" width="7" height="7" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
+            <line x1="0" y1="0" x2="0" y2="7" stroke="var(--olive)" stroke-width="2.4"/>
+          </pattern>
+        </defs>
+
+        <!-- rails and sleepers -->
+        <g stroke="var(--rule)" stroke-width="1.4">
+          <line x1="20" y1="352" x2="1180" y2="352"/>
+          <line x1="20" y1="357" x2="1180" y2="357"/>
+        </g>
+        <g stroke="var(--rule-soft)" stroke-width="5">
+          <line x1="70" y1="366" x2="120" y2="366"/><line x1="200" y1="366" x2="250" y2="366"/>
+          <line x1="330" y1="366" x2="380" y2="366"/><line x1="460" y1="366" x2="510" y2="366"/>
+          <line x1="590" y1="366" x2="640" y2="366"/><line x1="720" y1="366" x2="770" y2="366"/>
+          <line x1="850" y1="366" x2="900" y2="366"/><line x1="980" y1="366" x2="1030" y2="366"/>
+        </g>
+
+        <!-- bogies -->
+        <g fill="none" stroke="var(--ink-soft)" stroke-width="2">
+          <circle cx="168" cy="330" r="21"/><circle cx="228" cy="330" r="21"/>
+          <circle cx="972" cy="330" r="21"/><circle cx="1032" cy="330" r="21"/>
+        </g>
+        <g fill="var(--surface-2)" stroke="var(--ink-soft)" stroke-width="1.6">
+          <rect x="146" y="292" width="104" height="20"/>
+          <rect x="950" y="292" width="104" height="20"/>
+        </g>
+
+        <!-- flatcar deck -->
+        <rect x="60" y="268" width="1080" height="24" fill="var(--surface-2)" stroke="var(--ink)" stroke-width="1.8"/>
+        <g stroke="var(--rule)" stroke-width="1">
+          <line x1="60" y1="280" x2="1140" y2="280"/>
+        </g>
+        <!-- tie-down rings -->
+        <g fill="none" stroke="var(--ink-soft)" stroke-width="2">
+          <circle cx="120" cy="264" r="5"/><circle cx="400" cy="264" r="5"/>
+          <circle cx="800" cy="264" r="5"/><circle cx="1080" cy="264" r="5"/>
+        </g>
+
+        <!-- running gear -->
+        <path d="M 352 268 L 352 236 Q 352 226 364 226 L 900 226 Q 914 226 914 238 L 914 268 Z"
+              fill="var(--surface-2)" stroke="var(--ink)" stroke-width="1.8"/>
+        <g fill="var(--paper)" stroke="var(--ink-soft)" stroke-width="1.8">
+          <circle cx="392" cy="252" r="17"/><circle cx="464" cy="252" r="17"/>
+          <circle cx="536" cy="252" r="17"/><circle cx="608" cy="252" r="17"/>
+          <circle cx="680" cy="252" r="17"/><circle cx="752" cy="252" r="17"/>
+          <circle cx="824" cy="252" r="17"/><circle cx="880" cy="252" r="14"/>
+        </g>
+
+        <!-- hull -->
+        <path d="M 348 226 L 372 190 L 880 190 L 906 226 Z"
+              fill="var(--surface)" stroke="var(--ink)" stroke-width="2"/>
+        <!-- turret -->
+        <path d="M 512 190 Q 520 152 578 148 L 726 148 Q 782 152 790 190 Z"
+              fill="var(--surface-2)" stroke="var(--ink)" stroke-width="2"/>
+        <!-- gun, trained forward -->
+        <rect x="786" y="163" width="322" height="9" fill="var(--surface-2)" stroke="var(--ink)" stroke-width="1.6"/>
+        <rect x="1092" y="160" width="18" height="15" fill="var(--surface-2)" stroke="var(--ink)" stroke-width="1.6"/>
+
+        <!-- stop blocks, hatched: the pieces the trainee seats -->
+        <g stroke="var(--olive)" stroke-width="1.8">
+          <rect x="322" y="252" width="26" height="16" fill="url(#hatch)"/>
+          <rect x="916" y="252" width="26" height="16" fill="url(#hatch)"/>
+        </g>
+
+        <!-- wire lashing -->
+        <g stroke="var(--olive)" stroke-width="1.6" stroke-dasharray="5 4" fill="none">
+          <path d="M 400 226 L 400 264"/>
+          <path d="M 800 226 L 800 264"/>
+        </g>
+
+        <!-- dimension: seating distance -->
+        <g stroke="var(--ink-faint)" stroke-width="1">
+          <line x1="322" y1="300" x2="322" y2="318"/>
+          <line x1="392" y1="272" x2="392" y2="318"/>
+          <line x1="322" y1="311" x2="392" y2="311" marker-start="url(#ar)" marker-end="url(#ar)"/>
+        </g>
+        <text x="357" y="333" text-anchor="middle" font-family="IBM Plex Mono, monospace"
+              font-size="14" fill="var(--olive)">≤ 25 sm</text>
+
+        <!-- dimension: length over gun -->
+        <g stroke="var(--ink-faint)" stroke-width="1">
+          <line x1="348" y1="140" x2="348" y2="112"/>
+          <line x1="1110" y1="156" x2="1110" y2="112"/>
+          <line x1="348" y1="121" x2="1110" y2="121" marker-start="url(#ar)" marker-end="url(#ar)"/>
+        </g>
+        <text x="729" y="107" text-anchor="middle" font-family="IBM Plex Mono, monospace"
+              font-size="14" fill="var(--ink-soft)">uzynlygy top bilen — 9 530 mm</text>
+
+        <!-- dimension: deck -->
+        <g stroke="var(--ink-faint)" stroke-width="1">
+          <line x1="60" y1="296" x2="60" y2="386"/>
+          <line x1="1140" y1="296" x2="1140" y2="386"/>
+          <line x1="60" y1="379" x2="1140" y2="379" marker-start="url(#ar)" marker-end="url(#ar)"/>
+        </g>
+        <text x="600" y="396" text-anchor="middle" font-family="IBM Plex Mono, monospace"
+              font-size="13" fill="var(--ink-faint)">açyk wagonyň poly — 13 400 mm</text>
+
+        <!-- leader to the stop block -->
+        <g stroke="var(--olive)" stroke-width="1">
+          <line x1="335" y1="248" x2="290" y2="206"/>
+          <line x1="290" y1="206" x2="212" y2="206"/>
+        </g>
+        <text x="208" y="201" text-anchor="end" font-family="IBM Plex Mono, monospace"
+              font-size="13" fill="var(--olive)">direg agaç bölegi</text>
+        <text x="208" y="219" text-anchor="end" font-family="IBM Plex Mono, monospace"
+              font-size="11.5" fill="var(--ink-faint)">Tablisa 3 · 12,0 t çenli</text>
+      </svg>
+
+      <div class="drawing-cap">
+        <span>Plate 02 — tirkeg tehnikanyň berkidilişi</span>
+        <span>T-72 · açyk wagon · usul 3</span>
+        <span>Masştab 1 : 60</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= WHY ================= -->
+  <section class="plate">
+    <div class="callout">Esas <span class="val">01</span></div>
+    <h2 class="title">The interface was hiding its own evidence.</h2>
+    <div class="cols c2" style="margin-top:34px">
+      <div>
+        <h3 class="sub">Figures without provenance</h3>
+        <p style="color:var(--ink-soft)">
+          A stop block is 200 mm wide because Table 3 says so for a vehicle in the
+          12,0 t bracket. The old screens printed the number and dropped the source,
+          so a trainee could not tell a handbook figure from a drawn approximation.
+          In the new model every value carries the row it came from.
+        </p>
+      </div>
+      <div>
+        <h3 class="sub">State carried by colour alone</h3>
+        <p style="color:var(--ink-soft)">
+          Correct, configured and not-yet-configured were sand, green and amber —
+          the hardest triple to separate on a projector, in print, or with a colour
+          vision deficiency. Every state now has a shape and a word as well as a hue.
+        </p>
+      </div>
+    </div>
+    <p class="note" style="margin-top:32px">
+      <b>Unconfirmed is not a failure.</b> Where the extracted handbook data cannot
+      establish eligibility, the option is still offered and marked
+      <i>tassyklanmadyk</i>. Hiding it would teach the trainee that the choice does
+      not exist; asserting it would invent a figure. Neither is acceptable.
+    </p>
+  </section>
+
+  <!-- ================= SYSTEM ================= -->
+  <section class="plate">
+    <div class="callout">Ulgam <span class="val">02</span></div>
+    <h2 class="title">Specification</h2>
+    <p class="lede" style="margin-bottom:38px">
+      A drafting-office palette on a paper ground, with olive spent only where it
+      carries meaning. Semantic colour is separate from the accent and never doubles as it.
+    </p>
+
+    <div class="spec">
+      <div class="spec-row">
+        <div class="spec-key">Ground</div>
+        <div class="swatches">
+          <div class="sw"><div class="sw-chip" style="background:#E8EAE3"></div><span class="sw-name">Paper</span><span class="sw-hex">#E8EAE3</span></div>
+          <div class="sw"><div class="sw-chip" style="background:#F4F5F0"></div><span class="sw-name">Surface</span><span class="sw-hex">#F4F5F0</span></div>
+          <div class="sw"><div class="sw-chip" style="background:#DDE0D6"></div><span class="sw-name">Recessed</span><span class="sw-hex">#DDE0D6</span></div>
+          <div class="sw"><div class="sw-chip" style="background:#16190F"></div><span class="sw-name">Ink</span><span class="sw-hex">#16190F</span></div>
+        </div>
+      </div>
+      <div class="spec-row">
+        <div class="spec-key">Accent</div>
+        <div class="swatches">
+          <div class="sw"><div class="sw-chip" style="background:#48551F"></div><span class="sw-name">Olive</span><span class="sw-hex">#48551F</span></div>
+          <div class="sw"><div class="sw-chip" style="background:#C3C6B8"></div><span class="sw-name">Hairline</span><span class="sw-hex">#C3C6B8</span></div>
+        </div>
+      </div>
+      <div class="spec-row">
+        <div class="spec-key">Semantic</div>
+        <div class="swatches">
+          <div class="sw"><div class="sw-chip" style="background:#43702A"></div><span class="sw-name">Kanagatlanarly</span><span class="sw-hex">#43702A</span></div>
+          <div class="sw"><div class="sw-chip" style="background:#9A6510"></div><span class="sw-name">Tassyklanmadyk</span><span class="sw-hex">#9A6510</span></div>
+          <div class="sw"><div class="sw-chip" style="background:#A6392A"></div><span class="sw-name">Kemçilik</span><span class="sw-hex">#A6392A</span></div>
+        </div>
+      </div>
+      <div class="spec-row">
+        <div class="spec-key">Type</div>
+        <div>
+          <div class="typerow">
+            <span class="spec-key">Display</span>
+            <span style="font-family:var(--display);font-weight:800;font-size:30px;letter-spacing:-.03em">Archivo</span>
+            <span style="font-family:var(--data);font-size:12px;color:var(--ink-faint)">500 · 700 · 800 — headings, screen titles</span>
+          </div>
+          <div class="typerow">
+            <span class="spec-key">Body</span>
+            <span style="font-family:var(--body);font-size:23px">IBM Plex Sans</span>
+            <span style="font-family:var(--data);font-size:12px;color:var(--ink-faint)">400 · 600 — prose, controls, Turkmen diacritics</span>
+          </div>
+          <div class="typerow">
+            <span class="spec-key">Data</span>
+            <span style="font-family:var(--data);font-size:21px">IBM Plex Mono</span>
+            <span style="font-family:var(--data);font-size:12px;color:var(--ink-faint)">400 · 600 — every figure, code and citation</span>
+          </div>
+        </div>
+      </div>
+      <div class="spec-row">
+        <div class="spec-key">Spacing</div>
+        <div style="font-family:var(--data);font-size:14px;color:var(--ink-soft)">
+          4 · 8 · 12 · 16 · 24 · 32 — nothing between the steps
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SEQUENCE ================= -->
+  <section class="plate">
+    <div class="callout">Yzygiderlik <span class="val">03</span></div>
+    <h2 class="title">Seven steps, in order</h2>
+    <p class="lede" style="margin-bottom:38px">
+      The numbering is not decoration. A wagon cannot be chosen before a vehicle,
+      and nothing can be secured before it is placed — the order is the lesson.
+    </p>
+    <div class="steps">
+      <div class="step"><div class="step-n">01</div><div class="step-tk">Düzümi kesgitle</div><div class="step-en">How many wagons the echelon runs</div></div>
+      <div class="step"><div class="step-n">02</div><div class="step-tk">Tehnika saýlamak</div><div class="step-en">Tracked or wheeled, then the vehicle</div></div>
+      <div class="step"><div class="step-n">03</div><div class="step-tk">Wagonyň görnüşini saýla</div><div class="step-en">Open flatcar, covered, tank wagon</div></div>
+      <div class="step now"><div class="step-n">04</div><div class="step-tk">Tehnikany wagona ýerleşdir</div><div class="step-en">Placed and secured by hand in three dimensions</div></div>
+      <div class="step"><div class="step-n">05</div><div class="step-tk">Tehnikany berkit</div><div class="step-en">A review of what step 04 already decided</div></div>
+      <div class="step"><div class="step-n">06</div><div class="step-tk">Inžener seljermesi</div><div class="step-en">Every check against its cited rule</div></div>
+      <div class="step"><div class="step-n">07</div><div class="step-tk">Netije</div><div class="step-en">The mark, and what went wrong on the way</div></div>
+    </div>
+  </section>
+
+  <!-- ================= SCREENS ================= -->
+  <section class="plate">
+    <div class="callout">Ekranlar <span class="val">04</span></div>
+    <h2 class="title">Placement, and the review that follows it</h2>
+    <p class="lede" style="margin-bottom:38px">
+      Step 04 is where the work happens: the trainee seats the blocks themselves.
+      Step 05 therefore reports rather than asks — a decision already made by hand
+      is never put back as a written question.
+    </p>
+
+    <div class="cols c2">
+      <!-- Placement -->
+      <div class="screen">
+        <div class="screen-bar">
+          <h4>Tehnikany wagona ýerleşdir</h4>
+          <div class="crumbs"><span>1</span><span>2</span><span>3</span><span class="on">4</span><span>5</span><span>6</span><span>7</span></div>
+        </div>
+        <div class="screen-body">
+          <div class="sect-head">Üç ölçegli görnüş</div>
+          <div style="background:var(--paper);border:1px solid var(--rule);padding:12px">
+            <svg viewBox="0 0 520 132" role="img" aria-label="Simplified three-dimensional view of the vehicle on the wagon deck" style="display:block;width:100%;height:auto">
+              <rect x="24" y="88" width="472" height="13" fill="var(--surface-2)" stroke="var(--ink)" stroke-width="1.4"/>
+              <path d="M 152 88 L 152 68 Q 152 62 160 62 L 380 62 Q 388 62 388 69 L 388 88 Z" fill="var(--surface-2)" stroke="var(--ink)" stroke-width="1.4"/>
+              <path d="M 150 62 L 164 42 L 372 42 L 388 62 Z" fill="var(--surface)" stroke="var(--ink)" stroke-width="1.5"/>
+              <path d="M 218 42 Q 223 22 252 20 L 312 20 Q 340 22 345 42 Z" fill="var(--surface-2)" stroke="var(--ink)" stroke-width="1.5"/>
+              <rect x="343" y="28" width="132" height="6" fill="var(--surface-2)" stroke="var(--ink)" stroke-width="1.2"/>
+              <g fill="var(--paper)" stroke="var(--ink-soft)" stroke-width="1.3">
+                <circle cx="175" cy="78" r="9"/><circle cx="207" cy="78" r="9"/><circle cx="239" cy="78" r="9"/>
+                <circle cx="271" cy="78" r="9"/><circle cx="303" cy="78" r="9"/><circle cx="335" cy="78" r="9"/>
+              </g>
+              <g stroke="var(--olive)" stroke-width="1.5">
+                <rect x="136" y="79" width="14" height="9" fill="url(#hatch)"/>
+                <rect x="390" y="79" width="14" height="9" fill="url(#hatch)"/>
+              </g>
+              <g stroke="var(--ink-faint)" stroke-width=".9">
+                <line x1="136" y1="105" x2="136" y2="118"/><line x1="175" y1="105" x2="175" y2="118"/>
+                <line x1="136" y1="113" x2="175" y2="113" marker-start="url(#ar)" marker-end="url(#ar)"/>
+              </g>
+              <text x="155" y="129" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="10" fill="var(--olive)">22 sm</text>
+            </svg>
+          </div>
+
+          <div class="sect-head">Enjam palitrasy</div>
+          <div class="palette-strip">
+            <span class="piece on"><i style="background:var(--olive)"></i>Direg agaç · 12,0 t çenli</span>
+            <span class="piece"><i style="background:var(--ink-faint)"></i>Ara goýulýan agaç</span>
+            <span class="piece on"><i style="background:var(--olive)"></i>Sim çekme · Ø6 mm</span>
+            <span class="piece"><i style="background:var(--ink-faint)"></i>Demir spor · S-1</span>
+            <span class="piece"><i style="background:var(--ink-faint)"></i>KGUUB 1G</span>
+          </div>
+          <p class="note">
+            The palette offers every row the handbook sizes, with the one matching
+            this vehicle flagged — <b>never pre-selected</b>. Placing the piece is
+            the answer.
+          </p>
+        </div>
+      </div>
+
+      <!-- Securing -->
+      <div class="screen">
+        <div class="screen-bar">
+          <h4>Tehnikany berkit</h4>
+          <div class="crumbs"><span>1</span><span>2</span><span>3</span><span>4</span><span class="on">5</span><span>6</span><span>7</span></div>
+        </div>
+        <div class="screen-body">
+          <div>
+            <div style="font-family:var(--display);font-size:27px;font-weight:700;letter-spacing:-.02em">BTR-80</div>
+            <div style="color:var(--olive);font-size:15px;margin-top:2px">Generic open flatcar — açyk wagon</div>
+            <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:13px">
+              <span class="chip pass">
+                <svg width="13" height="13" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0a8 8 0 100 16A8 8 0 008 0zm3.9 5.9l-4.6 5.3a.8.8 0 01-1.2 0L3.9 8.9l1.2-1 1.7 1.8 4-4.6z"/></svg>
+                Kanagatlanarly
+              </span>
+              <span class="chip warn">
+                <svg width="13" height="13" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 1l7.2 13H.8L8 1zm-.8 5v4h1.6V6H7.2zm0 5.2v1.6h1.6v-1.6H7.2z"/></svg>
+                2 sany tassyklanmadyk
+              </span>
+            </div>
+          </div>
+
+          <div class="sect-head">Usul we enjamlar</div>
+          <p class="note" style="margin-top:-4px">
+            <b>3D sahnada goýan bölekleriňizden alyndy</b> — gaýtadan soralmaýar.
+          </p>
+
+          <div class="eq pass">
+            <div class="eq-top">
+              <span class="eq-name">Direg dörtgyraň agaç bölegi</span>
+              <span class="eq-ref">para-21</span>
+              <span class="chip pass" style="margin-left:auto">
+                <svg width="12" height="12" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0a8 8 0 100 16A8 8 0 008 0zm3.9 5.9l-4.6 5.3a.8.8 0 01-1.2 0L3.9 8.9l1.2-1 1.7 1.8 4-4.6z"/></svg>
+                Dogry
+              </span>
+            </div>
+            <div class="eq-val">Tablisa 3 · <b>12,0 t çenli</b> · 200 × 160 mm</div>
+          </div>
+
+          <div class="eq warn">
+            <div class="eq-top">
+              <span class="eq-name">Sim çekme</span>
+              <span class="eq-ref">table-7</span>
+              <span class="chip warn" style="margin-left:auto">
+                <svg width="12" height="12" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 1l7.2 13H.8L8 1zm-.8 5v4h1.6V6H7.2zm0 5.2v1.6h1.6v-1.6H7.2z"/></svg>
+                Tassyklanmadyk
+              </span>
+            </div>
+            <div class="eq-val">Ø6 mm · <b>4 sapak</b> · burçy ölçelmedik</div>
+          </div>
+
+          <div class="eq">
+            <div class="eq-top">
+              <span class="eq-name">Ara goýulýan agaç</span>
+              <span class="eq-ref">para-24</span>
+              <span class="chip idle" style="margin-left:auto">Ulanylmadyk</span>
+            </div>
+            <div class="eq-val">Bu usulda talap edilmeýär</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= DATA ================= -->
+  <section class="plate">
+    <div class="callout">Maglumat <span class="val">05</span></div>
+    <h2 class="title">Every figure names its row</h2>
+    <p class="lede" style="margin-bottom:34px">
+      Nine vehicles carry a recorded combat weight in the current extract. The rest
+      show <i>ýok</i> rather than a plausible number, and the interface says so
+      wherever the value would have been used.
+    </p>
+    <div class="tablewrap">
+      <table class="data">
+        <thead>
+          <tr>
+            <th>Tehnika</th><th>Görnüşi</th><th>Agramy</th>
+            <th>Direg ölçegi — Tablisa 3</th><th>Usul</th><th>Ýagdaý</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>BTR-80</td><td>Tigirli</td><td class="num">13,6 t</td><td class="num">200 × 160 mm</td><td class="num">3</td>
+              <td><span class="chip pass" style="font-size:11px;padding:3px 8px">Kanagatlanarly</span></td></tr>
+          <tr><td>BTR-70</td><td>Tigirli</td><td class="num">11,5 t</td><td class="num">200 × 160 mm</td><td class="num">3</td>
+              <td><span class="chip pass" style="font-size:11px;padding:3px 8px">Kanagatlanarly</span></td></tr>
+          <tr><td>BTR-60PB</td><td>Tigirli</td><td class="num">10,3 t</td><td class="num">200 × 160 mm</td><td class="num">3</td>
+              <td><span class="chip pass" style="font-size:11px;padding:3px 8px">Kanagatlanarly</span></td></tr>
+          <tr><td>T-72</td><td>Tirkeg</td><td class="num">ýok</td><td class="num">ýok</td><td class="num">1 · 3 · 5</td>
+              <td><span class="chip warn" style="font-size:11px;padding:3px 8px">Tassyklanmadyk</span></td></tr>
+          <tr><td>T-80U</td><td>Tirkeg</td><td class="num">ýok</td><td class="num">ýok</td><td class="num">1 · 3 · 5</td>
+              <td><span class="chip warn" style="font-size:11px;padding:3px 8px">Tassyklanmadyk</span></td></tr>
+          <tr><td>Ural-4320</td><td>Tigirli</td><td class="num">8,0 t</td><td class="num">150 × 120 mm</td><td class="num">3</td>
+              <td><span class="chip fail" style="font-size:11px;padding:3px 8px">Kemçilik</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note" style="margin-top:26px">
+      <b>ýok</b> is a real state, not an empty cell. A weight the extract does not
+      record cannot size a stop block, so the bracket is left unresolved and every
+      check that depends on it reports unconfirmed rather than passing quietly.
+    </p>
+  </section>
+
+  <!-- ================= PORT ================= -->
+  <footer class="plate">
+    <div class="callout">Geçiriş <span class="val">06</span></div>
+    <h2 class="title">Porting to Flutter</h2>
+    <p class="lede" style="margin-bottom:34px">
+      Nothing here needs a new architecture. The tokens map onto the classes the
+      application already has, and the components onto widgets that already exist.
+    </p>
+    <div class="foot-grid">
+      <div>
+        <h3 class="sub">AppColors</h3>
+        <p style="font-family:var(--data);font-size:13px;color:var(--ink-soft);line-height:1.8">
+          paper → scaffold<br>surface → card<br>olive → primary<br>verdant / amber / oxide → semantic
+        </p>
+      </div>
+      <div>
+        <h3 class="sub">AppText</h3>
+        <p style="font-family:var(--data);font-size:13px;color:var(--ink-soft);line-height:1.8">
+          Archivo → display, titles<br>Plex Sans → body, labels<br>Plex Mono → every figure
+        </p>
+      </div>
+      <div>
+        <h3 class="sub">AppSpace</h3>
+        <p style="font-family:var(--data);font-size:13px;color:var(--ink-soft);line-height:1.8">
+          Already built — 4 / 8 / 12 / 16 / 24 / 32, unchanged
+        </p>
+      </div>
+      <div>
+        <h3 class="sub">Components</h3>
+        <p style="font-family:var(--data);font-size:13px;color:var(--ink-soft);line-height:1.8">
+          VerdictChip → chip<br>AppPanel → eq card<br>SectionHeading → sect-head<br>dimension callout → new
+        </p>
+      </div>
+    </div>
+    <p class="note" style="margin-top:38px">
+      The one genuinely new thing is the <b>dimension callout</b> — the tick,
+      extension line and monospaced value that names a measurement. It is how the
+      source plates annotate, and it is what would make the application look like
+      it came from the handbook rather than from a UI kit.
+    </p>
+  </footer>
+
+</div>

@@ -1,0 +1,50 @@
+{
+  "_comment": "Three-dimensional model files bundled for individual vehicles, with the licence each is redistributed under. Nothing may be listed here without an author, a source page and a licence that permits redistribution: VehicleModelAsset.isAttributed refuses a record missing any of them, and HandbookRepository drops it rather than drawing it. See assets/models/README.md. — The T-80U entry was removed when the catalogue was rebuilt from the ministry's vehicle transport-characteristics table: that table is the unit's list of what it moves and does not list a T-80U, so there is no vehicle for the mesh to be drawn on. The file itself is still in assets/models/ and the entry can be restored the day the vehicle is.",
+  "models": [
+    {
+      "_comment": "NOT LOADED YET — author, sourceUrl, license and licenseUrl are deliberately empty, so isAttributed is false and the scene falls back to the drawn T-72. Everything else about this model is finished and tested; what is missing is the one thing nobody here can look up. The geometry was built by tools/build_model_from_plate.py from the three orthographic views on tools/plate_sources/t72-three-view.jpg, a plate received by email on 4 September 2026 with no author, no source page and no stated terms. A mesh traced from a drawing is a derivative of that drawing, so the plate's terms are this file's terms. Fill the four empty fields with whoever drew the plate and under what licence — or, if the ministry holds the plate outright, name it as the author and say so in the licence — and the model loads on the next run with no other change.",
+      "vehicleId": "veh-t72",
+      "file": "models/veh-t72.obj",
+      "sourceTitle": "T-72 three-view plate (ВИД СБОКУ / СВЕРХУ / СПЕРЕДИ / СЗАДИ)",
+      "sourceUrl": "",
+      "license": "",
+      "licenseUrl": "",
+      "author": "",
+      "axisConvention": "yUpFacingPlusX",
+      "notes": "A visual hull: the side, top and front silhouettes were intersected, so the shape is bounded by what all three views agree on and no concavity that none of them shows is recovered. Fitted on width it lands +0.20 m on height and -0.20 m on length against TrackedVehicleMeshSpec.t72 — the height because the side elevation draws the commander's sight above the 2.19 m turret roof the record means, the length because the muzzle is a taper a threshold trims. Both are the plate's, not the vehicle's, and test/plate_built_model_test.dart fails if either grows."
+    },
+    {
+      "vehicleId": "veh-btr80",
+      "file": "models/veh-btr80.obj",
+      "sourceTitle": "BTR-80 — parametric 8x8 APC solid",
+      "sourceUrl": "tools/build_btr_model.py",
+      "license": "Project-authored geometry (parametric), built from the ministry-provided reference views",
+      "licenseUrl": "",
+      "author": "RailSim (tools/build_btr_model.py)",
+      "axisConvention": "yUpFacingPlusX",
+      "notes": "Not a traced plate and not a scan: the shape is authored from the reference proportions and the record's own length, width and height, the same division of labour the Dart mesh builders keep. Smooth per-vertex normals; groups hull/turret/gun_barrel/wheel_tyre/fender map to the loader's materials."
+    },
+    {
+      "vehicleId": "veh-btr70",
+      "file": "models/veh-btr70.obj",
+      "sourceTitle": "BTR-70 — parametric 8x8 APC solid",
+      "sourceUrl": "tools/build_btr_model.py",
+      "license": "Project-authored geometry (parametric), built from the ministry-provided reference views",
+      "licenseUrl": "",
+      "author": "RailSim (tools/build_btr_model.py)",
+      "axisConvention": "yUpFacingPlusX",
+      "notes": "Not a traced plate and not a scan: the shape is authored from the reference proportions and the record's own length, width and height, the same division of labour the Dart mesh builders keep. Smooth per-vertex normals; groups hull/turret/gun_barrel/wheel_tyre/fender map to the loader's materials."
+    },
+    {
+      "vehicleId": "veh-btr60",
+      "file": "models/veh-btr60.obj",
+      "sourceTitle": "BTR-60PB — parametric 8x8 APC solid",
+      "sourceUrl": "tools/build_btr_model.py",
+      "license": "Project-authored geometry (parametric), built from the ministry-provided reference views",
+      "licenseUrl": "",
+      "author": "RailSim (tools/build_btr_model.py)",
+      "axisConvention": "yUpFacingPlusX",
+      "notes": "Not a traced plate and not a scan: the shape is authored from the reference proportions and the record's own length, width and height, the same division of labour the Dart mesh builders keep. Smooth per-vertex normals; groups hull/turret/gun_barrel/wheel_tyre/fender map to the loader's materials."
+    }
+  ]
+}

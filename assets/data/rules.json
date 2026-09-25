@@ -1,0 +1,354 @@
+{
+  "rules": [
+    {
+      "id": "rule-axle-load-wheeled-ramp",
+      "appliesTo": "wheeled",
+      "description": "Max axle load crossing flatcar side steel edges without ramps.",
+      "condition": "axleLoadT <= 10.0",
+      "failMessage": "Axle load exceeds 10 t — vehicle may not cross the flatcar's side steel edges without loading ramps (para. 51).",
+      "referenceId": "para-51"
+    },
+    {
+      "id": "rule-ground-pressure-tracked-ramp",
+      "appliesTo": "tracked",
+      "description": "Max specific ground pressure crossing flatcar side steel edges without ramps.",
+      "condition": "groundPressureKgCm2 <= 0.8",
+      "failMessage": "Ground pressure exceeds 0.8 kg/cm^2 — vehicle may not cross the flatcar's side steel edges without loading ramps (para. 51).",
+      "referenceId": "para-51"
+    },
+    {
+      "id": "rule-tracked-special-case-max",
+      "appliesTo": "tracked",
+      "description": "Special-case max combat weight for tracked vehicles loaded via side ramps (side loading structures, no bridging plates).",
+      "condition": "combatWeightT <= 15.0",
+      "failMessage": "Combat weight exceeds 15 t special-case limit for side-ramp loading without bridging plates (para. 51).",
+      "referenceId": "para-51"
+    },
+    {
+      "id": "rule-cog-height-method-eligibility",
+      "appliesTo": "tracked",
+      "description": "The six standard securing methods (Annex 14 §4) assume rigid running gear/brakes and COG no higher than 1.5m above the flatcar deck.",
+      "condition": "centerOfGravityHeightAboveDeckM <= 1.5",
+      "failMessage": "Center of gravity exceeds 1.5m above the flatcar deck — standard securing methods 1-6 are not validated for this configuration by the extracted handbook text; TODO: Fill from Handbook Page XX for high-COG procedure.",
+      "referenceId": "para-34"
+    },
+    {
+      "id": "rule-symmetry-tolerance",
+      "appliesTo": "tracked",
+      "description": "Left/right overhang past flatcar sides must be nearly equal.",
+      "condition": "abs(leftOverhangMm - rightOverhangMm) <= 40",
+      "failMessage": "Left/right track overhang difference exceeds 40mm — vehicle is not symmetrically placed on the flatcar's longitudinal axis (para. 34).",
+      "referenceId": "para-34"
+    },
+    {
+      "id": "rule-wheeled-lashing-count",
+      "appliesTo": "wheeled",
+      "description": "Wire lashing count for method 2, by combat weight bracket.",
+      "lookup": [
+        {
+          "combatWeightMaxT": 24.0,
+          "lashingsRequired": 4
+        },
+        {
+          "combatWeightMaxT": 40.0,
+          "lashingsRequired": 8
+        }
+      ],
+      "referenceId": "para-55"
+    },
+    {
+      "id": "rule-reusable-chock-tracked-selection",
+      "appliesTo": "tracked",
+      "description": "KGUUB tracked-chock variant selection by combat weight bracket.",
+      "lookup": [
+        {
+          "combatWeightMinT": 7.0,
+          "combatWeightMaxT": 25.0,
+          "hardwareId": "att-kguub-1g"
+        },
+        {
+          "combatWeightMinT": 25.1,
+          "combatWeightMaxT": 42.0,
+          "hardwareId": "att-kguub-2g"
+        }
+      ],
+      "referenceId": "para-29"
+    },
+    {
+      "id": "rule-reusable-chock-wheeled-selection",
+      "appliesTo": "wheeled",
+      "description": "KGUUB wheeled-chock variant selection by combat weight bracket.",
+      "lookup": [
+        {
+          "combatWeightMaxT": 15.0,
+          "hardwareId": "att-kguub-1k",
+          "setsRequired": 1
+        },
+        {
+          "combatWeightMinT": 15.1,
+          "combatWeightMaxT": 26.0,
+          "hardwareId": "att-kguub-2k",
+          "setsRequired": 1
+        },
+        {
+          "combatWeightMinT": 26.1,
+          "combatWeightMaxT": 40.0,
+          "hardwareId": "att-kguub-2k",
+          "setsRequired": 2
+        }
+      ],
+      "referenceId": "para-30"
+    },
+    {
+      "id": "rule-wire-strand-count",
+      "appliesTo": "tracked_or_wheeled",
+      "description": "Wire lashing strand count lookup from Table 7 by (axis angle, floor angle).",
+      "lookupTable": "wireLashingAngleTable",
+      "referenceId": "table-7"
+    },
+    {
+      "id": "rule-vehicle-specific-hardware-lookup",
+      "appliesTo": "tracked",
+      "description": "If the vehicle's handbook 'object' designation appears in Table 13 (iron spurs) or Table 11 (iron chock-boots), that specific hardware is mandatory in place of a generic method.",
+      "lookupTable": "ironSpurTable / ironChockBootTable via vehicle.objectDesignation",
+      "referenceId": "para-31"
+    },
+    {
+      "id": "rule-wheeled-chock-count",
+      "appliesTo": "wheeled",
+      "description": "Number of single-use quadrilateral wood chocks per wheeled vehicle, by combat weight.",
+      "lookup": [
+        {
+          "combatWeightMaxT": 5.5,
+          "chocksRequired": 4
+        },
+        {
+          "combatWeightMaxT": 12.0,
+          "chocksRequired": 8
+        }
+      ],
+      "doublingCondition": "Doubled for the middle and rear axle tyres of a three-axle vehicle, and for any vehicle of 5.5 t or more placed over the coupling of two open wagons.",
+      "failMessage": "Chock count does not match the weight bracket — 4 chocks under 5.5 t, 8 chocks for 5.6-12 t, doubled over a coupling or on a three-axle vehicle's middle and rear tyres (plate-06).",
+      "referenceId": "plate-06"
+    },
+    {
+      "id": "rule-chock-nail-count",
+      "appliesTo": "both",
+      "description": "Nails fixing one single-use quadrilateral wood chock to the wagon floor.",
+      "nailDiameterMm": 6,
+      "nailLengthMm": 200,
+      "nailsPerLongitudinalChock": 4,
+      "nailsPerLateralChock": 6,
+      "failMessage": "Each longitudinal chock takes four 6 mm x 200 mm nails and each lateral chock six (plate-06).",
+      "referenceId": "plate-06"
+    },
+    {
+      "id": "rule-lateral-chock-gap",
+      "appliesTo": "wheeled",
+      "description": "Gap between a lateral quadrilateral chock and the outer face of the tyre.",
+      "gapMmMin": 20,
+      "gapMmMax": 30,
+      "overCouplingGapMmMin": 15,
+      "overCouplingGapMmMax": 20,
+      "failMessage": "Lateral chocks sit 20-30 mm from the outer face of the front wheels (15-20 mm where the vehicle spans a coupling) (plate-06).",
+      "referenceId": "plate-06"
+    },
+    {
+      "id": "rule-kguub-chock-spacing",
+      "appliesTo": "tracked",
+      "description": "Spacing of the two KGUUB chock positions along the track.",
+      "minSpacingM": 1.7,
+      "offsetFromRailContactM": 0.5,
+      "chocksPerSet": 4,
+      "failMessage": "KGUUB chock positions must be at least 1.7 m apart; they may be seated 0.5 m from where the track rests on the rail (plate-04).",
+      "referenceId": "plate-04"
+    },
+    {
+      "id": "rule-placement-clearance",
+      "appliesTo": "both",
+      "description": "Minimum clearance between vehicles loaded on the running stock, as dimensioned on the plates.",
+      "clearances": [
+        {
+          "case": "between two tracked vehicles on one flatcar",
+          "minMm": 100,
+          "referenceId": "plate-02"
+        },
+        {
+          "case": "between vehicles in a mixed consist row",
+          "minMm": 270,
+          "referenceId": "plate-02"
+        },
+        {
+          "case": "mixed loading across the running stock",
+          "minMm": 440,
+          "referenceId": "plate-03"
+        },
+        {
+          "case": "between wheeled vehicles in a row",
+          "minMm": 50,
+          "referenceId": "plate-05"
+        },
+        {
+          "case": "long-wheelbase wheeled vehicles across coupled flatcars",
+          "minMm": 270,
+          "referenceId": "plate-05"
+        }
+      ],
+      "failMessage": "Vehicles are closer than the clearance the plates dimension for this case.",
+      "referenceId": "plate-02"
+    },
+    {
+      "id": "rule-overhang-guard-wagon",
+      "appliesTo": "both",
+      "description": "Overhang of the load past the end of the open wagon.",
+      "maxOverhangMm": 400,
+      "consequence": "An overhang greater than 400 mm requires a guard wagon to be placed.",
+      "failMessage": "Overhang past the open wagon exceeds 400 mm — a guard wagon is required (plate-05).",
+      "referenceId": "plate-05"
+    },
+    {
+      "id": "rule-lashing-max-angle",
+      "appliesTo": "both",
+      "description": "Maximum angle of a wire lashing to the wagon floor.",
+      "maxAngleDeg": 45,
+      "failMessage": "A wire lashing's angle to the wagon floor must not exceed 45 degrees (plate-05).",
+      "referenceId": "plate-05"
+    },
+    {
+      "id": "rule-tracked-chock-seating-distance",
+      "appliesTo": "tracked",
+      "description": "Seating distance of the wood chock from the running gear when securing a tracked vehicle.",
+      "distanceCmMin": 10,
+      "distanceCmMax": 15,
+      "altDistanceCmMin": 10,
+      "altDistanceCmMax": 20,
+      "failMessage": "The chock seats 10-15 cm from the running gear (10-20 cm in the alternate arrangement) (plate-03).",
+      "referenceId": "plate-03"
+    },
+    {
+      "id": "rule-tracked-chock-arrangement",
+      "appliesTo": "tracked",
+      "description": "How the wood chocks and insert blocks are seated on a tracked vehicle, and the two documented ways of restraining it sideways.",
+      "longitudinalChocksPerVehicle": 4,
+      "transverseInsertsPerVehicle": 4,
+      "transverseInsertsPerSide": 2,
+      "insertPairRoles": [
+        "first pair blocks the vehicle from moving forward along the track",
+        "second pair blocks it from moving backward"
+      ],
+      "chockLengthRule": "The chock's length must not be less than the width of the vehicle's track.",
+      "nailDiameterMm": 6,
+      "nailMinLengthMm": 200,
+      "stapleMinDiameterMm": 12,
+      "lateralRestraintOptions": [
+        {
+          "id": "lateral-staples",
+          "staples": 12,
+          "groupedInThrees": true,
+          "minStapleDiameterMm": 12,
+          "description": "Twelve bow-shaped iron staples of not less than 12 mm, nailed three at a time to the wagon floor on the inner face of the track."
+        },
+        {
+          "id": "lateral-side-blocks",
+          "blockSizeMm": "100*100*2000",
+          "description": "Squared wood blocks of 100x100x2000 mm laid along the inner and outer faces of the track, each nailed with 6 mm nails not shorter than 200 mm."
+        }
+      ],
+      "failMessage": "A tracked vehicle takes four longitudinal wood chocks and four transverse half-round insert blocks (two per side), and is restrained sideways either by twelve staples or by 100x100x2000 mm side blocks (plate-02).",
+      "referenceId": "plate-02"
+    },
+    {
+      "id": "rule-wheeled-chock-arrangement",
+      "appliesTo": "wheeled",
+      "description": "The six chock layout cases drawn for wheeled vehicles: by weight bracket and axle count, each on a single open wagon and again over the coupling of two wagons.",
+      "chockOrientationRule": "The chock's long side is laid across the wagon, under the tyre, and nailed to the wagon floor.",
+      "cases": [
+        {
+          "id": "wheeled-2axle-le-5-5t",
+          "axleCount": 2,
+          "combatWeightMaxT": 5.5,
+          "spansCoupling": false,
+          "baseChockCount": 4,
+          "doubled": false
+        },
+        {
+          "id": "wheeled-2axle-5-6-12t",
+          "axleCount": 2,
+          "combatWeightMaxT": 12.0,
+          "spansCoupling": false,
+          "baseChockCount": 8,
+          "doubled": false
+        },
+        {
+          "id": "wheeled-3axle",
+          "axleCount": 3,
+          "combatWeightMaxT": 12.0,
+          "spansCoupling": false,
+          "baseChockCount": 8,
+          "doubled": true,
+          "doublingReason": "doubled at the middle and rear axle tyres of a three-axle vehicle"
+        },
+        {
+          "id": "wheeled-2axle-le-5-5t-coupling",
+          "axleCount": 2,
+          "combatWeightMaxT": 5.5,
+          "spansCoupling": true,
+          "baseChockCount": 4,
+          "doubled": false
+        },
+        {
+          "id": "wheeled-2axle-5-6-12t-coupling",
+          "axleCount": 2,
+          "combatWeightMaxT": 12.0,
+          "spansCoupling": true,
+          "baseChockCount": 8,
+          "doubled": true,
+          "doublingReason": "doubled for a vehicle of 5.5 t or more placed over the coupling of two open wagons"
+        },
+        {
+          "id": "wheeled-3axle-coupling",
+          "axleCount": 3,
+          "combatWeightMaxT": 12.0,
+          "spansCoupling": true,
+          "baseChockCount": 8,
+          "doubled": true,
+          "doublingReason": "doubled both for the three-axle middle and rear tyres and for spanning a coupling"
+        }
+      ],
+      "failMessage": "The chock layout does not match any case drawn for this vehicle: four chocks under 5.5 t, eight for 5.6-12 t, doubled for a three-axle vehicle's middle and rear tyres and for a vehicle of 5.5 t or more over a coupling (plate-06).",
+      "referenceId": "plate-06"
+    }
+  ],
+  "sixApprovedTrackedMethods": [
+    {
+      "method": 1,
+      "name": "Reusable universal chocks (KGUUB-1G/2G)",
+      "referenceId": "para-35"
+    },
+    {
+      "method": 2,
+      "name": "Iron spurs (Ş-series)",
+      "referenceId": "para-39"
+    },
+    {
+      "method": 3,
+      "name": "Wood stop-blocks + wire lashings",
+      "referenceId": "para-40"
+    },
+    {
+      "method": 4,
+      "name": "Iron chock-boots + spacer boards",
+      "referenceId": "para-32"
+    },
+    {
+      "method": 5,
+      "name": "Wood stop-blocks + spacer boards",
+      "referenceId": "para-34"
+    },
+    {
+      "method": 6,
+      "name": "Clamp-tensioners + clamps (MK-765/S-765)",
+      "referenceId": "para-33"
+    }
+  ]
+}

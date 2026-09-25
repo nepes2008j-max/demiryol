@@ -1,0 +1,64 @@
+{
+  "principles": [
+    {
+      "id": "principle-symmetry",
+      "title": "Symmetric placement on the flatcar's longitudinal axis",
+      "principle": "The vehicle must be centered on the flatcar's longitudinal axis; left/right track (or wheel) overhang past the flatcar sides must be equal, differing by no more than 40mm.",
+      "purpose": "Even weight distribution across both bogies of the flatcar.",
+      "physics": "Asymmetric loading shifts load onto one rail/bogie, increasing derailment risk on curves and uneven track, and causing uneven wheel-rail wear.",
+      "engineeringReason": "Keeps the flatcar's own center of gravity close to its designed centerline under dynamic (braking, curving) loads.",
+      "militaryRequirement": "Mandatory for all six approved tracked-vehicle securing methods.",
+      "handbookReferenceId": "para-34"
+    },
+    {
+      "id": "principle-braking-transfer",
+      "title": "Vehicle immobilized before securing (parking brake + reverse gear)",
+      "principle": "Once positioned, the vehicle's transmission is left in reverse gear and the parking brake is applied before fastening begins.",
+      "purpose": "Prevents the vehicle from creeping forward during the securing process and adds a passive resistance to forward movement in transit.",
+      "physics": "A braked drivetrain converts translational force at the wheel/track contact patch into resisted torque at the transmission, reducing the load the chocks/lashings alone must react.",
+      "engineeringReason": "Redundant restraint — the securing hardware is sized assuming the brake may not hold under all conditions, not as the sole restraint.",
+      "militaryRequirement": "Required step in the sequence for all six methods.",
+      "handbookReferenceId": "para-34"
+    },
+    {
+      "id": "principle-chock-placement",
+      "title": "Chocks placed at the second-from-last road wheel",
+      "principle": "For chock-based methods (1 and 2), the chocking hardware is positioned where the track meets the ground just ahead of the second-to-last road wheel — not at the very end of the track run.",
+      "purpose": "This is the point of maximum, most stable ground contact under the track, minimizing the chance the vehicle rides up and over the chock under braking loads.",
+      "physics": "Placing a stop at a point of sustained (rather than momentary) ground pressure resists both the vehicle's forward momentum and any tendency to climb the obstacle.",
+      "engineeringReason": "A chock placed at a point of lighter contact pressure (e.g., directly under the idler wheel) is more likely to be crushed or ridden over.",
+      "militaryRequirement": "Explicit placement instruction, methods 1 and 2.",
+      "handbookReferenceId": "para-36"
+    },
+    {
+      "id": "principle-wire-angle",
+      "title": "Wire lashing strand count scales with angle, not just load",
+      "principle": "The number of wire strands in a lashing is selected from a lookup table (Table 7) based on the angle between the lashing and the flatcar's longitudinal axis AND the angle between the lashing and the flatcar floor — steep or shallow angles both require more strands than a mid-range angle.",
+      "purpose": "A lashing at a poor angle carries less of its rated tension as useful restraining force.",
+      "physics": "Only the force component along the direction of expected vehicle movement (roughly longitudinal) actually resists that movement; a lashing running nearly parallel to the direction of travel, or nearly vertical, wastes most of its tension on components that don't resist forward/lateral sliding, so more strands compensate for the lost efficiency.",
+      "engineeringReason": "Rather than requiring field crews to compute vector components, the handbook pre-solves the geometry into a lookup table.",
+      "militaryRequirement": "Table 7 is mandatory input for method 3 (tracked) and method 2 (wheeled) wire lashings.",
+      "handbookReferenceId": "table-7"
+    },
+    {
+      "id": "principle-vehicle-specific-hardware",
+      "title": "Some hardware is restricted to named vehicle types",
+      "principle": "Iron spurs (Table 13), iron stop-boots (Table 11), and the MK-765/S-765 clamp system are not general-purpose — each is only approved for the specific vehicle/object designations listed against it.",
+      "purpose": "These items are shaped to match a specific track-link, road-wheel, or hull geometry.",
+      "physics": "A stop designed for one track-link profile may not seat correctly, or may not distribute load correctly, on a different vehicle's running gear.",
+      "engineeringReason": "Cross-using vehicle-specific hardware risks it slipping, cracking under load, or failing to engage the track/wheel at all.",
+      "militaryRequirement": "Table 13 lookup is mandatory before selecting a spur; substitution outside the listed vehicle set is not authorized by the handbook text available.",
+      "handbookReferenceId": "para-31"
+    },
+    {
+      "id": "principle-weight-class-method-count",
+      "title": "Hardware quantity scales with vehicle weight bracket",
+      "principle": "The wire-lashing count for wheeled vehicles doubles once combat weight crosses 24 t (4 lashings up to 24t, 8 lashings 24.1-40t). Reusable chock system variant likewise changes with weight bracket.",
+      "purpose": "Heavier vehicles impart more kinetic energy in the same deceleration event, requiring proportionally more restraint.",
+      "physics": "Restraining force needed scales with mass (F = m*a for a given assumed deceleration during braking/shunting impact).",
+      "engineeringReason": "Rather than a continuous formula, the handbook uses discrete weight brackets tied to standardized hardware sets, so no in-field computation is required.",
+      "militaryRequirement": "Weight bracket lookup is mandatory before hardware selection (Tables 8, 9, 15).",
+      "handbookReferenceId": "para-55"
+    }
+  ]
+}

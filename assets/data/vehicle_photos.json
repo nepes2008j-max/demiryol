@@ -1,0 +1,347 @@
+{
+  "_comment": "Illustrative vehicle photographs from Wikimedia Commons, fetched by tools/fetch_vehicle_photos.py. These are NOT handbook figures: the source handbook contains no identification photograph of any vehicle. They are kept in their own manifest so nothing can present an internet photograph as a cited figure, and every entry carries its licence, author and source page for attribution. Vehicles whose designation is a design-bureau index covering several different vehicles are deliberately absent.",
+  "photos": [
+    {
+      "vehicleId": "veh-t34",
+      "file": "images/vehicles/veh-t34.jpg",
+      "sourceTitle": "File:Tank T-34.JPG",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tank_T-34.JPG",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "author": "Cezary Piwowarski"
+    },
+    {
+      "vehicleId": "veh-is4",
+      "file": "images/vehicles/veh-is4.jpg",
+      "sourceTitle": "File:IS-4 Tank.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:IS-4_Tank.jpg",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "author": "User:VORON SPb"
+    },
+    {
+      "vehicleId": "veh-t10",
+      "file": "images/vehicles/veh-t10.jpg",
+      "sourceTitle": "File:T-10 Heavy Tank (23752171808).jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:T-10_Heavy_Tank_(23752171808).jpg",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "author": "Alan Wilson from Stilton, Peterborough, Cambs, UK"
+    },
+    {
+      "vehicleId": "veh-t54",
+      "file": "images/vehicles/veh-t54.jpg",
+      "sourceTitle": "File:T-54-.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:T-54-.jpg",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "author": "The original uploader was נחמן at Hebrew Wikipedia.",
+      "views": {
+        "front": "images/vehicles/veh-t54-front.jpeg"
+      }
+    },
+    {
+      "vehicleId": "veh-t55",
+      "file": "images/vehicles/veh-t55.jpg",
+      "sourceTitle": "File:Imperial War Museum North - T-55 tank 1.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Imperial_War_Museum_North_-_T-55_tank_1.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "author": "Photograph by Mike Peel (www.mikepeel.net).",
+      "views": {
+        "front": "images/vehicles/veh-t55-front.jpg"
+      }
+    },
+    {
+      "vehicleId": "veh-pt76",
+      "file": "images/vehicles/veh-pt76.jpeg",
+      "sourceTitle": "File:Right side view, on display, Soviet PT-76 Light Amphibious Tank - DPLA - 2cc527e18949a1d15cd2f979cb401bd3.jpeg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Right_side_view,_on_display,_Soviet_PT-76_Light_Amphibious_Tank_-_DPLA_-_2cc527e18949a1d15cd2f979cb401bd3.jpeg",
+      "license": "Public domain",
+      "licenseUrl": "",
+      "author": "Department of Defense. American Forces Information Service. Defense Visual Information Center. 1994",
+      "views": {
+        "rear": "images/vehicles/veh-pt76-rear.jpg"
+      }
+    },
+    {
+      "vehicleId": "veh-btr50p",
+      "file": "images/vehicles/veh-btr50p.jpg",
+      "sourceTitle": "File:Captured Egyptian BTR-50 Armoured Personnel Carrier in IDF Service, 1973.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Captured_Egyptian_BTR-50_Armoured_Personnel_Carrier_in_IDF_Service,_1973.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "author": "ארכיון דן הדני, האוסף הלאומי לתצלומים על שם משפחת פריצקר, הספרייה הלאומית Dan Hadani Collection, The Pritzker Family National Photography Collection, The National Library of Israel"
+    },
+    {
+      "vehicleId": "veh-2s4",
+      "file": "images/vehicles/veh-2s4.jpg",
+      "sourceTitle": "File:2S4 ‘Tyulpan’ Self-propelled Mortar (37592024252).jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:2S4_%E2%80%98Tyulpan%E2%80%99_Self-propelled_Mortar_(37592024252).jpg",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "author": "Alan Wilson from Stilton, Peterborough, Cambs, UK"
+    },
+    {
+      "vehicleId": "veh-2s5",
+      "file": "images/vehicles/veh-2s5.jpg",
+      "sourceTitle": "File:Self-propelled gun 2S5 \"Giatsint-S\" with 152-mm gun 2A37..JPG",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Self-propelled_gun_2S5_%22Giatsint-S%22_with_152-mm_gun_2A37..JPG",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "author": "Parutip"
+    },
+    {
+      "vehicleId": "veh-2s7",
+      "file": "images/vehicles/veh-2s7.jpg",
+      "sourceTitle": "File:Russian 2S7 Pion self propelled 203 mm Heavy artillery gun (Ank Kumar, Infosys Limited) 02.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Russian_2S7_Pion_self_propelled_203_mm_Heavy_artillery_gun_(Ank_Kumar,_Infosys_Limited)_02.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "author": "Ank Kumar",
+      "views": {
+        "front": "images/vehicles/veh-2s7-front.jpg",
+        "rear": "images/vehicles/veh-2s7-rear.jpg"
+      }
+    },
+    {
+      "vehicleId": "veh-pts2",
+      "file": "images/vehicles/veh-pts2.jpg",
+      "sourceTitle": "File:PTS-2.JPG",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:PTS-2.JPG",
+      "license": "Public domain",
+      "licenseUrl": "",
+      "author": "One half 3544"
+    },
+    {
+      "vehicleId": "veh-ptsm",
+      "file": "images/vehicles/veh-ptsm.jpg",
+      "sourceTitle": "File:PTS-M.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:PTS-M.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "author": "Rainer Lippert"
+    },
+    {
+      "vehicleId": "veh-t80u",
+      "file": "images/vehicles/veh-t80u.jpg",
+      "sourceTitle": "File:4thTankBrigade - T-80U -11.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:4thTankBrigade_-_T-80U_-11.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "author": "Vitaly V. Kuzmin"
+    },
+    {
+      "vehicleId": "veh-t-62",
+      "file": "images/vehicles/veh-t-62.jpg",
+      "sourceTitle": "File:VNPA T-62 - 092025.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:VNPA_T-62_-_092025.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "author": "Somerset999",
+      "views": {
+        "front": "images/vehicles/veh-t-62-front.jpg",
+        "side": "images/vehicles/veh-t-62-side.png",
+        "rear": "images/vehicles/veh-t-62-rear.jpeg"
+      }
+    },
+    {
+      "vehicleId": "veh-bmp-1",
+      "file": "images/vehicles/veh-bmp-1.jpg",
+      "sourceTitle": "File:Syrian soldiers climb into a Soviet-made infantry fighting vehicle (most likely a BMP-1) during military exercises, 1980s.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Syrian_soldiers_climb_into_a_Soviet-made_infantry_fighting_vehicle_(most_likely_a_BMP-1)_during_military_exercises,_1980s.jpg",
+      "license": "Public domain",
+      "licenseUrl": "",
+      "author": "",
+      "views": {
+        "rear": "images/vehicles/veh-bmp-1-rear.jpg"
+      }
+    },
+    {
+      "vehicleId": "veh-bmp-2",
+      "file": "images/vehicles/veh-bmp-2.jpg",
+      "sourceTitle": "File:BMP-2 parade ukraine.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:BMP-2_parade_ukraine.jpg",
+      "license": "CC BY-SA 1.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/1.0",
+      "author": "self"
+    },
+    {
+      "vehicleId": "veh-bmp-3",
+      "file": "images/vehicles/veh-bmp-3.jpg",
+      "sourceTitle": "File:BMP-3 infantry fighting vehicle at Engineering Technologies 2012 03.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:BMP-3_infantry_fighting_vehicle_at_Engineering_Technologies_2012_03.jpg",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "author": "Mike1979 Russia"
+    },
+    {
+      "vehicleId": "veh-bmd-1-howa-desant",
+      "file": "images/vehicles/veh-bmd-1-howa-desant.jpg",
+      "sourceTitle": "File:BMD-1 in Afghanistan.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:BMD-1_in_Afghanistan.jpg",
+      "license": "Public domain",
+      "licenseUrl": "",
+      "author": ""
+    },
+    {
+      "vehicleId": "veh-btr70",
+      "file": "images/vehicles/veh-btr70.jpg",
+      "sourceTitle": "File:BTR-70 ’95 06’ at Musée des Blindés, Saumur, France (53319044571).jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:BTR-70_%E2%80%9995_06%E2%80%99_at_Mus%C3%A9e_des_Blind%C3%A9s,_Saumur,_France_(53319044571).jpg",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "author": "Alan Wilson from Peterborough, Cambs, UK"
+    },
+    {
+      "vehicleId": "veh-btr80",
+      "file": "images/vehicles/veh-btr80.jpg",
+      "sourceTitle": "File:BTR-80 Schnittmodell (24383509517).jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:BTR-80_Schnittmodell_(24383509517).jpg",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "author": "Triple-green"
+    },
+    {
+      "vehicleId": "veh-brdm-2",
+      "file": "images/vehicles/veh-brdm-2.jpg",
+      "sourceTitle": "File:BRDM-2 in Korolyov Moscow Oblast.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:BRDM-2_in_Korolyov_Moscow_Oblast.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "author": "Dmitry Ivanov."
+    },
+    {
+      "vehicleId": "veh-zsu-23-4-silka",
+      "file": "images/vehicles/veh-zsu-23-4-silka.jpg",
+      "sourceTitle": "File:ZSU 23-4 'Shilka' mobile anti-aircraft vehicle - Museum of Army Flying, Hampshire, England.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:ZSU_23-4_%27Shilka%27_mobile_anti-aircraft_vehicle_-_Museum_of_Army_Flying,_Hampshire,_England.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "author": "Acabashi"
+    },
+    {
+      "vehicleId": "veh-imr-inzener-pasgelcilik-ayyryjy",
+      "file": "images/vehicles/veh-imr-inzener-pasgelcilik-ayyryjy.jpg",
+      "sourceTitle": "File:IMR combat engineering vehicle in Odesa.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:IMR_combat_engineering_vehicle_in_Odesa.jpg",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "author": "Shamil Khakirov"
+    },
+    {
+      "vehicleId": "veh-gmz-mina-goyujy",
+      "file": "images/vehicles/veh-gmz-mina-goyujy.jpg",
+      "sourceTitle": "File:GMZ-3 at Engineering Technologies 2012.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:GMZ-3_at_Engineering_Technologies_2012.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "author": "Vitaly V. Kuzmin"
+    },
+    {
+      "vehicleId": "veh-brem-1-t-72-esasly-arw",
+      "file": "images/vehicles/veh-brem-1-t-72-esasly-arw.jpg",
+      "sourceTitle": "File:BREM-1 armoured recovery vehicle (1).jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:BREM-1_armoured_recovery_vehicle_(1).jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "author": "Vitaly V. Kuzmin"
+    },
+    {
+      "vehicleId": "veh-mtu-20-kopri-duseyji",
+      "file": "images/vehicles/veh-mtu-20-kopri-duseyji.jpg",
+      "sourceTitle": "File:MTU-20-latrun-4.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:MTU-20-latrun-4.jpg",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+      "author": "Bukvoed"
+    },
+    {
+      "vehicleId": "veh-mt-lb-mt-lb-u-cekiji",
+      "file": "images/vehicles/veh-mt-lb-mt-lb-u-cekiji.jpeg",
+      "sourceTitle": "File:Soviet MT-LB.JPEG",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Soviet_MT-LB.JPEG",
+      "license": "Public domain",
+      "licenseUrl": "",
+      "author": "DON S. Montgomery, U.S. Navy (Ret.)"
+    },
+    {
+      "vehicleId": "veh-2s1",
+      "file": "images/vehicles/veh-2s1.jpg",
+      "sourceTitle": "File:2S1 Gvozdika, AHM, 2024-04-28, Left full.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:2S1_Gvozdika,_AHM,_2024-04-28,_Left_full.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "author": "Joshbaumgartner",
+      "views": {
+        "front": "images/vehicles/veh-2s1-front.jpg",
+        "side": "images/vehicles/veh-2s1-side.jpg",
+        "rear": "images/vehicles/veh-2s1-rear.jpg"
+      }
+    },
+    {
+      "vehicleId": "veh-2s3",
+      "file": "images/vehicles/veh-2s3.jpeg",
+      "sourceTitle": "File:2S3 Akatsiya.JPEG",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:2S3_Akatsiya.JPEG",
+      "license": "Public domain",
+      "licenseUrl": "",
+      "author": "",
+      "views": {
+        "rear": "images/vehicles/veh-2s3-rear.jpg"
+      },
+      "cutout": "images/vehicles/cutouts/veh-2s3.png"
+    },
+    {
+      "vehicleId": "veh-t72",
+      "file": "images/vehicles/veh-t72.jpg",
+      "sourceTitle": "File:T-72 in Museum of technique 2016-08-16.JPG",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:T-72_in_Museum_of_technique_2016-08-16.JPG",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "author": "Mike1979 Russia",
+      "views": {
+        "front": "images/vehicles/veh-t72-front.jpg",
+        "side": "images/vehicles/veh-t72-side.jpg"
+      }
+    },
+    {
+      "vehicleId": "veh-t90s",
+      "file": "images/vehicles/veh-t90s.jpg",
+      "sourceTitle": "File:T-90S - Engineering Technologies 2010.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:T-90S_-_Engineering_Technologies_2010.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "author": "Vitaly V. Kuzmin"
+    },
+    {
+      "vehicleId": "veh-zil131",
+      "file": "images/vehicles/veh-zil131.jpg",
+      "sourceTitle": "File:ZIL-131. Tashkent. Foziltepa str.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:ZIL-131._Tashkent._Foziltepa_str.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "author": "Jamshid Nurkulov",
+      "cutout": "images/vehicles/cutouts/veh-zil131.png"
+    },
+    {
+      "vehicleId": "veh-kamaz43114",
+      "file": "images/vehicles/veh-kamaz43114.jpg",
+      "sourceTitle": "File:2015.03.30-0401 kamaz-43114.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:2015.03.30-0401_kamaz-43114.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "author": "Alexey8601"
+    },
+    {
+      "vehicleId": "veh-ural4320",
+      "file": "images/vehicles/veh-ural4320.jpg",
+      "sourceTitle": "File:Ural-4320, 12. Internationales Maritimes-Fahrzeugtreffen, Ribnitz-Damgarten ( 1060471).jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ural-4320,_12._Internationales_Maritimes-Fahrzeugtreffen,_Ribnitz-Damgarten_(_1060471).jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "author": "Matti Blume",
+      "cutout": "images/vehicles/cutouts/veh-ural4320.png"
+    }
+  ]
+}

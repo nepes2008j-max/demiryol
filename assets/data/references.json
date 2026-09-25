@@ -1,0 +1,242 @@
+{
+  "_comment": "Source: 'Rules for transporting troops by rail, water, and air transport' (Türkmenistan MoD/MoI Joint Order No. 145/175-ö, 03 July 2019). Original language: Turkmen. All 'quote' fields below are Claude's English paraphrase of the paragraph's technical content, not a translation license — verify against the original before operational use.",
+  "chapters": [
+    {
+      "id": "chapter-2",
+      "number": "II",
+      "title": "Transporting military echelons by rail",
+      "sections": [
+        {
+          "id": "ii-1",
+          "number": "1",
+          "title": "Preparing rail wagons and forming the military echelon"
+        },
+        {
+          "id": "ii-3",
+          "number": "3",
+          "title": "Loading the military echelon"
+        }
+      ]
+    },
+    {
+      "id": "annex-14",
+      "number": "Annex 14",
+      "title": "Technical rules for positioning and securing military equipment and weapons on rail rolling stock",
+      "sections": [
+        {
+          "id": "annex14-3",
+          "number": "3",
+          "title": "Materials used to secure equipment on open flatcars"
+        },
+        {
+          "id": "annex14-4",
+          "number": "4",
+          "title": "Securing tracked military machines on open flatcars"
+        },
+        {
+          "id": "annex14-5",
+          "number": "5",
+          "title": "Securing wheeled military machines on open flatcars"
+        }
+      ]
+    },
+    {
+      "id": "training-plates",
+      "number": "-",
+      "title": "Training wall charts issued with the handbook",
+      "sections": [
+        {
+          "id": "plates",
+          "number": "-",
+          "title": "Loading and securing plates (Berl)"
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "id": "para-51",
+      "chapterId": "chapter-2",
+      "sectionId": "ii-3",
+      "paragraph": "51",
+      "summary": "Axle load limits for driving vehicles across a flatcar's side steel edges without ramps: wheeled vehicles up to 10 t/axle; tracked vehicles up to 0.8 kg/cm^2 ground pressure. Special-case tracked loading (side ramps not bridged) permitted up to 15 t; wheeled up to 10 t/axle via the flatcar's side steel edges."
+    },
+    {
+      "id": "para-19",
+      "sectionId": "annex14-3",
+      "paragraph": "19",
+      "table": "1",
+      "summary": "Standard and reduced wire coil (bunch) length and weight by wire diameter (4/5/6 mm)."
+    },
+    {
+      "id": "para-20",
+      "sectionId": "annex14-3",
+      "paragraph": "20",
+      "summary": "Wood fastener material requirements: sound, dry-rot-free timber only; aspen/alder/linden and similarly weak species are prohibited; hardwood (oak, hornbeam) fasteners require pre-drilled nail holes."
+    },
+    {
+      "id": "para-21",
+      "sectionId": "annex14-3",
+      "paragraph": "21",
+      "table": "2,3",
+      "summary": "Wheel-chock / track-chock (stop-block) timber dimensions, keyed to wheel diameter (Table 2) or tracked-vehicle combat weight (Table 3)."
+    },
+    {
+      "id": "para-24",
+      "sectionId": "annex14-3",
+      "paragraph": "24",
+      "summary": "Wood packing boards/pallets/support wedges distribute load evenly and prevent equipment damage; cross-boards length = flatcar width; spacer boards length = cargo width (may overhang cargo by up to 200 mm within loading gauge). Minimum thickness: packing boards/spacer boards 25 mm, support wedges 50 mm."
+    },
+    {
+      "id": "para-25",
+      "sectionId": "annex14-3",
+      "paragraph": "25",
+      "table": "4,5",
+      "summary": "Nails used to fasten wood blocks to the flatcar deck must be 50-60 mm longer than the block height and must fully penetrate the deck planking; driven no less than 90 mm from block/deck edge and 30 mm from the block's side edge. Table 5 gives permitted 6mm-nail substitution ratios using 5mm/8mm nails."
+    },
+    {
+      "id": "para-26",
+      "sectionId": "annex14-3",
+      "paragraph": "26",
+      "table": "6",
+      "summary": "U-shaped iron staples (skoba) used to join wood fasteners together or to secure tracked vehicles to open flatcars; dimensions by staple shank diameter."
+    },
+    {
+      "id": "para-29",
+      "sectionId": "annex14-3",
+      "paragraph": "29",
+      "table": "8",
+      "summary": "KGUUB-1G / KGUUB-2G reusable universal chocking systems for ALL types of tracked military vehicles on open flatcars, selected by combat weight bracket (7-25 t -> KGUUB-1G; 25.1-42 t -> KGUUB-2G)."
+    },
+    {
+      "id": "para-30",
+      "sectionId": "annex14-3",
+      "paragraph": "30",
+      "table": "9",
+      "summary": "KGUUB-1K / KGUUB-2K reusable universal chocking systems for wheeled military vehicles."
+    },
+    {
+      "id": "para-31",
+      "sectionId": "annex14-3",
+      "paragraph": "31",
+      "table": "10,13",
+      "summary": "Iron spurs (Ş-series) for securing specific tracked-vehicle 'object' types; Table 13 maps object/vehicle designation to required spur type and part number."
+    },
+    {
+      "id": "para-32",
+      "sectionId": "annex14-3",
+      "paragraph": "32",
+      "table": "11",
+      "summary": "Iron chock-boots (KTP / KT-34 / KT-137 / KTT) for T-34, IS-4, T-10, T-54, T-55 (early production), PT-76, BTR-50P and their variants."
+    },
+    {
+      "id": "para-33",
+      "sectionId": "annex14-3",
+      "paragraph": "33",
+      "summary": "MK-765 clamp-tensioner and S-765 clamp used specifically for 'object 765' / 'object 675' and their derivatives."
+    },
+    {
+      "id": "para-34",
+      "sectionId": "annex14-4",
+      "paragraph": "34",
+      "summary": "Six permitted methods for securing tracked vehicles with rigid braking/running gear and center of gravity <= 1.5 m above the flatcar deck: (1) reusable universal chocks, (2) iron spurs, (3) wood stop-blocks + wire lashings, (4) iron chock-boots + spacer boards, (5) wood stop-blocks + spacer boards, (6) clamp-tensioners/clamps. Vehicle must sit symmetric on the flatcar's longitudinal axis; track overhang past the flatcar sides must be equal on both sides, difference <= 40 mm."
+    },
+    {
+      "id": "para-40",
+      "sectionId": "annex14-4",
+      "paragraph": "40",
+      "table": "14",
+      "summary": "Method 3 (tracked): four wood stop-blocks, long edge across the flatcar, secured with 6mm nails or staples; wire lashings (6mm wire) required in addition. Vehicles under 25 t need 12x 12mm staples or 100x100x2000mm side timbers for lateral restraint if side gates are open; track width >=400mm needs 8 staples, <400mm needs 12 staples."
+    },
+    {
+      "id": "table-7",
+      "sectionId": "annex14-3",
+      "table": "7",
+      "summary": "Number of wire strands required in a lashing, by (a) angle between the lashing and the flatcar's longitudinal axis, and (b) angle between the lashing and the flatcar floor. Steeper/shallower angles both increase strand count."
+    },
+    {
+      "id": "para-55",
+      "sectionId": "annex14-5",
+      "paragraph": "55",
+      "summary": "Wheeled vehicles: method 2 uses four single wire lashings up to 24 t combat weight, eight single wire lashings for 24.1-40 t. Wheel chocking timber count/placement varies by axle count (2/3/4-axle patterns specified)."
+    },
+    {
+      "id": "table-16",
+      "sectionId": "annex14-5",
+      "table": "16",
+      "summary": "Nail count, wire-lashing count, and strands-per-lashing required per wood stop-block, tabulated (values not fully captured in this extract — see handbook page for full table)."
+    },
+    {
+      "id": "plate-02",
+      "chapterId": "training-plates",
+      "sectionId": "plates",
+      "summary": "Securing tracked vehicles on open wagons with longitudinal quadrilateral wood chocks and inserts, and with clamp-tensioners (MK-765 / S-765). Carries a chock-dimension table that disagrees with plate-03's; see docs/berl-plate-extraction.md.",
+      "plate": "02"
+    },
+    {
+      "id": "plate-03",
+      "chapterId": "training-plates",
+      "sectionId": "plates",
+      "summary": "Securing tracked vehicles on open wagons with wood chocks and single-use wire lashings. Carries TABLISSA No.1 (consumables per vehicle by combat weight) and TABLISSA No.2 (minimum chock dimensions by combat weight), plus the four-step securing sequence and the mixed-loading clearances.",
+      "plate": "03"
+    },
+    {
+      "id": "plate-04",
+      "chapterId": "training-plates",
+      "sectionId": "plates",
+      "summary": "Securing tracked vehicles with reusable universal chocks (KGUUB-1G for 7-25 t, KGUUB-2G for 25.1-42 t) and with iron chock-boots (KTP for BTR-50P/PT-76 chassis, KTT for IS-5/T-10 chassis). Gives the chock spacing limits.",
+      "plate": "04"
+    },
+    {
+      "id": "plate-05",
+      "chapterId": "training-plates",
+      "sectionId": "plates",
+      "summary": "Securing wheeled vehicles on open wagons with quadrilateral wood chocks and single-use wire lashings. Carries the chock-dimension-by-tyre-diameter table and the consumables table split by working / non-working brake system, and the plan-view placement strip.",
+      "plate": "05"
+    },
+    {
+      "id": "plate-06",
+      "chapterId": "training-plates",
+      "sectionId": "plates",
+      "summary": "Securing wheeled vehicles with reusable universal chocks (KGUUB-1K up to 15 t, KGUUB-2K for 15.1-26 t, two KGUUB-2K sets for 26.1-40 t). Carries the six-case chock layout diagram and the prohibited-practice list.",
+      "plate": "06"
+    },
+    {
+      "id": "para-5",
+      "sectionId": "ii-1",
+      "paragraph": "5",
+      "summary": "Train-composition weight classes and the 'conditional wagon' (şertli wagon) accounting unit: a loaded freight wagon counts as 33 t net, a soft-class passenger wagon as 3 t, a hard-class compartment wagon as 4 t, a platskart as 6 t and a general-class wagon as 8 t. Summarised from the body text already quoted in platforms.json's echelon-class entries; the full paragraph was not extracted."
+    },
+    {
+      "id": "para-35",
+      "sectionId": "annex14-4",
+      "paragraph": "35",
+      "summary": "The text of this paragraph was not extracted into this dataset — only the citations that point at it. The paragraph number comes from the original extraction, so the reference itself is real; its wording is not available here and has deliberately not been invented."
+    },
+    {
+      "id": "para-36",
+      "sectionId": "annex14-4",
+      "paragraph": "36",
+      "summary": "The text of this paragraph was not extracted into this dataset — only the citations that point at it. The paragraph number comes from the original extraction, so the reference itself is real; its wording is not available here and has deliberately not been invented."
+    },
+    {
+      "id": "para-38",
+      "sectionId": "annex14-4",
+      "paragraph": "38",
+      "summary": "The text of this paragraph was not extracted into this dataset — only the citations that point at it. The paragraph number comes from the original extraction, so the reference itself is real; its wording is not available here and has deliberately not been invented."
+    },
+    {
+      "id": "para-39",
+      "sectionId": "annex14-4",
+      "paragraph": "39",
+      "summary": "The text of this paragraph was not extracted into this dataset — only the citations that point at it. The paragraph number comes from the original extraction, so the reference itself is real; its wording is not available here and has deliberately not been invented."
+    },
+    {
+      "id": "doc-transport-characteristics",
+      "chapterId": null,
+      "sectionId": null,
+      "paragraph": null,
+      "summary": "Harby tehnikalaryň ulag häsiýetnamalary (uzynlygy, ini, beýikligi we agramy — esasy platforma boýunça çemeleşdirilen maglumatlar). A second ministry document, separate from Order 145/175-ö: a table of 138 vehicles with a stated length, width, height and weight for each. It is the unit's own list of what it moves and it decides which vehicles this trainer offers. It states no securing method — hardware is assigned only by Annex 14, Tables 11 and 13."
+    }
+  ]
+}

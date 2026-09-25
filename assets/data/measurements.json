@@ -1,0 +1,509 @@
+{
+  "wireCoilTable": {
+    "id": "table-1",
+    "referenceId": "para-19",
+    "unit": "mm/m/kg",
+    "rows": [
+      {
+        "wireDiameterMm": 4,
+        "lengthPer1000mmDiameterCoilM": 99,
+        "standardCoilLengthM": 202,
+        "standardCoilWeightKg": 20,
+        "reducedCoilLengthM": 101,
+        "reducedCoilWeightKg": 10
+      },
+      {
+        "wireDiameterMm": 5,
+        "lengthPer1000mmDiameterCoilM": 154,
+        "standardCoilLengthM": 162,
+        "standardCoilWeightKg": 25,
+        "reducedCoilLengthM": 78,
+        "reducedCoilWeightKg": 12
+      },
+      {
+        "wireDiameterMm": 6,
+        "lengthPer1000mmDiameterCoilM": 222,
+        "standardCoilLengthM": 113,
+        "standardCoilWeightKg": 25,
+        "reducedCoilLengthM": 54,
+        "reducedCoilWeightKg": 12
+      }
+    ]
+  },
+  "wheelChockByWheelDiameterTable": {
+    "id": "table-2",
+    "referenceId": "para-21",
+    "unit": "mm",
+    "note": "Minimum dimensions of the wood stop-block (chock), selected by the vehicle's wheel diameter.",
+    "rows": [
+      {
+        "wheelDiameterRangeMm": "under 500",
+        "chockHeightMm": 40,
+        "chockWidthMm": 100
+      },
+      {
+        "wheelDiameterRangeMm": "500-799",
+        "chockHeightMm": 50,
+        "chockWidthMm": 100
+      },
+      {
+        "wheelDiameterRangeMm": "800-1099",
+        "chockHeightMm": 75,
+        "chockWidthMm": 120
+      },
+      {
+        "wheelDiameterRangeMm": "1100-1399",
+        "chockHeightMm": 100,
+        "chockWidthMm": 160
+      },
+      {
+        "wheelDiameterRangeMm": "1400-1599",
+        "chockHeightMm": 135,
+        "chockWidthMm": 200
+      },
+      {
+        "wheelDiameterRangeMm": "1600 and above",
+        "chockHeightMm": 150,
+        "chockWidthMm": 220
+      }
+    ]
+  },
+  "trackChockByWeightTable": {
+    "id": "table-3",
+    "referenceId": "para-21",
+    "unit": "mm / t",
+    "note": "Minimum dimensions of the wood stop-block for TRACKED vehicles, selected by combat weight.",
+    "rows": [
+      {
+        "combatWeightRangeT": "up to 12.0",
+        "chockHeightMm": 75,
+        "chockWidthMm": 150
+      },
+      {
+        "combatWeightRangeT": "12.1-18.0",
+        "chockHeightMm": 100,
+        "chockWidthMm": 180
+      },
+      {
+        "combatWeightRangeT": "over 18.0",
+        "chockHeightMm": 180,
+        "chockWidthMm": 200
+      }
+    ]
+  },
+  "nailTable": {
+    "id": "table-4",
+    "referenceId": "para-25",
+    "unit": "mm / kg",
+    "rows": [
+      {
+        "nailDiameterMm": 5,
+        "nailLengthMm": 150,
+        "weightPer1000Kg": 23.2,
+        "countPerKg": 43
+      },
+      {
+        "nailDiameterMm": 6,
+        "nailLengthMm": 200,
+        "weightPer1000Kg": 43.9,
+        "countPerKg": "22-23"
+      },
+      {
+        "nailDiameterMm": 8,
+        "nailLengthMm": 250,
+        "weightPer1000Kg": 98.6,
+        "countPerKg": 10
+      }
+    ]
+  },
+  "nailSubstitutionTable": {
+    "id": "table-5",
+    "referenceId": "para-25",
+    "note": "Permitted substitution of 6mm nails with 5mm or 8mm nails, by count.",
+    "rows": [
+      {
+        "sixMmNailsToReplace": 2,
+        "fiveMmNailsNeeded": 3,
+        "eightMmNailsNeeded": 2
+      },
+      {
+        "sixMmNailsToReplace": 3,
+        "fiveMmNailsNeeded": 5,
+        "eightMmNailsNeeded": 2
+      },
+      {
+        "sixMmNailsToReplace": 4,
+        "fiveMmNailsNeeded": 6,
+        "eightMmNailsNeeded": 3
+      },
+      {
+        "sixMmNailsToReplace": 5,
+        "fiveMmNailsNeeded": 8,
+        "eightMmNailsNeeded": 3
+      },
+      {
+        "sixMmNailsToReplace": 6,
+        "fiveMmNailsNeeded": 9,
+        "eightMmNailsNeeded": 4
+      },
+      {
+        "sixMmNailsToReplace": 7,
+        "fiveMmNailsNeeded": 10,
+        "eightMmNailsNeeded": 4
+      },
+      {
+        "sixMmNailsToReplace": 8,
+        "fiveMmNailsNeeded": 12,
+        "eightMmNailsNeeded": 5
+      },
+      {
+        "sixMmNailsToReplace": 9,
+        "fiveMmNailsNeeded": 13,
+        "eightMmNailsNeeded": 5
+      },
+      {
+        "sixMmNailsToReplace": 10,
+        "fiveMmNailsNeeded": 15,
+        "eightMmNailsNeeded": 6
+      }
+    ]
+  },
+  "wireLashingAngleTable": {
+    "id": "table-7",
+    "referenceId": "table-7",
+    "note": "Required number of wire strands in a lashing, cross-referenced by (row) angle between the lashing and the flatcar's LONGITUDINAL axis in degrees, and (column) angle between the lashing and the flatcar FLOOR in degrees. TODO: Fill from Handbook Page XX — column band boundaries (45/46-50/51-55/.../76-80) confirmed, but a few interior cells were not legible in this extract and are marked null below; do not use null cells for a real calculation without checking the source page.",
+    "floorAngleBandsDeg": [
+      "<=45",
+      "46-50",
+      "51-55",
+      "56-60",
+      "61-65",
+      "66-70",
+      "71-75",
+      "76-80"
+    ],
+    "rows": [
+      {
+        "axisAngleBandDeg": "<=45",
+        "strandsRequired": [
+          2,
+          3,
+          3,
+          3,
+          4,
+          5,
+          6,
+          8
+        ]
+      },
+      {
+        "axisAngleBandDeg": "46-50",
+        "strandsRequired": [
+          3,
+          3,
+          3,
+          4,
+          4,
+          5,
+          6,
+          null
+        ]
+      },
+      {
+        "axisAngleBandDeg": "51-55",
+        "strandsRequired": [
+          3,
+          3,
+          3,
+          4,
+          5,
+          6,
+          7,
+          null
+        ]
+      },
+      {
+        "axisAngleBandDeg": "56-60",
+        "strandsRequired": [
+          3,
+          4,
+          4,
+          4,
+          5,
+          6,
+          8,
+          null
+        ]
+      },
+      {
+        "axisAngleBandDeg": "61-65",
+        "strandsRequired": [
+          4,
+          4,
+          5,
+          5,
+          6,
+          7,
+          null,
+          null
+        ]
+      },
+      {
+        "axisAngleBandDeg": "66-70",
+        "strandsRequired": [
+          5,
+          5,
+          6,
+          6,
+          7,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "axisAngleBandDeg": "71-75",
+        "strandsRequired": [
+          6,
+          6,
+          7,
+          8,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      {
+        "axisAngleBandDeg": "76-80",
+        "strandsRequired": [
+          8,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      }
+    ],
+    "substitutionRule": "One 6mm-diameter wire strand may be replaced by two 6mm strands (sic - re-check), three 5mm strands, or five 4mm strands. Rewound/reused lashing wire may not be reused a second time.",
+    "maxAngleDeg": 45,
+    "maxAngleNote": "Verified on the scanned page word/media/image11.jpeg of Programma uchin.docx: the lashing's angle to the wagon floor must NOT exceed 45 degrees (\"45 köp bolmaly däl\"). The same page states the strand count of a lashing is set by the count on its weakest side."
+  },
+  "staplesTable": {
+    "id": "table-6",
+    "referenceId": "para-26",
+    "unit": "mm / kg",
+    "note": "U-shaped iron staple (skoba) dimensions. TODO: Fill from Handbook Page XX — only the column headers (shank diameter / staple length / shackle length / weight per 100 staples) were confirmed in this extract; row values require re-checking against the source table."
+  },
+  "ironSpurTable": {
+    "id": "table-10",
+    "referenceId": "para-31",
+    "unit": "mm / kg",
+    "rows": [
+      {
+        "type": "Ş-429",
+        "basePlateMm": "580x130x16",
+        "combHeightMm": 30,
+        "setWeightKg4Spurs": 108.0
+      },
+      {
+        "type": "Ş-137",
+        "basePlateMm": "585x140x12",
+        "combHeightMm": 30,
+        "setWeightKg4Spurs": 48.0
+      },
+      {
+        "type": "Ş-434",
+        "basePlateMm": "545x150x16",
+        "combHeightMm": 28,
+        "setWeightKg4Spurs": 57.4
+      },
+      {
+        "type": "Ş-216",
+        "basePlateMm": "605x140x25",
+        "combHeightMm": 30,
+        "setWeightKg4Spurs": 84.0
+      },
+      {
+        "type": "Ş-575",
+        "basePlateMm": "370x120x9",
+        "combHeightMm": 23,
+        "setWeightKg4Spurs": 26.8
+      },
+      {
+        "type": "Ş-915",
+        "basePlateMm": "250x100x5",
+        "combHeightMm": 30,
+        "setWeightKg4Spurs": 8.0
+      },
+      {
+        "type": "Ş-350",
+        "basePlateMm": "375x130x12",
+        "combHeightMm": 25,
+        "setWeightKg4Spurs": 31.0
+      },
+      {
+        "type": "Ş-70",
+        "basePlateMm": "590x146x14",
+        "combHeightMm": 28,
+        "setWeightKg4Spurs": 48.0
+      },
+      {
+        "type": "Ş-65L",
+        "basePlateMm": "530x170x14",
+        "combHeightMm": 28,
+        "setWeightKg4Spurs": 60.0
+      },
+      {
+        "type": "Ş-303",
+        "basePlateMm": "500x140x12",
+        "combHeightMm": 30,
+        "setWeightKg4Spurs": 38.8
+      },
+      {
+        "type": "Ş-78",
+        "basePlateMm": "380x110x10",
+        "combHeightMm": 30,
+        "setWeightKg4Spurs": 25.0
+      }
+    ]
+  },
+  "ironChockBootTable": {
+    "id": "table-11",
+    "referenceId": "para-32",
+    "unit": "mm / kg",
+    "rows": [
+      {
+        "type": "KTP",
+        "basePlateMm": "150x120x6",
+        "pinMm": "25x3",
+        "setWeightKg4Boots": 5.0,
+        "forVehicles": [
+          "BTR-50P",
+          "PT-76"
+        ]
+      },
+      {
+        "type": "KT-34",
+        "basePlateMm": "170x120x8",
+        "pinMm": "35x12",
+        "setWeightKg4Boots": 9.2,
+        "forVehicles": [
+          "T-34"
+        ]
+      },
+      {
+        "type": "KT-137",
+        "basePlateMm": "170x130x8",
+        "pinMm": "35x12",
+        "setWeightKg4Boots": 11.4,
+        "forVehicles": [
+          "T-54",
+          "T-55"
+        ]
+      },
+      {
+        "type": "KTT",
+        "basePlateMm": "200x150x10",
+        "pinMm": "35x12",
+        "setWeightKg4Boots": 14.0,
+        "forVehicles": [
+          "IS-4",
+          "T-10"
+        ]
+      }
+    ],
+    "note": "Table row for IS-4/T-10 lists 'IS-5; T-10' in the source text; para. 32 lists the applicable vehicle set as T-34, IS-4, T-10, T-54, T-55 (early production), PT-76, BTR-50P and their derivatives. Kept both readings; TODO: Fill from Handbook Page XX to resolve IS-4 vs IS-5 discrepancy."
+  },
+  "reusableChockTrackedTable": {
+    "id": "table-8",
+    "referenceId": "para-29",
+    "unit": "t / mm / kg",
+    "rows": [
+      {
+        "type": "KGUUB-1G",
+        "combatWeightRangeT": "7-25",
+        "basePlateMm": "280x200x8",
+        "pinCount": 6,
+        "pinMm": "26x14",
+        "setWeightKg4Posts": 26
+      },
+      {
+        "type": "KGUUB-2G",
+        "combatWeightRangeT": "25.1-42",
+        "basePlateMm": "280x240x10",
+        "pinCount": 10,
+        "pinMm": "26x14",
+        "setWeightKg4Posts": 31
+      }
+    ]
+  },
+  "reusableChockWheeledTable": {
+    "id": "table-9",
+    "referenceId": "para-30",
+    "unit": "t / mm / kg",
+    "rows": [
+      {
+        "type": "KGUUB-1K",
+        "combatWeightRangeT": "up to 15",
+        "setDimensionsMm": "480x200x280",
+        "setWeightKg4Posts": 36
+      },
+      {
+        "type": "KGUUB-2K",
+        "combatWeightRangeT": "15.1-26",
+        "setDimensionsMm": "540x245x280",
+        "setWeightKg4Posts": 80
+      }
+    ],
+    "note": "26.1-40 t bracket uses two KGUUB-2K sets together (per para. 30 body text and Table 15)."
+  },
+  "trackedConsumablesByWeightTable": {
+    "id": "plate-03-tablissa-1",
+    "referenceId": "plate-03",
+    "unit": "t / count / kg / m",
+    "note": "TABLISSA No.1 on plate-03: securing consumables for ONE tracked vehicle secured with wood chocks and single-use wire lashings, by combat weight. staplesPerChock note (*): where necessary two staples may be seated with a 200 mm long, 6 mm diameter nail instead. staplesPerVehicle note (**): the count excludes the lateral anti-slip fixings.",
+    "rows": [
+      {
+        "combatWeightRangeT": "up to 15.0",
+        "wireStrandsPerLashing": 4,
+        "wireKg": 10.0,
+        "wireLengthM": 45,
+        "staplesPerChock": 2,
+        "staplesPerVehicle": 8
+      },
+      {
+        "combatWeightRangeT": "15.1-25.0",
+        "wireStrandsPerLashing": 6,
+        "wireKg": 14.5,
+        "wireLengthM": 68,
+        "staplesPerChock": 3,
+        "staplesPerVehicle": 12
+      },
+      {
+        "combatWeightRangeT": "25.1-50.0",
+        "wireStrandsPerLashing": 8,
+        "wireKg": 19.0,
+        "wireLengthM": 85,
+        "staplesPerChock": 3,
+        "staplesPerVehicle": 12
+      }
+    ]
+  },
+  "insertBlockTable": {
+    "id": "insertBlockTable",
+    "referenceId": "plate-02",
+    "unit": "mm",
+    "note": "Half-round insert block (ara goýulýan ýarym tegelek agaç bölegi / вкладыш) laid transversely between the road wheel and the track links. Dimensions read off plate-02's own dimension callouts; the plate gives a range for each, not a single size.",
+    "rows": [
+      {
+        "type": "Ara goýulýan ýarym tegelek agaç bölegi",
+        "heightMm": "90-100",
+        "lengthMm": "300-400"
+      }
+    ]
+  }
+}

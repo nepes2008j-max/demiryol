@@ -1,0 +1,78 @@
+{
+  "_comment": "The handbook extract does not name specific flatcar models (e.g. no 'Model 13-401' style platform catalog). It gives: (1) generic open-flatcar ('açyk wagon') load/axle rules, and (2) train-composition weight classes. Both are captured below; per-platform dimensions are TODO pending pages with an actual flatcar type catalog. The covered wagon and the tank wagon are NOT a handbook rolling-stock catalogue: they are the wrong answers the trainee must reject, taken from the project's own design mockup (Berl/harby_yukleme_simulyator.html, const WAGONS). Their unsuitability is handbook-backed even though their existence here is not — every plate that places or secures a military vehicle titles itself 'DEMIR ÝOLUŇ AÇYK WAGONLARYNA' (onto the railway's OPEN wagons), and para. 51 gives the open flatcar's loading limits. Each carries kind + notApprovedReason so the app can say why it is wrong instead of silently hiding it.",
+  "platforms": [
+    {
+      "id": "plat-generic-open-flatcar",
+      "name": "Generic open flatcar (açyk wagon)",
+      "lengthCm": "TODO: Fill from Handbook Page XX",
+      "widthCm": "TODO: Fill from Handbook Page XX",
+      "deckHeightCm": "TODO: Fill from Handbook Page XX",
+      "maxAxleLoadWheeledT": 10.0,
+      "maxGroundPressureTrackedKgCm2": 0.8,
+      "specialCaseMaxTrackedT": 15.0,
+      "attachmentRings": "TODO: Fill from Handbook Page XX",
+      "tieDownRings": "TODO: Fill from Handbook Page XX",
+      "woodSupportPositions": "TODO: Fill from Handbook Page XX",
+      "allowedVehicleTypes": [
+        "tracked",
+        "wheeled"
+      ],
+      "referenceId": "para-51",
+      "notes": "Side steel edges may be crossed directly (no ramps) only within the axle-load / ground-pressure limits above; heavier loads require loading ramps or side-loading structures — see para. 51.",
+      "kind": "openFlatcar"
+    },
+    {
+      "id": "plat-covered-wagon",
+      "kind": "coveredWagon",
+      "name": "Covered wagon (ýapyk wagon)",
+      "lengthCm": "TODO: Fill from Handbook Page XX",
+      "widthCm": "TODO: Fill from Handbook Page XX",
+      "deckHeightCm": "TODO: Fill from Handbook Page XX",
+      "maxAxleLoadWheeledT": "TODO: Fill from Handbook Page XX",
+      "maxGroundPressureTrackedKgCm2": "TODO: Fill from Handbook Page XX",
+      "specialCaseMaxTrackedT": "TODO: Fill from Handbook Page XX",
+      "attachmentRings": "TODO: Fill from Handbook Page XX",
+      "tieDownRings": "TODO: Fill from Handbook Page XX",
+      "woodSupportPositions": "TODO: Fill from Handbook Page XX",
+      "allowedVehicleTypes": [],
+      "referenceId": "para-51",
+      "notApprovedReason": "A covered wagon carries packaged freight. Tracked and wheeled military vehicles are placed and secured on OPEN wagons — every placement and securing plate in the source is titled '... demir ýoluň açyk wagonlaryna ...', and none of the securing methods (chocks nailed to the wagon floor, wire lashings to the deck rings, clamps on the side frame) can be applied inside a closed body.",
+      "notes": "Offered on the wagon-type step as a wrong answer to reject, not as a loading option."
+    },
+    {
+      "id": "plat-tank-wagon",
+      "kind": "tankWagon",
+      "name": "Tank wagon (sisterna wagony)",
+      "lengthCm": "TODO: Fill from Handbook Page XX",
+      "widthCm": "TODO: Fill from Handbook Page XX",
+      "deckHeightCm": "TODO: Fill from Handbook Page XX",
+      "maxAxleLoadWheeledT": "TODO: Fill from Handbook Page XX",
+      "maxGroundPressureTrackedKgCm2": "TODO: Fill from Handbook Page XX",
+      "specialCaseMaxTrackedT": "TODO: Fill from Handbook Page XX",
+      "attachmentRings": "TODO: Fill from Handbook Page XX",
+      "tieDownRings": "TODO: Fill from Handbook Page XX",
+      "woodSupportPositions": "TODO: Fill from Handbook Page XX",
+      "allowedVehicleTypes": [],
+      "referenceId": "para-51",
+      "notApprovedReason": "A tank wagon carries liquids and has no load deck at all: there is no floor to nail a stop-block to and no side frame to clamp to. Vehicles go on open wagons.",
+      "notes": "Offered on the wagon-type step as a wrong answer to reject, not as a loading option."
+    },
+    {
+      "id": "plat-echelon-class-40wagon",
+      "name": "Military echelon class: 40 conditional wagons",
+      "trainMaxWeightT": 1500,
+      "conditionalWagonCount": 40,
+      "referenceId": "para-5",
+      "notes": "This is a train-composition weight class from Chapter I, not an individual flatcar model. 'Conditional wagon' (şertli wagon) is the handbook's standard accounting unit: a loaded freight wagon = 33 t net, soft-class passenger wagon = 3 t, hard-class compartment = 4 t, platskart = 6 t, general class = 8 t (para. 5 body text).",
+      "kind": "echelonClass"
+    },
+    {
+      "id": "plat-echelon-class-57wagon",
+      "name": "Military echelon class: 57 conditional wagons",
+      "trainMaxWeightT": 3000,
+      "conditionalWagonCount": 57,
+      "referenceId": "para-5",
+      "kind": "echelonClass"
+    }
+  ]
+}

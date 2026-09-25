@@ -1,0 +1,59 @@
+{
+  "_comment": "Turkmen translations of principles.json's explanatory prose, keyed by the same 'id'. This file never contains engineering values — it is prose only. See docs/turkmen-content-localization-report.md.",
+  "principles": [
+    {
+      "id": "principle-symmetry",
+      "titleTk": "Wagonyň uzynlygyna okunda simmetrik ýerleşdiriş",
+      "principleTk": "Tehnika wagonyň uzynlygyna okunyň merkezinde ýerleşdirilmelidir; gusenisanyň (ýa-da tigirleriň) wagon gyralaryndan çykyp duran ýapyşygy sag we çep tarapda deň bolmaly, tapawut 40 mm-den geçmeli däl.",
+      "purposeTk": "Wagonyň aşagyndaky iki tigir toplumyna agramyň deň paýlanmagyny üpjün etmek.",
+      "physicsTk": "Simmetrik däl ýükleme agramy bir demir ýol çyzygyna/tigir toplumyna süýşürýär, bu ýaýlarda we deň bolmadyk ýollarda relsden çykma howpuny ýokarlandyrýar we tigir-rels könelmesiniň deň bolmazlygyna getirýär.",
+      "engineeringReasonTk": "Dinamik ýüklerde (duruzmak, öwrülmek) wagonyň öz agyrlyk merkezini onuň taslama merkezi çyzygyna ýakyn saklaýar.",
+      "militaryRequirementTk": "Gusenisaly tehnikany berkitmegiň ähli alty tassyklanan usuly üçin hökmanydyr."
+    },
+    {
+      "id": "principle-braking-transfer",
+      "titleTk": "Berkitmezden ozal tehnikanyň hereketsiz edilmegi (durmuş tormozy + yzky bereda)",
+      "principleTk": "Ýerleşdirilenden soň, berkitme başlanmazdan öň tehnikanyň geçirijisi yzky beredada goýulýar we durmuş tormozy işjeňleşdirilýär.",
+      "purposeTk": "Berkitme wagtynda tehnikanyň öňe süýşmeginiň öňüni alýar we ýol wagtynda öňe hereketine passiw garşylyk goşýar.",
+      "physicsTk": "Tormozlanan geçiriji ulgamy tigir/gusenisanyň ýer bilen galtaşyk nokadyndaky öňe hereket güýjüni geçirijide garşylyk momentine öwürýär, netijede diňe duruzyjylaryň/çekmeleriň göterýän agramy azalýar.",
+      "engineeringReasonTk": "Goşmaça goragy üpjün ediş — berkitme enjamlarynyň ölçegi tormozyň ähli ýagdaýda saklap bilmejegini göz öňünde tutup kesgitlenilýär, ýagny tormoz ýeke-täk gulplaýjy hökmünde hasap edilmeýär.",
+      "militaryRequirementTk": "Ähli alty usulyň yzygiderliliginde talap edilýän ädim."
+    },
+    {
+      "id": "principle-chock-placement",
+      "titleTk": "Duruzyjylaryň soňundan ikinji ýol tigiriniň ýanynda ýerleşdirilmegi",
+      "principleTk": "Duruzyja esaslanýan usullar (1 we 2) üçin, duruzyjy enjamy gusenisanyň ýer bilen galtaşýan ýerinde, soňundan ikinji ýol tigiriniň öňünde ýerleşdirilýär — gusenisanyň iň soňky ujunda däl.",
+      "purposeTk": "Bu gusenisanyň aşagyndaky iň durnukly we iň ýokary ýer galtaşyk nokady bolup, tehnikanyň duruzmak ýüklerinde duruzyjynyň üstünden geçmek ähtimallygyny azaldýar.",
+      "physicsTk": "Duruzyjyny gysga wagtlaýyn däl-de, durnukly ýer basyşynyň bolýan nokadynda ýerleşdirmek, tehnikanyň öňe hereket impulsyna-da, päsgelçiligiň üstünden geçmek ýykgynyna-da garşylyk görkezýär.",
+      "engineeringReasonTk": "Ýeňil galtaşyk basyşynyň bolýan nokadynda (mysal üçin, gönüden-göni gollaýjy tigiriň aşagynda) ýerleşdirilen duruzyjynyň döwülmek ýa-da üstünden geçilmek ähtimallygy has ýokary.",
+      "militaryRequirementTk": "1 we 2-nji usullar üçin görkezilen anyk ýerleşdiriş görkezmesi."
+    },
+    {
+      "id": "principle-wire-angle",
+      "titleTk": "Sim çekmäniň sapak sany diňe agram boýunça däl, burç boýunça-da üýtgeýär",
+      "principleTk": "Çekmedäki sim sapaklarynyň sany, çekmäniň wagonyň uzynlygyna oky bilen emele getirýän burçuna WE çekmäniň wagonyň poly bilen emele getirýän burçuna esaslanyp, gözleg tablisasyndan (7-nji tablisa) saýlanylýar — hem dik, hem ýapyk burçlar orta derejeli burça garanyňda has köp sapak talap edýär.",
+      "purposeTk": "Amatsyz burçda ýerleşdirilen çekme öz kesgitlenen dartgysynyň has az bölegini peýdaly gulplaýjy güýç hökmünde geçirýär.",
+      "physicsTk": "Diňe tehnikanyň garaşylýan hereket ugry (takmynan uzynlygyna) boýunça güýç bölegi bu hereketе hakykatdan-da garşylyk görkezýär; hereket ugruna ýakyn parallel ýa-da dik ýerleşdirilen çekme öz dartgysynyň köp bölegini öňe/gapdala süýşmä garşylyk görkezmeýän bölekler üçin ýitirýär, şonuň üçin ýitirilen netijeliligi öwezini dolmak üçin has köp sapak gerek bolýar.",
+      "engineeringReasonTk": "Meýdan toparlaryndan wektor bölekleriniň hasaplamagyny talap etmegiň ýerine, gollanma geometriýany öňünden gözleg tablisasy görnüşinde çözýär.",
+      "militaryRequirementTk": "7-nji tablisa 3-nji usul (gusenisaly) we 2-nji usul (tigirli) sim çekmeleri üçin hökmany girdeji maglumatdyr."
+    },
+    {
+      "id": "principle-vehicle-specific-hardware",
+      "titleTk": "Käbir enjamlar diňe atly tehnika görnüşleri üçin çäklendirilendir",
+      "principleTk": "Demir şporlar (13-nji tablisa), demir başmaklar (11-nji tablisa) we MK-765/S-765 gysgyç ulgamy umumy maksatly däldir — olaryň her biri diňe garşysynda görkezilen anyk tehnika/obýekt belgileri üçin tassyklanandyr.",
+      "purposeTk": "Bu enjamlar anyk gusenisa halkasynyň, ýol tigiriniň ýa-da korpusyň geometriýasyna gabat gelmek üçin şekillendirilendir.",
+      "physicsTk": "Bir gusenisa halkasynyň profili üçin niýetlenen duruzyjy başga bir tehnikanyň hereketlendiriji ulgamynda dogry ornaşmazlyk ýa-da agramy dogry paýlamazlyk ähtimallygy bar.",
+      "engineeringReasonTk": "Tehnika üçin ýörite niýetlenen enjamlary başga tehnikada ulanmak, onuň typmagyna, agram astynda döwülmegine ýa-da gusenisa/tigir bilen umuman birikmezligine sebäp bolup biler.",
+      "militaryRequirementTk": "Şpor saýlamazdan öň 13-nji tablisa boýunça barlag hökmanydyr; elýeterli gollanma tekstine görä, sanawda görkezilen tehnika toplumynyň daşynda çalyşma rugsat edilmeýär."
+    },
+    {
+      "id": "principle-weight-class-method-count",
+      "titleTk": "Enjamlaryň sany tehnikanyň agram toparyna görä üýtgeýär",
+      "principleTk": "Tigirli tehnikalar üçin sim çekmeleriň sany söweş agramy 24 t-dan geçende iki esse artýar (24 t-a çenli 4 çekme, 24,1-40 t aralygynda 8 çekme). Gaýtadan ulanylýan duruzyjy ulgamynyň görnüşi hem agram toparyna görä üýtgeýär.",
+      "purposeTk": "Agyr tehnikalar şol bir haýallama wakasynda has köp kinetiki energiýa döredýär, bu bolsa oňa deň derejede köp gulplama talap edýär.",
+      "physicsTk": "Zerur gulplaýjy güýç massa bilen göni proporsionaldyr (duruzmak/itekleme urgusy wagtynda çak edilýän haýallama üçin F = m*a).",
+      "engineeringReasonTk": "Yzygiderli formulanyň ýerine, gollanma standartlaşdyrylan enjam toplumlaryna baglanyşykly aýry-aýry agram toparlaryny ulanýar, şonuň üçin meýdanda hasaplama geçirmek talap edilmeýär.",
+      "militaryRequirementTk": "Enjam saýlamazdan öň agram topary boýunça barlag hökmanydyr (8, 9, 15-nji tablisalar)."
+    }
+  ]
+}

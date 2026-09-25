@@ -1,0 +1,27 @@
+{
+  "_comment": "Turkmen translation of platforms.json's 'notes' and 'notApprovedReason' fields. 'name' is intentionally not translated — treated as a platform identifier/classification label.",
+  "platforms": [
+    {
+      "id": "plat-generic-open-flatcar",
+      "notesTk": "Gapdal demir gyralaryndan göni geçmek (rampasyz) diňe ýokardaky ok agramy/ýer basyşy çäklerinde mümkindir; has agyr ýükler üçin ýükleme rampalary ýa-da gapdal ýükleme gurluşlary gerek — 51-nji madda serediň."
+    },
+    {
+      "id": "plat-echelon-class-40wagon",
+      "notesTk": "Bu I-nji bapdan alnan otly düzüminiň agram topary bolup, aýratyn wagon modeli däldir. 'Şertli wagon' gollanmanyň standart hasap birligidir: ýüklenen ýük wagony = 33 t arassa, ýumşak klas ýolagçy wagony = 3 t, gaty klas kupe = 4 t, platskart = 6 t, umumy klas = 8 t (5-nji maddanyň esasy teksti)."
+    },
+    {
+      "id": "plat-covered-wagon",
+      "notesTk": "Wagon görnüşi saýlanýan tapgyrda dogry jogap däl-de, ret edilmeli ýalňyş jogap hökmünde hödürlenýär.",
+      "notApprovedReasonTk": "Ýapyk wagon gaplanan ýükler üçindir. Zynjyrly we tigirli harby tehnikalar AÇYK wagonlara ýerleşdirilýär we berkidilýär — çeşmedäki ähli plakatlar «... demir ýoluň açyk wagonlaryna ...» diýip atlandyrylýar, we berkitme usullarynyň hiç biri (wagonyň poluna çüýlenýän direg agaç bölekleri, poluň halkalaryna sim çekmeler, gapdal ramanyň gysgyçlary) ýapyk gövrede ulanylyp bilinmeýär."
+    },
+    {
+      "id": "plat-tank-wagon",
+      "notesTk": "Wagon görnüşi saýlanýan tapgyrda dogry jogap däl-de, ret edilmeli ýalňyş jogap hökmünde hödürlenýär.",
+      "notApprovedReasonTk": "Sisterna wagony suwuk ýükler üçindir we onuň ýük poly asla ýokdur: direg agaç bölegini çüýlemäge pol, gysgyç berkitmäge gapdal rama ýok. Tehnikalar açyk wagonlara ýüklenýär."
+    },
+    {
+      "id": "plat-echelon-class-57wagon",
+      "notesTk": "Bu I-nji bapdan alnan otly düzüminiň agram topary bolup, aýratyn wagon modeli däldir: 3000 tonna çenli, 57 şertli wagon."
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+# Builds the Windows .exe without anyone owning a Windows PC.
+#
+# GitHub runs it on a windows-latest machine that already has Visual Studio and
+# the C++ toolchain. Push, wait a few minutes, download the artifact.
+#
+# Needs this project to be its own git repository with a GitHub remote — see
+# the note in tools/build_windows_exe.md.
+name: windows-exe
+
+on:
+  push:
+    branches: [main, master]
+  workflow_dispatch:      # also runnable by hand from the Actions tab
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+
+      - run: flutter config --enable-windows-desktop
+      - run: flutter pub get
+
+      # The suite must pass before a build is worth shipping: this program
+      # grades soldiers, and a wrong verdict is worse than no build.
+      - run: flutter analyze lib test
+      - run: flutter test
+
+      - run: flutter build windows --release
+
+      # The Microsoft C runtime, copied in beside the program so the machine
+      # that runs it needs nothing installed at all.
+      - name: Bundle the C runtime
+        shell: pwsh
+        run: |
+          $release = 'build\windows\x64\runner\Release'
+          $vs = & "${env:ProgramFiles(x86)}\Microsoft Visual Studio\Installer\vswhere.exe" -latest -property installationPath
+          $crt = Get-ChildItem "$vs\VC\Redist\MSVC\*\x64\Microsoft.VC*.CRT" -Directory |
+                 Sort-Object FullName -Descending | Select-Object -First 1
+          # The whole folder, not a hand-picked few: which runtime DLLs a build
+          # touches depends on the plugins compiled in.
+          Copy-Item "$($crt.FullName)\*.dll" $release -Force
+          Get-ChildItem $release | Select-Object Name, Length
+
+      # Proof, not belief: every DLL the program imports must be either a
+      # Windows system DLL or sitting in the folder we are about to ship. This
+      # is the check that catches "works on the build machine" — the runner has
+      # Visual Studio installed, so without it a missing runtime would go
+      # unnoticed until a trainee's PC refused to start the program.
+      - name: Prove it needs nothing installed
+        shell: pwsh
+        run: |
+          $release = 'build\windows\x64\runner\Release'
+          $vs = & "${env:ProgramFiles(x86)}\Microsoft Visual Studio\Installer\vswhere.exe" -latest -property installationPath
+          $dumpbin = Get-ChildItem "$vs\VC\Tools\MSVC\*\bin\Hostx64\x64\dumpbin.exe" | Select-Object -First 1
+          $shipped = (Get-ChildItem $release -Filter *.dll).Name + @('railsim.exe')
+
+          # Present on every supported Windows; never shipped by an application.
+          $system = @('kernel32.dll','user32.dll','gdi32.dll','shell32.dll','ole32.dll',
+                      'oleaut32.dll','advapi32.dll','comdlg32.dll','dwmapi.dll','shlwapi.dll',
+                      'winmm.dll','ws2_32.dll','crypt32.dll','bcrypt.dll','dbghelp.dll',
+                      'uxtheme.dll','imm32.dll','setupapi.dll','cfgmgr32.dll','rpcrt4.dll',
+                      'd3d11.dll','dxgi.dll','d3dcompiler_47.dll','api-ms-win-core','api-ms-win-crt',
+                      'ntdll.dll','msvcrt.dll','version.dll','propsys.dll','wtsapi32.dll')
+
+          $missing = @()
+          foreach ($bin in @("$release\railsim.exe") + (Get-ChildItem $release -Filter *.dll).FullName) {
+            $out = & $dumpbin.FullName /dependents $bin
+            foreach ($line in $out) {
+              if ($line -match '^\s{4}(\S+\.dll)\s*$') {
+                $dep = $matches[1]
+                if ($system | Where-Object { $dep -like "$_*" }) { continue }
+                if ($shipped -contains $dep) { continue }
+                $missing += "$(Split-Path $bin -Leaf) needs $dep"
+              }
+            }
+          }
+          if ($missing) {
+            $missing | Sort-Object -Unique | ForEach-Object { Write-Host "MISSING: $_" }
+            throw "the build depends on DLLs it does not ship — it would not start on a clean Windows PC"
+          }
+          Write-Host 'OK: every dependency is either a Windows system DLL or shipped in the folder.'
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: RailSim-windows-x64
+          path: build/windows/x64/runner/Release/

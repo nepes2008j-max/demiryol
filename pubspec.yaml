@@ -1,0 +1,102 @@
+name: railsim
+description: >
+  Military Railway Loading Simulator — an educational engineering trainer
+  for securing armored vehicles on railway flatcars, built strictly from
+  the source handbook: "Rules for transporting troops by rail, water, and
+  air transport" (Order No. 145/175-ö, 03 July 2019).
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: '>=3.3.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # State management
+  flutter_riverpod: ^2.5.1
+
+  # Routing
+  go_router: ^14.2.0
+
+  # Where the exported result sheet is written
+  path: ^1.9.0
+  path_provider: ^2.1.3
+
+  # JSON <-> Dart (manual models; codegen avoided so the project builds
+  # without network access to pub.dev's build_runner toolchain)
+  collection: ^1.18.0
+
+  # The printable result sheet. `pdf` builds the document; it is written to a
+  # file rather than sent to a printer, so `printing` is not needed — these
+  # machines may have no printer configured, and an instructor wants the file.
+  pdf: ^3.11.0
+
+  # Icons
+  cupertino_icons: ^1.0.6
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+  # Plain-Dart-VM test runner for the model/domain unit tests (test/*.dart),
+  # which have no Flutter widget/binding dependency and so don't need the
+  # flutter_test engine harness.
+  test: ^1.24.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/data/vehicles.json
+    - assets/data/platforms.json
+    - assets/data/principles.json
+    - assets/data/attachments.json
+    - assets/data/measurements.json
+    - assets/data/references.json
+    - assets/data/rules.json
+    - assets/data/photos.json
+    # Illustrative vehicle photographs (Wikimedia Commons) — not handbook
+    # figures; see lib/data/models/vehicle_photo.dart.
+    - assets/data/vehicle_photos.json
+    # Model files for individual vehicles, with the licence each is
+    # redistributed under. See assets/models/README.md.
+    - assets/data/vehicle_models.json
+    - assets/models/
+    - assets/data/localization/principles_tk.json
+    - assets/data/localization/rules_tk.json
+    - assets/data/localization/attachments_tk.json
+    - assets/data/localization/references_tk.json
+    - assets/data/localization/photos_tk.json
+    - assets/data/localization/vehicles_tk.json
+    - assets/data/localization/platforms_tk.json
+    - assets/images/
+    - assets/images/plates/
+    # assets/images/ui/ is deliberately NOT bundled. The one file in it,
+    # wagon-counter-wheel.png, is the customer brief's photograph of a ship's
+    # helm for the wagon counter. The counter draws its own dial now, so
+    # nothing references the file; it stays on disk because it is the
+    # customer's material to keep or discard, and it stays out of the manifest
+    # because a raster shipped inside the binary has to carry its provenance
+    # and this one has none.
+    - assets/images/figures/
+    - assets/images/vehicles/
+    - assets/images/vehicles/cutouts/
+    - assets/images/rolling_stock/
+
+  # Bundled so the interface does not depend on whatever the host machine has
+  # installed, and because both families cover the Turkmen letters (ä ň ö ü ý
+  # ş ž) the whole app is written in. Noto is SIL OFL 1.1; the files come from
+  # the system's fonts-noto-core package.
+  fonts:
+    - family: NotoSans
+      fonts:
+        - asset: assets/fonts/NotoSans-Regular.ttf
+        - asset: assets/fonts/NotoSans-Bold.ttf
+          weight: 700
+    - family: NotoSansMono
+      fonts:
+        - asset: assets/fonts/NotoSansMono-Regular.ttf
+        - asset: assets/fonts/NotoSansMono-Bold.ttf
+          weight: 700
+

@@ -1,0 +1,126 @@
+{
+  "_comment": "Turkmen translations of rules.json's prose fields (description, failMessage, and the six approved methods' name), keyed the same way as rules.json. The 'condition'/'lookup'/'lookupTable'/'appliesTo' fields are engineering logic, not prose, and have no Turkmen counterpart here on purpose.",
+  "rules": [
+    {
+      "id": "rule-axle-load-wheeled-ramp",
+      "descriptionTk": "Rampasyz wagonyň gapdal demir gyralaryndan geçilende iň ýokary ok agramy.",
+      "failMessageTk": "Ok agramy 10 t-dan geçýär — tehnika ýükleme rampalarysyz wagonyň gapdal demir gyralaryndan geçip bilmez (51-nji madda)."
+    },
+    {
+      "id": "rule-ground-pressure-tracked-ramp",
+      "descriptionTk": "Rampasyz wagonyň gapdal demir gyralaryndan geçilende iň ýokary aýratyn ýer basyşy.",
+      "failMessageTk": "Ýer basyşy 0.8 kg/sm²-den geçýär — tehnika ýükleme rampalarysyz wagonyň gapdal demir gyralaryndan geçip bilmez (51-nji madda)."
+    },
+    {
+      "id": "rule-tracked-special-case-max",
+      "descriptionTk": "Gapdal rampalar (köpürjik plitalarsyz gapdal ýükleme gurluşlary) arkaly ýüklenýän gusenisaly tehnikalar üçin aýratyn ýagdaýdaky iň ýokary söweş agramy.",
+      "failMessageTk": "Söweş agramy köpürjik plitalarsyz gapdal rampa arkaly ýükleme üçin bellenen aýratyn ýagdaýdaky 15 t çägini geçýär (51-nji madda)."
+    },
+    {
+      "id": "rule-cog-height-method-eligibility",
+      "descriptionTk": "Alty standart berkitme usuly (14-nji goşmaçanyň 4-nji bölümi) berk hereketlendiriji ulgamy/tormozlary we agyrlyk merkeziniň wagon palubasyndan 1.5 m-den ýokary bolmazlygyny göz öňünde tutýar.",
+      "failMessageTk": "Agyrlyk merkezi wagon palubasyndan 1.5 m-den ýokary — çykarylan gollanma teksti bu konfigurasiýa üçin 1-6-njy standart berkitme usullaryny tassyklamaýar; ýokary agyrlyk merkezli tehnikalar üçin degişli amal gollanmanyň bu bölekde alnan sahypalarynda ýazylyp getirilmändir."
+    },
+    {
+      "id": "rule-symmetry-tolerance",
+      "descriptionTk": "Wagonyň gyralaryndan çykyp duran ýapyşygyň sag we çep tarapy diýen ýaly deň bolmaly.",
+      "failMessageTk": "Sag we çep gusenisa ýapyşygynyň arasyndaky tapawut 40 mm-den geçýär — tehnika wagonyň uzynlygyna okunda simmetrik ýerleşdirilmedik (34-nji madda)."
+    },
+    {
+      "id": "rule-wheeled-lashing-count",
+      "descriptionTk": "2-nji usul üçin söweş agram topary boýunça sim çekmeleriň sany."
+    },
+    {
+      "id": "rule-reusable-chock-tracked-selection",
+      "descriptionTk": "Söweş agram topary boýunça KGUUB gusenisaly duruzyjy görnüşiniň saýlanylyşy."
+    },
+    {
+      "id": "rule-reusable-chock-wheeled-selection",
+      "descriptionTk": "Söweş agram topary boýunça KGUUB tigirli duruzyjy görnüşiniň saýlanylyşy."
+    },
+    {
+      "id": "rule-wire-strand-count",
+      "descriptionTk": "(Ok burçy, pol burçy) boýunça 7-nji tablisadan sim çekme sapak sanynyň gözlenilişi."
+    },
+    {
+      "id": "rule-vehicle-specific-hardware-lookup",
+      "descriptionTk": "Eger tehnikanyň gollanmadaky 'obýekt' belgisi 13-nji tablisada (demir şporlar) ýa-da 11-nji tablisada (demir başmaklar) bar bolsa, umumy usulyň ýerine şol anyk enjam hökmanydyr."
+    },
+    {
+      "id": "rule-tracked-chock-arrangement",
+      "descriptionTk": "Zynjyrly tehnikada direg agaç bölekleriniň we ara goýulýan agaç bölekleriniň nähili ýerleşdirilýändigi, hem-de gapdal süýşmäniň öňüni almagyň iki resmi usuly.",
+      "failMessageTk": "Her bir zynjyrly maşyn dört sany direg agaç bölegi we keseligine dört sany ýarym aýlaw ara goýulýan agaç bölegi (her tarapyna iki sany) bilen berkidilýär; gapdal süýşmä garşy 12 sany skoba ýa-da 100*100*2000 mm agaç bölekleri ulanylýar (plakat 02)."
+    },
+    {
+      "id": "rule-wheeled-chock-arrangement",
+      "descriptionTk": "Tigirli tehnika üçin çyzylan alty ýerleşdiriş ýagdaýy: agram toparyna we ok sanyna görä, bir açyk wagonda hem-de iki wagonyň tirkeginiň üstünde.",
+      "failMessageTk": "Ýerleşdiriş bu tehnika üçin çyzylan ýagdaýlaryň hiç birine gabat gelmeýär: 5,5 t çenli dört, 5,6-12 t üçin sekiz sany dörtgyraň agaç bölegi; üç okly tehnikanyň orta we yzky oklarynda hem-de 5,5 t we ondan agyr tehnika tirkegiň üstünde ýerleşdirilende sany iki esse köpeldilýär (plakat 06)."
+    },
+    {
+      "id": "rule-wheeled-chock-count",
+      "descriptionTk": "Bir tigirli tehnika üçin bir gezeklik dörtgyraň agaç bölekleriniň sany, söweş agramyna görä.",
+      "failMessageTk": "Agaç bölekleriniň sany agram toparyna gabat gelmeýär — 5,5 t çenli 4 sany, 5,6-12 t üçin 8 sany; tirkegiň üstünde ýa-da üç okly tehnikanyň orta we yzky tigirlerinde sany iki esse köpeldilýär (plakat 06)."
+    },
+    {
+      "id": "rule-chock-nail-count",
+      "descriptionTk": "Bir gezeklik dörtgyraň agaç bölegini wagonyň poluna berkidýän çüýleriň sany.",
+      "failMessageTk": "Her uzynlygyna goýlan agaç bölegi 6 mm x 200 mm ölçegli dört çüý bilen, her gapdal agaç bölegi bolsa alty çüý bilen berkidilýär (plakat 06)."
+    },
+    {
+      "id": "rule-lateral-chock-gap",
+      "descriptionTk": "Gapdal dörtgyraň agaç bölegi bilen tigriň daş ýüzüniň arasyndaky aralyk.",
+      "failMessageTk": "Gapdal agaç bölekleri öň tigirleriň daş ýüzünden 20-30 mm aralykda goýulýar (tehnika tirkegiň üstünde dursa 15-20 mm) (plakat 06)."
+    },
+    {
+      "id": "rule-kguub-chock-spacing",
+      "descriptionTk": "Iki KGUUB direginiň zynjyr boýunça arasyndaky aralyk.",
+      "failMessageTk": "KGUUB diregleriniň arasy 1,7 metrden az bolmaly däl; olar zynjyryň relse daýanýan ýerinden 0,5 metr uzaklykda goýlup bilner (plakat 04)."
+    },
+    {
+      "id": "rule-placement-clearance",
+      "descriptionTk": "Plakatlarda ölçeg bilen görkezilen, wagonlara ýüklenen tehnikalaryň arasyndaky iň az aralyk.",
+      "failMessageTk": "Tehnikalar plakatda şu ýagdaý üçin görkezilen aralykdan has ýakyn dur."
+    },
+    {
+      "id": "rule-overhang-guard-wagon",
+      "descriptionTk": "Ýüküň açyk wagonyň ujundan daşyna çykmagy (sallanma).",
+      "failMessageTk": "Açyk wagondan daşyna çykýan sallanma 400 mm-den geçýär — gorag wagonyny goýmak hökmandyr (plakat 05)."
+    },
+    {
+      "id": "rule-lashing-max-angle",
+      "descriptionTk": "Sim çekmäniň wagonyň poluna bolan iň uly burçy.",
+      "failMessageTk": "Sim çekmäniň wagonyň poluna bolan burçy 45 gradusdan köp bolmaly däl (plakat 05)."
+    },
+    {
+      "id": "rule-tracked-chock-seating-distance",
+      "descriptionTk": "Gusenisaly tehnika berkidilende direg agaç böleginiň ýöreýiş bölekden goýulýan aralygy.",
+      "failMessageTk": "Agaç bölegi ýöreýiş bölekden 10-15 sm aralykda goýulýar (ikinji ýerleşdirişde 10-20 sm) (plakat 03)."
+    }
+  ],
+  "sixApprovedTrackedMethods": [
+    {
+      "method": 1,
+      "descriptionTk": "Gaýtadan ulanylýan uniwersal duruzyjylar (KGUUB-1G/2G)"
+    },
+    {
+      "method": 2,
+      "descriptionTk": "Demir şporlar (Ş-topary)"
+    },
+    {
+      "method": 3,
+      "descriptionTk": "Agaç duruzyjylar + sim çekmeler"
+    },
+    {
+      "method": 4,
+      "descriptionTk": "Demir başmaklar + aralyk tagtalar"
+    },
+    {
+      "method": 5,
+      "descriptionTk": "Agaç duruzyjylar + aralyk tagtalar"
+    },
+    {
+      "method": 6,
+      "descriptionTk": "Dartgyç-gysgyçlar + gysgyçlar (MK-765/S-765)"
+    }
+  ]
+}

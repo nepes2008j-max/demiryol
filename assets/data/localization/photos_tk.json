@@ -1,0 +1,233 @@
+{
+  "_comment": "Turkmen translations of photos.json's 'caption' field, keyed by photo id. figureNumber and file (asset path) are untouched.",
+  "photos": [
+    {
+      "id": "fig-15.8",
+      "captionTk": "Bir gezeklik ulanylýan uzynlygyna we gapdal agaç duruzyjylar"
+    },
+    {
+      "id": "fig-15.10",
+      "captionTk": "Gaýtadan ulanylýan çekmeler (mehanizmleşdirilen streplar): (a) sim/ýüp çekme, (b) zynjyr çekme"
+    },
+    {
+      "id": "fig-15.11",
+      "captionTk": "Gusenisaly tehnikalar üçin KGUUB-1G gaýtadan ulanylýan uniwersal duruzyjy: 1 - yzky beýiklik dişlisi, 2 - esas plastinkasy, 3 - çüýler"
+    },
+    {
+      "id": "fig-15.12",
+      "captionTk": "Tigirli tehnikalar üçin gaýtadan ulanylýan uniwersal duruzyjylar: (a) KGUUB-16S, (b) KGUUB-1K — 1 sütün, 2 berkitme gurluşy, 3 çüýler, 4 çarçuwa, 5 esas, 6 esas plastinkasy"
+    },
+    {
+      "id": "fig-15.13a",
+      "captionTk": "Demir şporlar, 1-nji görnüş"
+    },
+    {
+      "id": "fig-15.13b",
+      "captionTk": "Demir şporlar: 1 plastinka, 2 plastinka dişlisi, 3 goldaw, 4 çäklendiriji, 5 berkitme gurluşy, 6 bölünen çüý, 7 çäklendiriji deşikler"
+    },
+    {
+      "id": "fig-15.14",
+      "captionTk": "Demir başmaklar: (a) KTT, (b) KT-137, (c) KT-34 — T-34, IS-4, T-10, T-54, T-55, PT-76, BTR-50P üçin"
+    },
+    {
+      "id": "fig-15.15",
+      "captionTk": "(a) MK-765 dartgyç-gysgyjy, (b) S-765 gysgyjy"
+    },
+    {
+      "id": "fig-15.16ab",
+      "captionTk": "Gusenisaly tehnikalar üçin KGUUB-2G berkitme yzygiderligi: (a) tehnikanyň ýerleşdirilişi we birinji duruzyjy jübütiniň ýeri, (b) gusenisa gyrasyndaky ýumurlaryň aşagyndaky duruzyjy ýeri"
+    },
+    {
+      "id": "fig-15.16cde",
+      "captionTk": "KGUUB-2G berkitme yzygiderliginiň dowamy: ikinji duruzyjy jübütiniň ýerleşdirilişi we ýerleşdiriş görnüşleri"
+    },
+    {
+      "id": "fig-15.16ae",
+      "captionTk": "Birinji we ikinji duruzyjy jübütleriniň arasyndaky iň az rugsat edilen aralyk (>=1.7 m)"
+    },
+    {
+      "id": "fig-15.17ab",
+      "captionTk": "Demir şpor berkitme yzygiderligi: (a) şpor ýerini kesgitlemek, (b) birinji şpor jübütini gusenisa berkitmek"
+    },
+    {
+      "id": "fig-15.17cd",
+      "captionTk": "Demir şpor berkitme yzygiderliginiň dowamy: (c) ikinji şpor jübütini berkitmek, (d) soňky ulag ýagdaýy"
+    },
+    {
+      "id": "fig-15.18",
+      "captionTk": "Gusenisaly tehnikany sim çekmeler we agaç duruzyjylar bilen berkitmek: 1 duruzyjy, 2 sim çekme"
+    },
+    {
+      "id": "fig-15.26",
+      "captionTk": "2 we 3 oklyk tigirli tehnikalary KGUUB-1K gaýtadan ulanylýan uniwersal duruzyjylary bilen berkitmek"
+    },
+    {
+      "id": "fig-15.27",
+      "captionTk": "4 oklyk tigirli tehnikalary bir toplum KGUUB-2K bilen berkitmek"
+    },
+    {
+      "id": "fig-15.28",
+      "captionTk": "4 oklyk tigirli tehnikalary (mysal üçin, MAZ-543 görnüşli) iki toplum KGUUB-2K bilen berkitmek"
+    },
+    {
+      "id": "fig-15.29",
+      "captionTk": "Iki wagonyň birleşme böleginde ýerleşýän 2 we 3 oklyk tigirli tehnikalary KGUUB-1K bilen berkitmek"
+    },
+    {
+      "id": "fig-15.30",
+      "captionTk": "Gaýtadan ulanylýan uniwersal duruzyjylar üçin uzynlygyna we kese sütün ýerleşdirilişi"
+    },
+    {
+      "id": "fig-15.31",
+      "captionTk": "3 oklyk tehnikany we 2 oklyk tirkegi sim çekmeler we agaç duruzyjylar bilen berkitmek: 1 çekme, 2 duruzyjy"
+    },
+    {
+      "id": "plate-01",
+      "captionTk": "Zynjyrly harby tehnikalary demir ýoluň açyk wagonlaryna ýerleşdirmek we berkitmek: agaç bölekleriň görnüşleri we ölçegleri, gysgyç çekmeler (MK-765, S-765) hem-de aralyk ölçegleri."
+    },
+    {
+      "id": "plate-02",
+      "captionTk": "Zynjyrly harby tehnikalary demir ýoluň açyk wagonlaryna ýerleşdirmek we berkitmek — direg dört gyrag agaç bölekleri we ara goýulýan agaç bölekleri arkaly hem-de gysgyç çekmeler we gysgyçlar arkaly."
+    },
+    {
+      "id": "plate-03",
+      "captionTk": "Zynjyrly harby tehnikalary demir ýoluň açyk wagonlaryna berkitmek — direg agaç bölekleri we sim (bir nusgaly) çekmeler arkaly. TABLISSA №1 we №2 bilen."
+    },
+    {
+      "id": "plate-04",
+      "captionTk": "Zynjyrly harby tehnikalary demir ýoluň açyk wagonlaryna berkitmek — köp gezek ulanylýan uniwersal berkidijiler (KGUUB-1G, KGUUB-2G) bilen hem-de demir direg başmaklar (KTP, KTT) we ara goýulýan agaç bölekleri arkaly."
+    },
+    {
+      "id": "plate-05",
+      "captionTk": "Harby tigirli maşynlary demir ýoluň açyk wagonlaryna berkitmek — direg dört gyraň agaç bölekleri we sim (bir nusgaly) çekmeler arkaly."
+    },
+    {
+      "id": "plate-06",
+      "captionTk": "Harby tigirli maşynlary demir ýoluň açyk wagonlaryna berkitmek — köp gezek ulanylýan uniwersal berkidijiler (KGUUB-1K, KGUUB-2K) arkaly."
+    },
+    {
+      "id": "plate-08a",
+      "captionTk": "Howpsuzlyk çäreleri."
+    },
+    {
+      "id": "plate-08b",
+      "captionTk": "Howpsuzlyk çäreleri, ikinji sahypa."
+    },
+    {
+      "id": "plate-09",
+      "captionTk": "Harby eşelonyň söweşjeň üpjünçiliginiň gurnalyşy: ýükleýiş-düşüriş meýdançasy, ÝDM-1 we ÝDM-2, patrul ugurlary we şertli belgiler."
+    },
+    {
+      "id": "fig-tracked-methods-overview",
+      "captionTk": "Demir ýol açyk wagonlarynda harby zynjyrly maşynlaryň berkidilişiniň alty tassyklanan usuly."
+    },
+    {
+      "id": "fig-tracked-method-1",
+      "captionTk": "Zynjyrly 1-nji usul: köp gezek ulanylýan uniwersal berkidijiler arkaly."
+    },
+    {
+      "id": "fig-tracked-method-2",
+      "captionTk": "Zynjyrly 2-nji usul: demir şporlar arkaly."
+    },
+    {
+      "id": "fig-tracked-method-3",
+      "captionTk": "Zynjyrly 3-nji usul: direg dörtgyraň agaç bölekleri we sim (bir nusgaly) çekmeler arkaly."
+    },
+    {
+      "id": "fig-tracked-method-4",
+      "captionTk": "Zynjyrly 4-nji usul: demir direg başmaklar we ara goýulýan agaç bölekleri arkaly."
+    },
+    {
+      "id": "fig-tracked-method-5",
+      "captionTk": "Zynjyrly 5-nji usul: direg dörtgyraň agaç bölekleri we ara goýulýan agaç bölekleri arkaly."
+    },
+    {
+      "id": "fig-tracked-method-6",
+      "captionTk": "Zynjyrly 6-njy usul: gysgyç-çekmeler we gysgyçlar arkaly."
+    },
+    {
+      "id": "fig-kguub-1g-2g",
+      "captionTk": "Zynjyrly tehnika üçin KGUUB-1G we KGUUB-2G köp gezek ulanylýan uniwersal berkidijiler; bölekleri we agram çäkleri (7-25 t we 25,1-42 t)."
+    },
+    {
+      "id": "fig-iron-spur-types",
+      "captionTk": "Demir şporlaryň görnüşleri: Ş-137, Ş-375, Ş-575 we Ş-915, bölekleri bilen."
+    },
+    {
+      "id": "fig-tracked-consumables-tables",
+      "captionTk": "TABLISSA №1 we №2: zynjyrly tehnikanyň agramyna görä sarp edilýän berkidiji serişdeler we agaç bölekleriň iň az ölçegleri."
+    },
+    {
+      "id": "fig-wood-chock-shapes",
+      "captionTk": "Direg dört gyraň agaç bölekleriniň görnüşleri; tablisalarda görkezilen beýikligi (h) we ini (b)."
+    },
+    {
+      "id": "fig-lashing-angle-45",
+      "captionTk": "Sim çekmäniň wagonyň poluna bolan burçy 45 gradusdan köp bolmaly däl; sapaklaryň sany çekmäniň iň gowşak tarapyna görä kesgitlenýär."
+    },
+    {
+      "id": "fig-iron-chock-boot-ktp-ktt",
+      "captionTk": "KTP we KTT görnüşli demir direg başmaklar, bölekleri bilen: KTP — BTR-50P we PT-76 binýadyndaky, KTT — IS-5 we T-10 binýadyndaky tehnika üçin."
+    },
+    {
+      "id": "fig-tracked-chock-boot-securing",
+      "captionTk": "Zynjyrly tehnikanyň dört sany demir direg başmak we ara goýulýan agaç bölekleri bilen berkidilişi, agaç bölekleriň zynjyra galtaşyşy jikme-jik görkezilen."
+    },
+    {
+      "id": "fig-wheeled-methods-overview",
+      "captionTk": "Demir ýol açyk wagonlarynda harby tigirli awtoulaglaryň berkidilişiniň üç usuly."
+    },
+    {
+      "id": "fig-wheeled-method-1",
+      "captionTk": "Tigirli 1-nji usul: köp gezek ulanylýan uniwersal berkidijiler arkaly."
+    },
+    {
+      "id": "fig-wagon-plan-chock-layout",
+      "captionTk": "Ýüklenen açyk wagonyň ýokardan görnüşi: tigirleriň yzy, direg we gapdal agaç bölekleri hem-de sim çekmeleriň ugry."
+    },
+    {
+      "id": "fig-kguub-wheeled-under-tyre",
+      "captionTk": "Tigirli tehnikanyň tigriniň aşagynda goýlan köp gezek ulanylýan uniwersal berkidiji."
+    },
+    {
+      "id": "fig-kguub-1k",
+      "captionTk": "KGUUB-1K görnüşli köp gezek ulanylýan berkidiji — 15 tonna çenli agramly tigirli tehnika üçin."
+    },
+    {
+      "id": "fig-kguub-2k",
+      "captionTk": "KGUUB-2K görnüşli köp gezek ulanylýan berkidiji — 15,1-26 tonna agramly tigirli tehnika üçin; 26,1-40 tonna bolsa iki toplum ulanylýar."
+    },
+    {
+      "id": "fig-wheeled-method-2",
+      "captionTk": "Tigirli 2-nji usul: direg dörtgyraň agaç bölekleri we sim (bir nusgaly) çekmeler arkaly."
+    },
+    {
+      "id": "fig-wire-lashings-and-consumables",
+      "captionTk": "Bir nusgaly çekmeler — urganly (trosly) we zynjyrly — bölekleri bilen, hem-de bir sany tigirli tehnika sarp edilýän serişdeleriň agrama we tormaz ýagdaýyna görä tablisasy."
+    },
+    {
+      "id": "fig-wheeled-chock-shapes-and-sizes",
+      "captionTk": "Tigirli tehnika üçin agaç bölekleriň görnüşleri, tigriň diametrine görä iň az ölçegleriň tablisasy we wagonyň polunda goýlan agaç bölegi."
+    },
+    {
+      "id": "fig-wheeled-method-3",
+      "captionTk": "Tigirli 3-nji usul: bir nusgaly direg dörtgyraň agaç bölekleri we gapdal dörtgyraň agaç bölekleri arkaly."
+    },
+    {
+      "id": "fig-wheeled-chock-layout-cases",
+      "captionTk": "Direg we gapdal agaç bölekleriniň tigriň aşagyna ýerleşdirilişiniň alty ýagdaýy: 5,5 tonna çenli, 5,6-12 tonna, üç okly, we şolaryň iki wagonyň tirkeg ýerinde goýlan ýagdaýlary."
+    },
+    {
+      "id": "fig-wheeled-chock-securing",
+      "captionTk": "Tigirli tehnikanyň açyk wagonda direg we gapdal dörtgyraň agaç bölekleri bilen berkidilişi, tigriň ýanyndaky agaç bölek jübüti jikme-jik görkezilen."
+    },
+    {
+      "id": "fig-clamp-s765",
+      "captionTk": "S-765 gysgyç, bölekleri bilen: 1 — ýaý görnüşli demir berkidiji (skoba), 2 — berkidiji bolt, 3 — kontrgaýka."
+    },
+    {
+      "id": "fig-clamp-mk765",
+      "captionTk": "MK-765 gysgyç çekme, bölekleri bilen: 1 — ýaý görnüşli demir berkidiji (skoba), 2 — gaýka, 3 — berkidiji gaýka, 4 — ok, 5 — gysyp alyjy."
+    }
+  ]
+}

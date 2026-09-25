@@ -1,0 +1,404 @@
+{
+  "_comment": "These are the actual figures embedded in the handbook docx (word/media/*.png), copied verbatim — not redrawn or reinterpreted. Captions are Claude's English paraphrase of the original Turkmen figure captions.",
+  "photos": [
+    {
+      "id": "fig-15.8",
+      "file": "images/image34.png",
+      "figureNumber": "15.8",
+      "caption": "Single-use longitudinal and side wood stop-blocks",
+      "referenceId": "para-21"
+    },
+    {
+      "id": "fig-15.10",
+      "file": "images/image35.png",
+      "figureNumber": "15.10",
+      "caption": "Reusable lashings (mechanized strops): (a) wire/rope lashing, (b) chain lashing",
+      "referenceId": "para-19"
+    },
+    {
+      "id": "fig-15.11",
+      "file": "images/image36.png",
+      "figureNumber": "15.11",
+      "caption": "KGUUB-1G reusable universal chock for tracked vehicles: 1 - rear-height comb, 2 - base plate, 3 - pins",
+      "referenceId": "para-29"
+    },
+    {
+      "id": "fig-15.12",
+      "file": "images/image37.png",
+      "figureNumber": "15.12",
+      "caption": "Reusable universal chocks for wheeled vehicles: (a) KGUUB-16S, (b) KGUUB-1K — 1 post, 2 fastening structure, 3 pins, 4 frame, 5 base, 6 base plate",
+      "referenceId": "para-30"
+    },
+    {
+      "id": "fig-15.13a",
+      "file": "images/image38.png",
+      "figureNumber": "15.13",
+      "caption": "Iron spurs, view 1",
+      "referenceId": "para-31"
+    },
+    {
+      "id": "fig-15.13b",
+      "file": "images/image39.png",
+      "figureNumber": "15.13",
+      "caption": "Iron spurs: 1 plate, 2 plate comb, 3 support, 4 limiter, 5 fastening structure, 6 split pin, 7 limiter holes",
+      "referenceId": "para-31"
+    },
+    {
+      "id": "fig-15.14",
+      "file": "images/image40.png",
+      "figureNumber": "15.14",
+      "caption": "Iron chock-boots: (a) KTT, (b) KT-137, (c) KT-34 — for T-34, IS-4, T-10, T-54, T-55, PT-76, BTR-50P",
+      "referenceId": "para-32"
+    },
+    {
+      "id": "fig-15.15",
+      "file": "images/image41.png",
+      "figureNumber": "15.15",
+      "caption": "(a) MK-765 clamp-tensioner, (b) S-765 clamp",
+      "referenceId": "para-33"
+    },
+    {
+      "id": "fig-15.16ab",
+      "file": "images/image42.png",
+      "figureNumber": "15.16",
+      "caption": "KGUUB-2G securing sequence for tracked vehicles: (a) vehicle positioning and first chock-pair location, (b) chock location under the track edge lugs",
+      "referenceId": "para-36"
+    },
+    {
+      "id": "fig-15.16cde",
+      "file": "images/image43.png",
+      "figureNumber": "15.16",
+      "caption": "KGUUB-2G securing sequence continued: second chock-pair positioning and placement variants",
+      "referenceId": "para-38"
+    },
+    {
+      "id": "fig-15.16ae",
+      "file": "images/image44.png",
+      "figureNumber": "15.16",
+      "caption": "Minimum permitted spacing between the first and second chock pairs (>=1.7m)",
+      "referenceId": "para-38"
+    },
+    {
+      "id": "fig-15.17ab",
+      "file": "images/image45.png",
+      "figureNumber": "15.17",
+      "caption": "Iron spur securing sequence: (a) determining spur location, (b) fastening the first spur pair to the track",
+      "referenceId": "para-39"
+    },
+    {
+      "id": "fig-15.17cd",
+      "file": "images/image46.png",
+      "figureNumber": "15.17",
+      "caption": "Iron spur securing sequence continued: (c) fastening the second spur pair, (d) final transport position",
+      "referenceId": "para-39"
+    },
+    {
+      "id": "fig-15.18",
+      "file": "images/image47.png",
+      "figureNumber": "15.18",
+      "caption": "Securing a tracked vehicle with wire lashings and wood stop-blocks: 1 stop-block, 2 wire lashing",
+      "referenceId": "para-40"
+    },
+    {
+      "id": "fig-15.26",
+      "file": "images/image56.png",
+      "figureNumber": "15.26",
+      "caption": "Securing 2- and 3-axle wheeled vehicles with KGUUB-1K reusable universal chocks",
+      "referenceId": "para-55"
+    },
+    {
+      "id": "fig-15.27",
+      "file": "images/image57.png",
+      "figureNumber": "15.27",
+      "caption": "Securing 4-axle wheeled vehicles with one KGUUB-2K set",
+      "referenceId": "para-55"
+    },
+    {
+      "id": "fig-15.28",
+      "file": "images/image58.png",
+      "figureNumber": "15.28",
+      "caption": "Securing 4-axle wheeled vehicles (e.g. MAZ-543-type) with two KGUUB-2K sets",
+      "referenceId": "para-55"
+    },
+    {
+      "id": "fig-15.29",
+      "file": "images/image59.png",
+      "figureNumber": "15.29",
+      "caption": "Securing 2- and 3-axle wheeled vehicles spanning two flatcars' coupling area with KGUUB-1K",
+      "referenceId": "para-55"
+    },
+    {
+      "id": "fig-15.30",
+      "file": "images/image60.png",
+      "figureNumber": "15.30",
+      "caption": "Longitudinal and cross-post placement for reusable universal chocks",
+      "referenceId": "para-55"
+    },
+    {
+      "id": "fig-15.31",
+      "file": "images/image61.png",
+      "figureNumber": "15.31",
+      "caption": "Securing a 3-axle vehicle and 2-axle trailer with wire lashings and wood stop-blocks: 1 lashing, 2 stop-block",
+      "referenceId": "para-55"
+    },
+    {
+      "id": "plate-01",
+      "file": "images/plates/plate-01-tracked-wood-chocks-clamps.jpg",
+      "figureNumber": "Plate 1",
+      "caption": "Securing tracked vehicles on open wagons: wood chock shapes and dimensions, chock seating detail, MK-765 / S-765 clamp-tensioners, and a mixed consist with its clearance dimensions.",
+      "referenceId": "plate-02"
+    },
+    {
+      "id": "plate-02",
+      "file": "images/plates/plate-02-tracked.jpg",
+      "figureNumber": "Plate 2",
+      "caption": "Securing tracked vehicles with longitudinal quadrilateral chocks and half-round inserts, and with clamp-tensioners; chock dimension table and the 100 mm / 270 mm / 400 mm clearances.",
+      "referenceId": "plate-02"
+    },
+    {
+      "id": "plate-03",
+      "file": "images/plates/plate-03-tracked.jpg",
+      "figureNumber": "Plate 3",
+      "caption": "Securing tracked vehicles with wood chocks and single-use wire lashings: the four-step sequence, TABLISSA No.1 (consumables by weight), TABLISSA No.2 (chock dimensions by weight), and the mixed-loading clearances.",
+      "referenceId": "plate-03"
+    },
+    {
+      "id": "plate-04",
+      "file": "images/plates/plate-04-tracked.jpg",
+      "figureNumber": "Plate 4",
+      "caption": "Securing tracked vehicles with reusable universal chocks (KGUUB-1G / KGUUB-2G) and with iron chock-boots (KTP, KTT), including the chock spacing limits.",
+      "referenceId": "plate-04"
+    },
+    {
+      "id": "plate-05",
+      "file": "images/plates/plate-05-wheeled-chocks-wire-lashings.jpg",
+      "figureNumber": "Plate 5",
+      "caption": "Securing wheeled vehicles with quadrilateral chocks and single-use wire lashings: plan-view placement strip, chock dimensions by tyre diameter, and consumables by weight and brake condition.",
+      "referenceId": "plate-05"
+    },
+    {
+      "id": "plate-06",
+      "file": "images/plates/plate-06-wheeled.jpg",
+      "figureNumber": "Plate 6",
+      "caption": "Securing wheeled vehicles with reusable universal chocks (KGUUB-1K / KGUUB-2K): the six-case chock layout diagram, placement distances, and the prohibited-practice list.",
+      "referenceId": "plate-06"
+    },
+    {
+      "id": "plate-08a",
+      "file": "images/plates/plate-08a-safety-measures.jpg",
+      "figureNumber": "Plate 8a",
+      "caption": "Safety measures during loading and securing.",
+      "referenceId": "plate-06"
+    },
+    {
+      "id": "plate-08b",
+      "file": "images/plates/plate-08b-safety-measures.jpg",
+      "figureNumber": "Plate 8b",
+      "caption": "Safety measures during loading and securing, second sheet.",
+      "referenceId": "plate-06"
+    },
+    {
+      "id": "plate-09",
+      "file": "images/plates/plate-09-echelon-organisation.jpg",
+      "figureNumber": "Plate 9",
+      "caption": "Organising the combat support of a military echelon: the loading/unloading yard layout, YDM-1 and YDM-2 positions, patrol routes and the conventional-sign key.",
+      "referenceId": "plate-03"
+    },
+    {
+      "id": "fig-tracked-methods-overview",
+      "file": "images/figures/tracked-methods-overview.jpg",
+      "figureNumber": "B-01",
+      "caption": "The six approved methods for securing tracked vehicles on open wagons, as the handbook's own index plate lists them.",
+      "referenceId": "plate-02"
+    },
+    {
+      "id": "fig-tracked-method-1",
+      "file": "images/figures/tracked-method-1-banner.jpg",
+      "figureNumber": "B-02",
+      "caption": "Tracked method 1: by reusable universal chocks (KGUUB).",
+      "referenceId": "plate-04"
+    },
+    {
+      "id": "fig-tracked-method-2",
+      "file": "images/figures/tracked-method-2-banner.jpg",
+      "figureNumber": "B-03",
+      "caption": "Tracked method 2: by iron spurs.",
+      "referenceId": "plate-02"
+    },
+    {
+      "id": "fig-tracked-method-3",
+      "file": "images/figures/tracked-method-3-banner.jpg",
+      "figureNumber": "B-04",
+      "caption": "Tracked method 3: by longitudinal quadrilateral wood chocks and single-use wire lashings.",
+      "referenceId": "plate-03"
+    },
+    {
+      "id": "fig-tracked-method-4",
+      "file": "images/figures/tracked-method-4-banner.jpg",
+      "figureNumber": "B-05",
+      "caption": "Tracked method 4: by iron chock-boots and inserted wood blocks.",
+      "referenceId": "plate-04"
+    },
+    {
+      "id": "fig-tracked-method-5",
+      "file": "images/figures/tracked-method-5-banner.jpg",
+      "figureNumber": "B-06",
+      "caption": "Tracked method 5: by longitudinal quadrilateral wood chocks and inserted wood blocks.",
+      "referenceId": "plate-02"
+    },
+    {
+      "id": "fig-tracked-method-6",
+      "file": "images/figures/tracked-method-6-banner.jpg",
+      "figureNumber": "B-07",
+      "caption": "Tracked method 6: by clamp-tensioners and clamps.",
+      "referenceId": "plate-02"
+    },
+    {
+      "id": "fig-kguub-1g-2g",
+      "file": "images/figures/kguub-1g-2g.jpg",
+      "figureNumber": "B-08",
+      "caption": "KGUUB-1G and KGUUB-2G reusable universal chocks for tracked vehicles, with their parts labelled and their weight ranges (7-25 t and 25.1-42 t).",
+      "referenceId": "para-29"
+    },
+    {
+      "id": "fig-iron-spur-types",
+      "file": "images/figures/iron-spur-types.jpg",
+      "figureNumber": "B-09",
+      "caption": "Iron spur types Ş-137, Ş-375, Ş-575 and Ş-915, with their parts labelled.",
+      "referenceId": "para-31"
+    },
+    {
+      "id": "fig-tracked-consumables-tables",
+      "file": "images/figures/tracked-consumables-tables.jpg",
+      "figureNumber": "B-10",
+      "caption": "TABLISSA No.1 and No.2: securing consumables and minimum chock dimensions for a tracked vehicle, by combat weight.",
+      "referenceId": "plate-03"
+    },
+    {
+      "id": "fig-wood-chock-shapes",
+      "file": "images/figures/wood-chock-shapes.jpg",
+      "figureNumber": "B-11",
+      "caption": "The permitted shapes of the longitudinal quadrilateral wood chock (direg dörtgyraň agaç bölegi), with the height (h) and width (b) the sizing tables refer to.",
+      "referenceId": "para-21"
+    },
+    {
+      "id": "fig-lashing-angle-45",
+      "file": "images/figures/lashing-angle-45.jpg",
+      "figureNumber": "B-12",
+      "caption": "A wire lashing's angle to the wagon floor must not exceed 45 degrees; the strand count is set by the count on the lashing's weakest side.",
+      "referenceId": "table-7"
+    },
+    {
+      "id": "fig-iron-chock-boot-ktp-ktt",
+      "file": "images/figures/iron-chock-boot-ktp-ktt.jpg",
+      "figureNumber": "B-13",
+      "caption": "KTP and KTT iron chock-boots with their parts labelled: KTP for BTR-50P and PT-76 chassis, KTT for IS-5 and T-10 chassis.",
+      "referenceId": "para-32"
+    },
+    {
+      "id": "fig-tracked-chock-boot-securing",
+      "file": "images/figures/tracked-chock-boot-securing.jpg",
+      "figureNumber": "B-14",
+      "caption": "A tracked vehicle secured with four iron chock-boots and inserted wood blocks, with the seating of the blocks against the track shown in detail.",
+      "referenceId": "para-32"
+    },
+    {
+      "id": "fig-wheeled-methods-overview",
+      "file": "images/figures/wheeled-methods-overview.jpg",
+      "figureNumber": "B-15",
+      "caption": "The three approved methods for securing wheeled vehicles on open wagons.",
+      "referenceId": "plate-05"
+    },
+    {
+      "id": "fig-wheeled-method-1",
+      "file": "images/figures/wheeled-method-1-banner.jpg",
+      "figureNumber": "B-16",
+      "caption": "Wheeled method 1: by reusable universal chocks (KGUUB).",
+      "referenceId": "plate-06"
+    },
+    {
+      "id": "fig-wagon-plan-chock-layout",
+      "file": "images/figures/wagon-plan-chock-layout.jpg",
+      "figureNumber": "B-17",
+      "caption": "Plan view of a loaded open wagon: wheel footprints, longitudinal and lateral chocks, and the wire lashing runs.",
+      "referenceId": "plate-05"
+    },
+    {
+      "id": "fig-kguub-wheeled-under-tyre",
+      "file": "images/figures/kguub-wheeled-under-tyre.jpg",
+      "figureNumber": "B-18",
+      "caption": "A reusable universal chock seated under a wheeled vehicle's tyre.",
+      "referenceId": "para-30"
+    },
+    {
+      "id": "fig-kguub-1k",
+      "file": "images/figures/kguub-1k.jpg",
+      "figureNumber": "B-19",
+      "caption": "KGUUB-1K reusable universal chock, for wheeled vehicles up to 15 t.",
+      "referenceId": "para-30"
+    },
+    {
+      "id": "fig-kguub-2k",
+      "file": "images/figures/kguub-2k.jpg",
+      "figureNumber": "B-20",
+      "caption": "KGUUB-2K reusable universal chock, for wheeled vehicles of 15.1-26 t; two sets are used for 26.1-40 t.",
+      "referenceId": "para-30"
+    },
+    {
+      "id": "fig-wheeled-method-2",
+      "file": "images/figures/wheeled-method-2-banner.jpg",
+      "figureNumber": "B-21",
+      "caption": "Wheeled method 2: by longitudinal quadrilateral wood chocks and single-use wire lashings.",
+      "referenceId": "plate-05"
+    },
+    {
+      "id": "fig-wire-lashings-and-consumables",
+      "file": "images/figures/wire-lashings-and-consumables.jpg",
+      "figureNumber": "B-22",
+      "caption": "Single-use lashings — wire/rope and chain — with their parts labelled, and the consumables table for one wheeled vehicle by combat weight and brake condition.",
+      "referenceId": "para-19"
+    },
+    {
+      "id": "fig-wheeled-chock-shapes-and-sizes",
+      "file": "images/figures/wheeled-chock-shapes-and-sizes.jpg",
+      "figureNumber": "B-23",
+      "caption": "Wood chock shapes for wheeled vehicles, the table of minimum chock dimensions by tyre diameter, and a chock seated on the wagon floor.",
+      "referenceId": "para-21"
+    },
+    {
+      "id": "fig-wheeled-method-3",
+      "file": "images/figures/wheeled-method-3-banner.jpg",
+      "figureNumber": "B-24",
+      "caption": "Wheeled method 3: by single-use longitudinal and lateral quadrilateral wood chocks.",
+      "referenceId": "plate-06"
+    },
+    {
+      "id": "fig-wheeled-chock-layout-cases",
+      "file": "images/figures/wheeled-chock-layout-cases.jpg",
+      "figureNumber": "B-25",
+      "caption": "Where the longitudinal and lateral chocks go under the tyres, in six cases: up to 5.5 t, 5.6-12 t, three-axle, and each of those set over the coupling of two open wagons.",
+      "referenceId": "plate-06"
+    },
+    {
+      "id": "fig-wheeled-chock-securing",
+      "file": "images/figures/wheeled-chock-securing.jpg",
+      "figureNumber": "B-26",
+      "caption": "Wheeled vehicles secured on an open wagon with longitudinal and lateral quadrilateral wood chocks, with the chock pair at the tyre shown in detail.",
+      "referenceId": "plate-06"
+    },
+    {
+      "id": "fig-clamp-s765",
+      "file": "images/figures/clamp-s765.jpg",
+      "figureNumber": "B-27",
+      "caption": "S-765 clamp, with its parts labelled: 1 U-shaped iron fastener (skoba), 2 fastening bolt, 3 locknut.",
+      "referenceId": "para-33"
+    },
+    {
+      "id": "fig-clamp-mk765",
+      "file": "images/figures/clamp-mk765.jpg",
+      "figureNumber": "B-28",
+      "caption": "MK-765 clamp-tensioner, with its parts labelled: 1 U-shaped iron fastener (skoba), 2 nut, 3 fastening nut, 4 shaft, 5 gripping jaw.",
+      "referenceId": "para-33"
+    }
+  ]
+}

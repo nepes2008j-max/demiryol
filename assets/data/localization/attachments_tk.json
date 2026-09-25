@@ -1,0 +1,57 @@
+{
+  "_comment": "Turkmen translations of attachments.json's 'notes' field only. 'name', 'category', 'material', and sizing/spec fields are intentionally not translated here — see docs/turkmen-content-localization-report.md.",
+  "attachmentTypes": [
+    {
+      "id": "att-wire-lashing",
+      "notesTk": "Her çekme üçin sapak sany, çekmäniň wagonyň uzynlygyna oky we poly bilen emele getirýän burçy boýunça 7-nji tablisadan gözlenilýär. Gaýtadan ulanylan/gaýtadan çolanan çekme simi ikinji gezek ulanylyp bilinmez (19-njy madda)."
+    },
+    {
+      "id": "att-wood-chock",
+      "notesTk": "Ölçegler 2-nji tablisadan (tigirli tehnikalar üçin tigir diametri boýunça) ýa-da 3-nji tablisadan (gusenisaly tehnikalar üçin söweş agramy boýunça) saýlanylýar. Uzyn gyrasy wagonyň kese ugruna, tigiriň/gusenisanyň garşysyna goýulýar."
+    },
+    {
+      "id": "att-wood-packing",
+      "notesTk": "Enjamyň zeper ýetmeginiň öňüni almak üçin agramy paýlaýar. Kese tagtalar wagonyň ini boýunça, aralyk tagtalar bolsa ýüküň ini boýunça uzalýar (ýükleme ölçegi çäginde ýüküň gyrasyndan 200 mm-e çenli çykyp durup biler). Goldaw paz-agaçlarynyň iň az galyňlygy 50 mm."
+    },
+    {
+      "id": "att-nail",
+      "notesTk": "Uzynlygy agaç berkidijiniň beýikliginden 50-60 mm uzyn bolmaly we paluba tagtalaryndan doly geçmeli. Bölegiň/palubanyň gyrasyndan >=90 mm, bölegiň gapdal gyrasyndan 30 mm aralykda kakylýar."
+    },
+    {
+      "id": "att-staple",
+      "notesTk": "Agaç berkidijileri biri-birine ýa-da agaç berkidijileri wagon palubasyna birikdirýär. Şeýle-de gapdal derwezeler açyk bolanda, kese gulplama üçin gönüden-göni gusenisaly tehnikanyň gusenisa gyralarynyň garşysynda (12 mm skobalar) ulanylýar."
+    },
+    {
+      "id": "att-kguub-1g",
+      "notesTk": "4 sütünden ybarat toplum; gusenisanyň galtaşyk nokadynda, soňundan ikinji ýol tigiriniň öňünde, her tarapda bir jübüt bolup ýerleşdirilýär."
+    },
+    {
+      "id": "att-iron-spur",
+      "notesTk": "Tehnika görnüşine görä bellidir — talap edilýän şpor görnüşi erkin saýlanmaýar, 13-nji tablisada atly 'obýekt' belgisi boýunça gözlenilýär."
+    },
+    {
+      "id": "att-iron-chock-boot",
+      "notesTk": "Diňe köne görnüşli tehnikalar üçin: T-34, IS-4, T-10, T-54, T-55 (irki önümçilik), PT-76, BTR-50P we olaryň önümlerinden gaýdýan görnüşleri."
+    },
+    {
+      "id": "att-clamp-tensioner",
+      "notesTk": "Diňe 'obýekt 765'/'obýekt 675' we olardan gaýdýan görnüşler üçin çäklendirilendir."
+    },
+    {
+      "id": "att-clamp",
+      "notesTk": "MK-765 dartgyç-gysgyjy bilen bilelikde ulanylýar; şol bir tehnika çäklendirmesi degişlidir."
+    },
+    {
+      "id": "att-kguub-2g",
+      "notesTk": "Köp gezek ulanylýan uniwersal berkidiji (gusenisaly tehnika üçin), 25,1-42 tonna söweş agramyndaky tehnikalar üçin. Toplum dört sany diregden ybarat (plakat 04)."
+    },
+    {
+      "id": "att-kguub-1k",
+      "notesTk": "Köp gezek ulanylýan uniwersal berkidiji (tigirli tehnika üçin), 15 tonna çenli tehnikalar üçin (plakat 06)."
+    },
+    {
+      "id": "att-kguub-2k",
+      "notesTk": "Köp gezek ulanylýan uniwersal berkidiji (tigirli tehnika üçin), 15,1-26 tonna üçin; 26,1-40 tonna üçin iki toplum ulanylýar (plakat 06)."
+    }
+  ]
+}

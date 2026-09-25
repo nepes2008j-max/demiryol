@@ -1,0 +1,117 @@
+{
+  "_comment": "Turkmen translations of references.json's 'summary' field, keyed by reference id. Chapter/section titles are not translated here because they are not currently rendered by any screen — see docs/turkmen-content-localization-report.md.",
+  "references": [
+    {
+      "id": "para-51",
+      "summaryTk": "Rampasyz wagonyň gapdal demir gyralaryndan geçilende tehnikalar üçin ok agramynyň çäkleri: tigirli tehnikalar üçin 10 t/oka çenli; gusenisaly tehnikalar üçin 0.8 kg/sm² ýer basyşyna çenli. Aýratyn ýagdaýda (köpürjiklenmedik gapdal rampalar bilen) gusenisaly ýükleme 15 t-a çenli rugsat edilýär; tigirli tehnikalar üçin wagonyň gapdal demir gyralary arkaly 10 t/oka çenli."
+    },
+    {
+      "id": "para-19",
+      "summaryTk": "Sim diametrine (4/5/6 mm) görä standart we azaldylan sim togalagynyň (desseniň) uzynlygy we agramy."
+    },
+    {
+      "id": "para-20",
+      "summaryTk": "Agaç berkidijiler üçin material talaplary: diňe sagdyn, çüýrüksiz gury agaç; ak baldak/gara agaç/lipa we şuňa meňzeş gowşak agaç görnüşleri gadagandyr; berk agaçdan (dub, çingil) ýasalan berkidijiler öňünden burawlanan çüý deşiklerini talap edýär."
+    },
+    {
+      "id": "para-21",
+      "summaryTk": "Tigir duruzyjy / gusenisa duruzyjy (agaç bölek) üçin agaç ölçegleri, tigir diametrine (2-nji tablisa) ýa-da gusenisaly tehnikanyň söweş agramyna (3-nji tablisa) baglydyr."
+    },
+    {
+      "id": "para-24",
+      "summaryTk": "Agaç tagtalar/paletler/goldaw paz-agaçlary agramy deň paýlaýar we enjamyň zeperlenmeginiň öňüni alýar; kese tagtalaryň uzynlygy wagonyň inine deň; aralyk tagtalaryň uzynlygy ýüküň inine deň (ýükleme ölçegi çäginde ýükden 200 mm-e çenli çykyp durup biler). Iň az galyňlyk: tagtalar/aralyk tagtalar 25 mm, goldaw paz-agaçlary 50 mm."
+    },
+    {
+      "id": "para-25",
+      "summaryTk": "Agaç böleklerini wagon palubasyna berkitmek üçin ulanylýan çüýler bölegiň beýikliginden 50-60 mm uzyn bolmaly we paluba tagtalaryndan doly geçmeli; bölegiň/palubanyň gyrasyndan 90 mm-den az bolmadyk, bölegiň gapdal gyrasyndan 30 mm aralykda kakylýar. 5-nji tablisada 6 mm çüýleriň 5 mm/8 mm çüýler bilen çalşylmagyna rugsat edilen gatnaşyklar görkezilýär."
+    },
+    {
+      "id": "para-26",
+      "summaryTk": "U şekilli demir skobalar agaç berkidijileri biri-birine birikdirmek ýa-da gusenisaly tehnikalary açyk wagonlara berkitmek üçin ulanylýar; ölçegleri skobanyň ok diametrine görä kesgitlenilýär."
+    },
+    {
+      "id": "para-29",
+      "summaryTk": "Açyk wagonlardaky ÄHLI görnüşli gusenisaly harby tehnikalar üçin KGUUB-1G / KGUUB-2G gaýtadan ulanylýan uniwersal duruzyjy ulgamlary, söweş agram topary boýunça saýlanylýar (7-25 t -> KGUUB-1G; 25.1-42 t -> KGUUB-2G)."
+    },
+    {
+      "id": "para-30",
+      "summaryTk": "Tigirli harby tehnikalar üçin KGUUB-1K / KGUUB-2K gaýtadan ulanylýan uniwersal duruzyjy ulgamlary."
+    },
+    {
+      "id": "para-31",
+      "summaryTk": "Anyk gusenisaly tehnika 'obýekt' görnüşlerini berkitmek üçin demir şporlar (Ş-topary); 13-nji tablisa obýekt/tehnika belgisini talap edilýän şpor görnüşine we bölek belgisine gabat getirýär."
+    },
+    {
+      "id": "para-32",
+      "summaryTk": "T-34, IS-4, T-10, T-54, T-55 (irki önümçilik), PT-76, BTR-50P we olaryň görnüşleri üçin demir başmaklar (KTP / KT-34 / KT-137 / KTT)."
+    },
+    {
+      "id": "para-33",
+      "summaryTk": "Diňe 'obýekt 765' / 'obýekt 675' we olardan gaýdýan görnüşler üçin ulanylýan MK-765 dartgyç-gysgyjy we S-765 gysgyjy."
+    },
+    {
+      "id": "para-34",
+      "summaryTk": "Berk tormoz/hereketlendiriji ulgamly we agyrlyk merkezi wagon palubasyndan <= 1.5 m bolan gusenisaly tehnikalary berkitmek üçin rugsat edilen alty usul: (1) gaýtadan ulanylýan uniwersal duruzyjylar, (2) demir şporlar, (3) agaç duruzyjylar + sim çekmeler, (4) demir başmaklar + aralyk tagtalar, (5) agaç duruzyjylar + aralyk tagtalar, (6) dartgyç-gysgyçlar/gysgyçlar. Tehnika wagonyň uzynlygyna okunda simmetrik oturmalydyr; gusenisanyň wagon gyralaryndan çykyp duran ýapyşygy iki tarapda-da deň bolmaly, tapawut <= 40 mm."
+    },
+    {
+      "id": "para-40",
+      "summaryTk": "3-nji usul (gusenisaly): dört agaç duruzyjy, uzyn gyrasy wagonyň kese ugruna, 6 mm çüýler ýa-da skobalar bilen berkidilýär; goşmaça sim çekmeler (6 mm sim) talap edilýär. Gapdal derwezeler açyk bolanda, 25 t-dan az tehnikalar üçin kese gulplama üçin 12x 12 mm skoba ýa-da 100x100x2000 mm gapdal agaçlar gerek; gusenisanyň ini >=400 mm bolsa 8 skoba, <400 mm bolsa 12 skoba gerek."
+    },
+    {
+      "id": "table-7",
+      "summaryTk": "Çekmede talap edilýän sim sapaklarynyň sany, (a) çekmäniň wagonyň uzynlygyna oky bilen emele getirýän burçy we (b) çekmäniň wagonyň poly bilen emele getirýän burçy boýunça kesgitlenilýär. Hem dik, hem ýapyk burçlar sapak sanyny artdyrýar."
+    },
+    {
+      "id": "para-55",
+      "summaryTk": "Tigirli tehnikalar: 2-nji usul söweş agramy 24 t-a çenli dört sany ýekeje sim çekme, 24.1-40 t üçin bolsa sekiz sany ýekeje sim çekme ulanýar. Tigir duruzyjy agaçlarynyň sany/ýerleşişi ok sanyna görä üýtgeýär (2/3/4 oklyk nusgalar görkezilendir)."
+    },
+    {
+      "id": "table-16",
+      "summaryTk": "Her agaç duruzyjy üçin talap edilýän çüý sany, sim çekme sany we çekme başyna sapak sany tablisa görnüşinde (bahalar bu bölekde doly alynmandyr — doly tablisa üçin gollanma sahypasyna serediň)."
+    },
+    {
+      "id": "plate-02",
+      "summaryTk": "Zynjyrly tehnikalary direg dört gyraň agaç bölekleri, ara goýulýan agaç bölekleri we gysgyç çekmeler bilen berkitmek. Bu tablisadaky agaç bölekleriň ölçegleri plate-03-däkiler bilen gabat gelmeýär — docs/berl-plate-extraction.md serediň."
+    },
+    {
+      "id": "plate-03",
+      "summaryTk": "Zynjyrly tehnikalary agaç bölekler we bir nusgaly sim çekmeler bilen berkitmek. TABLISSA №1 (agrama görä sarp edilýän serişdeler), TABLISSA №2 (agrama görä agaç bölekleriň iň az ölçegleri), dört basgançakly berkitme tertibi we aralyk ölçegleri."
+    },
+    {
+      "id": "plate-04",
+      "summaryTk": "Zynjyrly tehnikalary köp gezek ulanylýan uniwersal berkidijiler (KGUUB-1G 7-25 t, KGUUB-2G 25,1-42 t) we demir direg başmaklar (KTP — BTR-50P/PT-76, KTT — IS-5/T-10) bilen berkitmek, direg aralyk çäkleri bilen."
+    },
+    {
+      "id": "plate-05",
+      "summaryTk": "Tigirli tehnikalary direg dört gyraň agaç bölekleri we bir nusgaly sim çekmeler bilen berkitmek. Tigriň diametrine görä agaç bölekleriň ölçegleri, tormaz ulgamyna görä sarp edilýän serişdeler we ýokardan görnüşi."
+    },
+    {
+      "id": "plate-06",
+      "summaryTk": "Tigirli tehnikalary köp gezek ulanylýan uniwersal berkidijiler (KGUUB-1K 15 t çenli, KGUUB-2K 15,1-26 t, 26,1-40 t üçin iki toplum) bilen berkitmek. Alty ýagdaýyň çyzgysy we gadagan edilýän işleriň sanawy."
+    },
+    {
+      "id": "para-5",
+      "summaryTk": "Otly düzüminiň agram toparlary we «şertli wagon» hasap birligi: ýüklenen ýük wagony 33 t arassa, ýumşak klas ýolagçy wagony 3 t, gaty klas kupe wagony 4 t, platskart 6 t, umumy klas wagony 8 t hasaplanýar. platforms.json-daky eşelon toparlarynyň bellikleýnden alnan gysgaça beýan; maddanyň doly teksti çykarylmady."
+    },
+    {
+      "id": "para-35",
+      "summaryTk": "Bu maddanyň teksti şu maglumat toplumyna çykarylmady — diňe oňa salgylanmalar bar. Maddanyň belgisi asyl çykarmadan gelýär, şonuň üçin salgylanmanyň özi hakykydyr; teksti bolsa elýeterli däl we ýörite oýlanyp tapylmady."
+    },
+    {
+      "id": "para-36",
+      "summaryTk": "Bu maddanyň teksti şu maglumat toplumyna çykarylmady — diňe oňa salgylanmalar bar. Maddanyň belgisi asyl çykarmadan gelýär, şonuň üçin salgylanmanyň özi hakykydyr; teksti bolsa elýeterli däl we ýörite oýlanyp tapylmady."
+    },
+    {
+      "id": "para-38",
+      "summaryTk": "Bu maddanyň teksti şu maglumat toplumyna çykarylmady — diňe oňa salgylanmalar bar. Maddanyň belgisi asyl çykarmadan gelýär, şonuň üçin salgylanmanyň özi hakykydyr; teksti bolsa elýeterli däl we ýörite oýlanyp tapylmady."
+    },
+    {
+      "id": "para-39",
+      "summaryTk": "Bu maddanyň teksti şu maglumat toplumyna çykarylmady — diňe oňa salgylanmalar bar. Maddanyň belgisi asyl çykarmadan gelýär, şonuň üçin salgylanmanyň özi hakykydyr; teksti bolsa elýeterli däl we ýörite oýlanyp tapylmady."
+    },
+    {
+      "id": "doc-transport-characteristics",
+      "summaryTk": "Harby tehnikalaryň ulag häsiýetnamalary (uzynlygy, ini, beýikligi we agramy — esasy platforma boýunça çemeleşdirilen maglumatlar). 145/175-ö belgili Buýrukdan aýry, ministrligiň ikinji resminamasy: 138 sany tehnikanyň her biriniň uzynlygy, ini, beýikligi we agramy görkezilen tablisa. Bu tablisa bölümiň hakykatda daşaýan tehnikalarynyň sanawy bolup, trenažýorda haýsy tehnikalaryň hödürlenýändigini kesgitleýär. Ol berkitme usulyny bellemeýär — berkidiş enjamy diňe 14-nji goşundynyň 11-nji we 13-nji tablisalary boýunça bellenýär."
+    }
+  ]
+}

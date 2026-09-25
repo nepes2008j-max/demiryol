@@ -1,0 +1,27 @@
+{
+  "_comment": "Input to tools/build_model_from_plate.py. The boxes are the pixel rectangles of each orthographic view on the plate, written by hand: finding them automatically works until a plate puts a caption under one view, and then it models the caption. The record figures are the ones TrackedVehicleMeshSpec.t72 already carries, so the part boundaries the tool draws agree with the ones the drawn model uses.",
+
+  "vehicleId": "veh-t72",
+  "title": "T-72 (Object 172M) — visual hull from the three-view plate",
+  "category": "tracked",
+  "plate": "tools/plate_sources/t72-three-view.jpg",
+
+  "views": {
+    "_comment": "The side view is captioned ВИД СБОКУ with the gun trained forward to the right; the top view ВИД СВЕРХУ draws it to the left, so it is mirrored back. The side box starts below the plate's T-72 title and rule.",
+    "side": { "box": [13, 55, 838, 264], "mirrorX": false },
+    "top": { "box": [0, 450, 855, 339], "mirrorX": true },
+    "front": { "box": [61, 896, 343, 285], "mirrorX": false }
+  },
+
+  "heightCells": 56,
+
+  "record": {
+    "_comment": "lengthM is the overall length with the gun trained forward, because that is what the side and top views both span. It is the hull's 6.86 m plus the 2.67 m of gun overhang TrackedVehicleMeshSpec.t72 states. Every other figure is that spec's, unchanged.",
+    "lengthM": 9.53,
+    "widthM": 3.59,
+    "heightM": 2.19,
+    "widthOverTracksM": 3.46,
+    "trackShoeWidthM": 0.58,
+    "groundClearanceM": 0.47
+  }
+}

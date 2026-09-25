@@ -1,0 +1,110 @@
+{
+  "_comment": "Catalog of physical fastening hardware types found in the handbook (Annex 14, §3). Each entry is an 'AttachmentType' — the simulator's Securing module picks from these, never invents new hardware.",
+  "attachmentTypes": [
+    {
+      "id": "att-wire-lashing",
+      "category": "rope",
+      "name": "Steel wire lashing (sim çekme)",
+      "material": "Steel wire, twisted strand",
+      "diametersAvailableMm": [4, 5, 6],
+      "usedFor": ["trackedMethod3", "wheeledMethod2"],
+      "sizingRule": "table-7",
+      "referenceId": "table-7",
+      "notes": "Strand count per lashing is looked up from Table 7 by the angle the lashing makes with both the flatcar's longitudinal axis and its floor. Reused/rewound lashing wire may not be reused a second time (para. 19)."
+    },
+    {
+      "id": "att-wood-chock",
+      "category": "woodBlock",
+      "name": "Wood stop-block / chock (direg dörtgyraň agaç bölegi)",
+      "material": "Sound dry hardwood or softwood timber; aspen/alder/linden prohibited",
+      "sizingRule": "wheelChockByWheelDiameterTable / trackChockByWeightTable",
+      "referenceId": "para-21",
+      "notes": "Dimensions selected from Table 2 (by wheel diameter, wheeled vehicles) or Table 3 (by combat weight, tracked vehicles). Long edge placed across the flatcar, against the wheel/track."
+    },
+    {
+      "id": "att-wood-packing",
+      "category": "woodBlock",
+      "name": "Wood packing board / spacer board / support wedge",
+      "material": "Sound dry timber",
+      "minThicknessMm": 25,
+      "referenceId": "para-24",
+      "notes": "Distributes load to prevent equipment damage. Cross-boards run the width of the flatcar; spacer boards run the width of the cargo (may overhang cargo edge by up to 200mm within loading gauge). Support wedges minimum 50mm thick."
+    },
+    {
+      "id": "att-nail",
+      "category": "bolt",
+      "name": "Fastening nail (çüý)",
+      "diametersAvailableMm": [5, 6, 8],
+      "sizingRule": "nailTable",
+      "referenceId": "para-25",
+      "notes": "Length must exceed the wood fastener's height by 50-60mm and fully penetrate the deck planking. Driven >=90mm from the block/deck edge, 30mm from the block's side edge."
+    },
+    {
+      "id": "att-staple",
+      "category": "clamp",
+      "name": "U-shaped iron staple (skoba)",
+      "sizingRule": "staplesTable",
+      "referenceId": "para-26",
+      "notes": "Joins wood fasteners to each other, or wood fasteners to the flatcar deck. Also used directly against tracked-vehicle track edges (12mm staples) for lateral restraint when side gates are open."
+    },
+    {
+      "id": "att-kguub-1g",
+      "category": "specialLock",
+      "name": "KGUUB-1G reusable universal chock (tracked)",
+      "combatWeightRangeT": "7-25",
+      "referenceId": "para-29",
+      "notes": "Set of 4 posts; placed at the chain/track contact point ahead of the second-from-last road wheel, one pair per side."
+    },
+    {
+      "id": "att-kguub-2g",
+      "category": "specialLock",
+      "name": "KGUUB-2G reusable universal chock (tracked)",
+      "combatWeightRangeT": "25.1-42",
+      "referenceId": "para-29"
+    },
+    {
+      "id": "att-kguub-1k",
+      "category": "specialLock",
+      "name": "KGUUB-1K reusable universal chock (wheeled)",
+      "combatWeightRangeT": "up to 15",
+      "referenceId": "para-30"
+    },
+    {
+      "id": "att-kguub-2k",
+      "category": "specialLock",
+      "name": "KGUUB-2K reusable universal chock (wheeled)",
+      "combatWeightRangeT": "15.1-26 (two sets used together for 26.1-40)",
+      "referenceId": "para-30"
+    },
+    {
+      "id": "att-iron-spur",
+      "category": "metalStop",
+      "name": "Iron spur (demir şpor, Ş-series)",
+      "sizingRule": "ironSpurTable",
+      "referenceId": "para-31",
+      "notes": "Vehicle-type-specific — required spur type is looked up per named 'object' number in Table 13, not chosen freely."
+    },
+    {
+      "id": "att-iron-chock-boot",
+      "category": "metalStop",
+      "name": "Iron stop-boot (demir direg başmak, KTP/KT-34/KT-137/KTT)",
+      "sizingRule": "ironChockBootTable",
+      "referenceId": "para-32",
+      "notes": "Legacy-vehicle-specific: T-34, IS-4, T-10, T-54, T-55 (early production), PT-76, BTR-50P and their derivatives only."
+    },
+    {
+      "id": "att-clamp-tensioner",
+      "category": "clamp",
+      "name": "MK-765 clamp-tensioner",
+      "referenceId": "para-33",
+      "notes": "Restricted to 'object 765'/'object 675' and their derivatives."
+    },
+    {
+      "id": "att-clamp",
+      "category": "clamp",
+      "name": "S-765 clamp",
+      "referenceId": "para-33",
+      "notes": "Used together with the MK-765 clamp-tensioner; same vehicle restriction."
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+# Tests tagged `flutter` need the Flutter engine (widgets, providers that pull
+# in `flutter_riverpod`, anything touching `dart:ui`). They cannot even be
+# loaded by the plain Dart runner.
+#
+#   flutter test                      runs everything, including these
+#   dart test --exclude-tags flutter  runs the pure-Dart majority, faster
+#
+# `flutter test` is the one to trust before shipping.
+tags:
+  flutter:
+    description: Requires the Flutter engine; run with `flutter test`.

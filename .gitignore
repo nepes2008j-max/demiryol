@@ -1,0 +1,21 @@
+# Flutter / Dart
+build/
+.dart_tool/
+.packages
+.flutter-plugins
+.flutter-plugins-dependencies
+*.iml
+
+# Generated platform scaffolding that `flutter build` recreates
+**/ephemeral/
+linux/flutter/generated_plugin_registrant.*
+linux/flutter/generated_plugins.cmake
+windows/flutter/generated_plugin_registrant.*
+windows/flutter/generated_plugins.cmake
+
+# Packaged output — rebuilt by tools/make_single_file.sh and build_windows.ps1
+dist/
+
+# Local scratch
+.impeccable/
+*.log

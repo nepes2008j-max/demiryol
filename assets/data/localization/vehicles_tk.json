@@ -1,0 +1,656 @@
+{
+  "_comment": "Turkmen text for the vehicle catalogue. Written by tools/import_transport_table.py alongside assets/data/vehicles.json, so the two cannot drift: test/data_integrity_test.dart fails if a vehicle has no entry here or an entry outlives its vehicle.",
+  "vehicles": [
+    {
+      "id": "veh-t72",
+      "classDisplayTk": "Esasy söweş tanky — T-72 «Ural» (172M obýektiniň gulluk ady); gollanmada «172-nji obýekt» ady bilen bar",
+      "notesTk": "BU TEHNIKA GOLLANMADA BAR — zawod belgisi bilen. 14-nji goşundynyň 13-nji tablisasynda '172-nji obýekt' 137-nji obýektler toparynyň içinde görkezilýär we ol topara Ş-137 görnüşli demir şpor bellenilýär. 172M obýekti — T-72, şonuň üçin onuň berkidiliş usuly saýlanmaýar: 31-nji bent demir şpory hökmany edýär we şporyň görnüşi gollanmada ady bilen berlen. Diňe tanamak — ýagny '172-nji obýekt = T-72' — gollanmadan däl: çykarylan tekstde 'T-72' ady ýazylmaýar. Ölçegler öndürijiniň häsiýetnamasyndan: korpusyň uzynlygy 6,86 m (top öňe gönükdirilende 9,53 m), ini 3,59 m, diňiň üstüne çenli beýikligi 2,19 m, söweş agramy 41,0 t, ýerden beýikligi 0,47 m, gusenisanyň ini 580 mm, ýere degýän böleginiň uzynlygy 4,27 m. Şu iki ölçegden ýer basyşy 0,83 kg/sm2 bolýar — 51-nji bendiň 0,8 kg/sm2 çäginden ýokary. 41,0 tonna 8-nji tablisanyň 25,1-42 t aralygyna düşýär, emma ady bilen bellenen şpor hökmany."
+    },
+    {
+      "id": "veh-t-72k",
+      "classDisplayTk": "TANKLAR"
+    },
+    {
+      "id": "veh-t90s",
+      "classDisplayTk": "Esasy söweş tanky — T-90S, T-90-yň eksport görnüşi; Hindistanda ygtyýarnama boýunça «Bhishma» ady bilen ýygnalýar. Gollanmanyň sanawynda ýok",
+      "notesTk": "GOLLANMADA ÝOK TEHNIKA. Gollanmanyň 14-nji goşundysyndaky sanawda T-90-yň hiç bir görnüşi ady bilen agzalmaýar, şonuň üçin bu tehnika üçin berkidiliş usuly ady bilen bellenilmeýär. Bu ýerdäki sanlar — öndürijiniň T-90S üçin çap eden häsiýetnamasy: korpusyň uzynlygy 6,86 m (top öňe gönükdirilende 9,53 m), gapdal ekranlar bilen ini 3,78 m, gusenisalar boýunça 3,37 m, diňiň üstüne çenli beýikligi 2,23 m, söweş agramy 46,5 t, ýerden beýikligi 0,49 m, gusenisanyň ini 580 mm, ýere degýän böleginiň uzynlygy 4,27 m. Şu iki ölçegden 51-nji bendiň ýer basyşy çäklendirmesi hasaplanýar: 46,5 t / (2 x 58 sm x 427 sm) = 0,94 kg/sm2, ol bolsa rugsat edilen 0,8 kg/sm2-den ýokary. Görkezilen berkidiş serişdeleri — gollanmanyň açyk wagondaky gusenisaly tehnika üçin umumy düzgüni (32-nji bent). 46,5 tonna 8-nji tablisanyň KGUUB üçin 42 tonnalyk çäginden hem, 51-nji bendiň 15 tonnalyk aýratyn ýagdaýyndan hem ýokary."
+    },
+    {
+      "id": "veh-t-62",
+      "classDisplayTk": "TANKLAR"
+    },
+    {
+      "id": "veh-bmp-1",
+      "classDisplayTk": "PIÝADA SÖWEŞ MAŞYNLARY (BMP/BMD)"
+    },
+    {
+      "id": "veh-bmp-2",
+      "classDisplayTk": "PIÝADA SÖWEŞ MAŞYNLARY (BMP/BMD)"
+    },
+    {
+      "id": "veh-bmp-3",
+      "classDisplayTk": "PIÝADA SÖWEŞ MAŞYNLARY (BMP/BMD)"
+    },
+    {
+      "id": "veh-bmp-2-k-dolandyrys",
+      "classDisplayTk": "PIÝADA SÖWEŞ MAŞYNLARY (BMP/BMD)"
+    },
+    {
+      "id": "veh-bmp-1-k-dolandyrys",
+      "classDisplayTk": "PIÝADA SÖWEŞ MAŞYNLARY (BMP/BMD)"
+    },
+    {
+      "id": "veh-brm-1-k-razwedka",
+      "classDisplayTk": "PIÝADA SÖWEŞ MAŞYNLARY (BMP/BMD)"
+    },
+    {
+      "id": "veh-bmp-1-ks-stab",
+      "classDisplayTk": "PIÝADA SÖWEŞ MAŞYNLARY (BMP/BMD)"
+    },
+    {
+      "id": "veh-bmp-1-prp-3-4-arta-razwedka",
+      "classDisplayTk": "PIÝADA SÖWEŞ MAŞYNLARY (BMP/BMD)"
+    },
+    {
+      "id": "veh-bmd-1-howa-desant",
+      "classDisplayTk": "PIÝADA SÖWEŞ MAŞYNLARY (BMP/BMD)"
+    },
+    {
+      "id": "veh-btr70",
+      "classDisplayTk": "Ýaraglanan pyýada göteriji, 8x8 (BTR-70) — ölçegleri öndürijiniň çap eden häsiýetnamasyndan, gollanmadan däl",
+      "notesTk": "Ölçegler öndürijiniň çap eden häsiýetnamasyndan (8x8 suwda ýüzýän BTR, söweş agramy 11,5 t). 3D model ministrligiň beren şekil çyzgylaryndan gurlan parametrik jisim, gollanma plakatyndan däl. Berkidiş serişdeleri gollanmanyň açyk wagonlardaky tigirli tehnika üçin öz serişdeleridir (bir nusgaly direg agaç bölekleri we sim çekmeler, plakat 05), her tehnika üçin aýratyn bellenilen däl."
+    },
+    {
+      "id": "veh-btr80",
+      "classDisplayTk": "Ýaraglanan pyýada göteriji, 8x8 (BTR-80) — ölçegleri öndürijiniň çap eden häsiýetnamasyndan, gollanmadan däl",
+      "notesTk": "Ölçegler öndürijiniň çap eden häsiýetnamasyndan (8x8 suwda ýüzýän BTR, söweş agramy 13,6 t). 3D model ministrligiň beren şekil çyzgylaryndan gurlan parametrik jisim, gollanma plakatyndan däl. Berkidiş serişdeleri gollanmanyň açyk wagonlardaky tigirli tehnika üçin öz serişdeleridir (bir nusgaly direg agaç bölekleri we sim çekmeler, plakat 05), her tehnika üçin aýratyn bellenilen däl."
+    },
+    {
+      "id": "veh-btr-80k-1-80-dolandyrys",
+      "classDisplayTk": "ÝÖRITE TIGIRLI ZYRHLY MAŞYNLAR (BTR)"
+    },
+    {
+      "id": "veh-btr-80-aet-17bm",
+      "classDisplayTk": "ÝÖRITE TIGIRLI ZYRHLY MAŞYNLAR (BTR)"
+    },
+    {
+      "id": "veh-btr-80-r-145-aragatnasyk",
+      "classDisplayTk": "ÝÖRITE TIGIRLI ZYRHLY MAŞYNLAR (BTR)"
+    },
+    {
+      "id": "veh-btr60",
+      "classDisplayTk": "Ýaraglanan pyýada göteriji, 8x8 (BTR-60PB) — ölçegleri öndürijiniň çap eden häsiýetnamasyndan, gollanmadan däl",
+      "notesTk": "Ölçegler öndürijiniň çap eden häsiýetnamasyndan (8x8 suwda ýüzýän BTR, söweş agramy 10,3 t). 3D model ministrligiň beren şekil çyzgylaryndan gurlan parametrik jisim, gollanma plakatyndan däl. Berkidiş serişdeleri gollanmanyň açyk wagonlardaky tigirli tehnika üçin öz serişdeleridir (bir nusgaly direg agaç bölekleri we sim çekmeler, plakat 05), her tehnika üçin aýratyn bellenilen däl."
+    },
+    {
+      "id": "veh-btr-60-r-145bm-aragatnasyk",
+      "classDisplayTk": "ÝÖRITE TIGIRLI ZYRHLY MAŞYNLAR (BTR)"
+    },
+    {
+      "id": "veh-btr-60-r-156-aragatnasyk",
+      "classDisplayTk": "ÝÖRITE TIGIRLI ZYRHLY MAŞYNLAR (BTR)"
+    },
+    {
+      "id": "veh-btr-60-1w-18",
+      "classDisplayTk": "ÝÖRITE TIGIRLI ZYRHLY MAŞYNLAR (BTR)"
+    },
+    {
+      "id": "veh-btr-60-1w-19",
+      "classDisplayTk": "ÝÖRITE TIGIRLI ZYRHLY MAŞYNLAR (BTR)"
+    },
+    {
+      "id": "veh-btr-60-pu-12-stab",
+      "classDisplayTk": "ÝÖRITE TIGIRLI ZYRHLY MAŞYNLAR (BTR)"
+    },
+    {
+      "id": "veh-brdm-2",
+      "classDisplayTk": "ÝEŇIL ZYRHLY RAZWEDKA MAŞYNLARY (BRDM)"
+    },
+    {
+      "id": "veh-brdm-2rh-himiki-razwedka",
+      "classDisplayTk": "ÝEŇIL ZYRHLY RAZWEDKA MAŞYNLARY (BRDM)"
+    },
+    {
+      "id": "veh-brdm-9p-31m-strela-1",
+      "classDisplayTk": "ÝEŇIL ZYRHLY RAZWEDKA MAŞYNLARY (BRDM)"
+    },
+    {
+      "id": "veh-brdm-2-zs-72b",
+      "classDisplayTk": "ÝEŇIL ZYRHLY RAZWEDKA MAŞYNLARY (BRDM)"
+    },
+    {
+      "id": "veh-brdm-2-9p148-konkurs",
+      "classDisplayTk": "ÝEŇIL ZYRHLY RAZWEDKA MAŞYNLARY (BRDM)"
+    },
+    {
+      "id": "veh-brem-1-t-72-esasly-arw",
+      "classDisplayTk": "ÝÖRITE ZYNJYRLY (INŽENER-TEHNIKI) MAŞYNLAR"
+    },
+    {
+      "id": "veh-brem-2-bmp-1-esasly-arw",
+      "classDisplayTk": "ÝÖRITE ZYNJYRLY (INŽENER-TEHNIKI) MAŞYNLAR"
+    },
+    {
+      "id": "veh-bts-4-tank-cekiji",
+      "classDisplayTk": "ÝÖRITE ZYNJYRLY (INŽENER-TEHNIKI) MAŞYNLAR"
+    },
+    {
+      "id": "veh-imr-inzener-pasgelcilik-ayyryjy",
+      "classDisplayTk": "ÝÖRITE ZYNJYRLY (INŽENER-TEHNIKI) MAŞYNLAR"
+    },
+    {
+      "id": "veh-gmz-mina-goyujy",
+      "classDisplayTk": "ÝÖRITE ZYNJYRLY (INŽENER-TEHNIKI) MAŞYNLAR"
+    },
+    {
+      "id": "veh-mtu-20-kopri-duseyji",
+      "classDisplayTk": "ÝÖRITE ZYNJYRLY (INŽENER-TEHNIKI) MAŞYNLAR"
+    },
+    {
+      "id": "veh-mt-55-kopri-duseyji",
+      "classDisplayTk": "ÝÖRITE ZYNJYRLY (INŽENER-TEHNIKI) MAŞYNLAR"
+    },
+    {
+      "id": "veh-trm-a",
+      "classDisplayTk": "ÝÖRITE ZYNJYRLY (INŽENER-TEHNIKI) MAŞYNLAR"
+    },
+    {
+      "id": "veh-mto-80-bejeris-ussahanasy",
+      "classDisplayTk": "ÝÖRITE ZYNJYRLY (INŽENER-TEHNIKI) MAŞYNLAR"
+    },
+    {
+      "id": "veh-mes",
+      "classDisplayTk": "ÝÖRITE ZYNJYRLY (INŽENER-TEHNIKI) MAŞYNLAR"
+    },
+    {
+      "id": "veh-mto-btr-80-bejeris-ussahanasy",
+      "classDisplayTk": "ÝÖRITE ZYNJYRLY (INŽENER-TEHNIKI) MAŞYNLAR"
+    },
+    {
+      "id": "veh-2s3",
+      "classDisplayTk": "ÝÖRITE ZYNJYRLY (INŽENER-TEHNIKI) MAŞYNLAR"
+    },
+    {
+      "id": "veh-zsu-23-4-silka",
+      "classDisplayTk": "ÝÖRITE ZYNJYRLY (INŽENER-TEHNIKI) MAŞYNLAR"
+    },
+    {
+      "id": "veh-gm-578-2k12-kub-gozgalyan-enjamy",
+      "classDisplayTk": "ÝÖRITE ZYNJYRLY (INŽENER-TEHNIKI) MAŞYNLAR"
+    },
+    {
+      "id": "veh-motosikl-ural-m-72-gor",
+      "classDisplayTk": "ÝÖRITE ZYNJYRLY (INŽENER-TEHNIKI) MAŞYNLAR"
+    },
+    {
+      "id": "veh-mt-lb-mt-lb-u-cekiji",
+      "classDisplayTk": "ÝÖRITE ZYNJYRLY (INŽENER-TEHNIKI) MAŞYNLAR"
+    },
+    {
+      "id": "veh-mt-lb-yorite-zynjyrly-tehnikalar",
+      "classDisplayTk": "ÝÖRITE ZYNJYRLY (INŽENER-TEHNIKI) MAŞYNLAR"
+    },
+    {
+      "id": "veh-mt-lb-u-yorite-zynjyrly-tehnikalar",
+      "classDisplayTk": "ÝÖRITE ZYNJYRLY (INŽENER-TEHNIKI) MAŞYNLAR"
+    },
+    {
+      "id": "veh-2s1",
+      "classDisplayTk": "ÝÖRITE ZYNJYRLY (INŽENER-TEHNIKI) MAŞYNLAR"
+    },
+    {
+      "id": "veh-gt-mu-yorite",
+      "classDisplayTk": "ÝÖRITE ZYNJYRLY (INŽENER-TEHNIKI) MAŞYNLAR"
+    },
+    {
+      "id": "veh-att-yorite-zynjyrly-tehnikalar-b-10-buldozer",
+      "classDisplayTk": "GT-SM ýörite"
+    },
+    {
+      "id": "veh-ural-375-yuk",
+      "classDisplayTk": "URAL AWTOULAGLARY"
+    },
+    {
+      "id": "veh-ural4320",
+      "classDisplayTk": "Ýük awtoulagy, 6x6 — dizaýn maketinden, gollanmadan däl",
+      "notesTk": "Ölçegleri we 6x6 oky ýerleşdirilişi dizaýn maketinden alyndy; maket boş agramy görkezýär — bu direg agaç bölekleriniň sany we ölçegi baglanýan söweş agramy däl, şonuň üçin söweş agramy ýazylýança ol barlaglar kesgitlenmedik bolup galýar. Berkitme serişdeleri gollanmanyň açyk wagonlardaky tigirli tehnika üçin öz serişdeleridir (bir nusgaly direg agaç bölekleri we sim çekmeler, plakat 05)."
+    },
+    {
+      "id": "veh-ural-375-cekiji",
+      "classDisplayTk": "URAL AWTOULAGLARY"
+    },
+    {
+      "id": "veh-ural-4320-tk-6-ketl-ket-l-cekiji",
+      "classDisplayTk": "URAL AWTOULAGLARY"
+    },
+    {
+      "id": "veh-ural-4320-43202-cekiji",
+      "classDisplayTk": "URAL AWTOULAGLARY"
+    },
+    {
+      "id": "veh-ural-4320-0110-10-cekiji",
+      "classDisplayTk": "URAL AWTOULAGLARY"
+    },
+    {
+      "id": "veh-ural-5551-40-yangyn-sonduriji-yorite",
+      "classDisplayTk": "URAL AWTOULAGLARY"
+    },
+    {
+      "id": "veh-ural-4320-ms-yorite",
+      "classDisplayTk": "URAL AWTOULAGLARY"
+    },
+    {
+      "id": "veh-ural-375-yorite",
+      "classDisplayTk": "URAL AWTOULAGLARY"
+    },
+    {
+      "id": "veh-ural-4320-43202-43203-yorite",
+      "classDisplayTk": "URAL AWTOULAGLARY"
+    },
+    {
+      "id": "veh-kamaz-4310-43105-43106-yuk",
+      "classDisplayTk": "KamAZ AWTOULAGLARY"
+    },
+    {
+      "id": "veh-kamaz-53212-kamaz-5320-yuk",
+      "classDisplayTk": "KamAZ AWTOULAGLARY"
+    },
+    {
+      "id": "veh-kamaz-4326-yuk",
+      "classDisplayTk": "KamAZ AWTOULAGLARY"
+    },
+    {
+      "id": "veh-kamaz43114",
+      "classDisplayTk": "Ýük awtoulagy, 6x6 — dizaýn maketinden, gollanmadan däl",
+      "notesTk": "Ölçegleri we 6x6 oky ýerleşdirilişi dizaýn maketinden alyndy; maket boş agramy görkezýär — bu direg agaç bölekleriniň sany we ölçegi baglanýan söweş agramy däl, şonuň üçin söweş agramy ýazylýança ol barlaglar kesgitlenmedik bolup galýar. Berkitme serişdeleri gollanmanyň açyk wagonlardaky tigirli tehnika üçin öz serişdeleridir (bir nusgaly direg agaç bölekleri we sim çekmeler, plakat 05)."
+    },
+    {
+      "id": "veh-kamaz-44108-2-pp-20-y-t-bilen-yuk",
+      "classDisplayTk": "KamAZ AWTOULAGLARY"
+    },
+    {
+      "id": "veh-kamaz-5410-2-pp-14-y-t-bilen-yuk",
+      "classDisplayTk": "KamAZ AWTOULAGLARY"
+    },
+    {
+      "id": "veh-kamaz-54112-2-pp-14-y-t-bilen-yuk",
+      "classDisplayTk": "KamAZ AWTOULAGLARY"
+    },
+    {
+      "id": "veh-kamaz-4310-43105-43106-cekiji",
+      "classDisplayTk": "KamAZ AWTOULAGLARY"
+    },
+    {
+      "id": "veh-kamaz-43114-cekiji",
+      "classDisplayTk": "KamAZ AWTOULAGLARY"
+    },
+    {
+      "id": "veh-kamaz-4310-43101-43105-yorite",
+      "classDisplayTk": "KamAZ AWTOULAGLARY"
+    },
+    {
+      "id": "veh-kamaz-43118-yangyn-yorite",
+      "classDisplayTk": "KamAZ AWTOULAGLARY"
+    },
+    {
+      "id": "veh-kamaz-43114-yorite",
+      "classDisplayTk": "KamAZ AWTOULAGLARY"
+    },
+    {
+      "id": "veh-kamaz-43118-yorite",
+      "classDisplayTk": "KamAZ AWTOULAGLARY"
+    },
+    {
+      "id": "veh-kamaz-43253-yorite",
+      "classDisplayTk": "KamAZ AWTOULAGLARY"
+    },
+    {
+      "id": "veh-kamaz-65225-cekiji",
+      "classDisplayTk": "KamAZ AWTOULAGLARY"
+    },
+    {
+      "id": "veh-kamaz-65226-cekiji",
+      "classDisplayTk": "KamAZ AWTOULAGLARY"
+    },
+    {
+      "id": "veh-kamaz-5320-53215-yorite",
+      "classDisplayTk": "KamAZ AWTOULAGLARY"
+    },
+    {
+      "id": "veh-mmz-4502-544-samoswal",
+      "classDisplayTk": "MAZ / BAZ / HYTAÝ ÖNDÜRIJILI AWTOULAGLAR"
+    },
+    {
+      "id": "veh-maz-54329-yuk",
+      "classDisplayTk": "MAZ / BAZ / HYTAÝ ÖNDÜRIJILI AWTOULAGLAR"
+    },
+    {
+      "id": "veh-maz-odaz-y-t-bilen-maz-6303-yuk",
+      "classDisplayTk": "MAZ / BAZ / HYTAÝ ÖNDÜRIJILI AWTOULAGLAR"
+    },
+    {
+      "id": "veh-maz-6303-yorite",
+      "classDisplayTk": "MAZ / BAZ / HYTAÝ ÖNDÜRIJILI AWTOULAGLAR"
+    },
+    {
+      "id": "veh-baz-5937-yorite",
+      "classDisplayTk": "MAZ / BAZ / HYTAÝ ÖNDÜRIJILI AWTOULAGLAR"
+    },
+    {
+      "id": "veh-baz-5938-yorite",
+      "classDisplayTk": "MAZ / BAZ / HYTAÝ ÖNDÜRIJILI AWTOULAGLAR"
+    },
+    {
+      "id": "veh-baz-5939-yorite",
+      "classDisplayTk": "MAZ / BAZ / HYTAÝ ÖNDÜRIJILI AWTOULAGLAR"
+    },
+    {
+      "id": "veh-eq-2230d-dongfeng-yuk",
+      "classDisplayTk": "MAZ / BAZ / HYTAÝ ÖNDÜRIJILI AWTOULAGLAR"
+    },
+    {
+      "id": "veh-beyben-1928a",
+      "classDisplayTk": "MAZ / BAZ / HYTAÝ ÖNDÜRIJILI AWTOULAGLAR"
+    },
+    {
+      "id": "veh-beyben-2628a",
+      "classDisplayTk": "MAZ / BAZ / HYTAÝ ÖNDÜRIJILI AWTOULAGLAR"
+    },
+    {
+      "id": "veh-beyben-3232a",
+      "classDisplayTk": "MAZ / BAZ / HYTAÝ ÖNDÜRIJILI AWTOULAGLAR"
+    },
+    {
+      "id": "veh-gaz-66-cekiji",
+      "classDisplayTk": "GAZ AWTOULAGLARY"
+    },
+    {
+      "id": "veh-gaz-2705-412-sanitar",
+      "classDisplayTk": "GAZ AWTOULAGLARY"
+    },
+    {
+      "id": "veh-gaz-66-as-yorite",
+      "classDisplayTk": "GAZ AWTOULAGLARY"
+    },
+    {
+      "id": "veh-gaz-66-yorite",
+      "classDisplayTk": "GAZ AWTOULAGLARY"
+    },
+    {
+      "id": "veh-gaz-3307-3309-yorite",
+      "classDisplayTk": "GAZ AWTOULAGLARY"
+    },
+    {
+      "id": "veh-gaz-53-yorite",
+      "classDisplayTk": "GAZ AWTOULAGLARY"
+    },
+    {
+      "id": "veh-gaz-2410-waz-21099-yenil",
+      "classDisplayTk": "GAZ AWTOULAGLARY"
+    },
+    {
+      "id": "veh-gaz-3307-uaz-3303-yuk",
+      "classDisplayTk": "GAZ AWTOULAGLARY"
+    },
+    {
+      "id": "veh-gaz-53-yuk",
+      "classDisplayTk": "GAZ AWTOULAGLARY"
+    },
+    {
+      "id": "veh-gaz-66-yuk",
+      "classDisplayTk": "GAZ AWTOULAGLARY"
+    },
+    {
+      "id": "veh-zil-433362-431410-yuk",
+      "classDisplayTk": "ZIL AWTOULAGLARY"
+    },
+    {
+      "id": "veh-zil-130-yuk",
+      "classDisplayTk": "ZIL AWTOULAGLARY"
+    },
+    {
+      "id": "veh-zil-131k",
+      "classDisplayTk": "ZIL AWTOULAGLARY"
+    },
+    {
+      "id": "veh-zil131",
+      "classDisplayTk": "Ýük awtoulagy, 6x6 — dizaýn maketinden, gollanmadan däl",
+      "notesTk": "Ölçegleri we 6x6 oky ýerleşdirilişi dizaýn maketinden alyndy; maket boş agramy görkezýär — bu direg agaç bölekleriniň sany we ölçegi baglanýan söweş agramy däl, şonuň üçin söweş agramy ýazylýança ol barlaglar kesgitlenmedik bolup galýar. Berkitme serişdeleri gollanmanyň açyk wagonlardaky tigirli tehnika üçin öz serişdeleridir (bir nusgaly direg agaç bölekleri we sim çekmeler, plakat 05)."
+    },
+    {
+      "id": "veh-zil-157-137-yuk",
+      "classDisplayTk": "ZIL AWTOULAGLARY"
+    },
+    {
+      "id": "veh-zil-131-cekiji",
+      "classDisplayTk": "ZIL AWTOULAGLARY"
+    },
+    {
+      "id": "veh-zil-431412-yorite",
+      "classDisplayTk": "ZIL AWTOULAGLARY"
+    },
+    {
+      "id": "veh-zil-130-yorite",
+      "classDisplayTk": "ZIL AWTOULAGLARY"
+    },
+    {
+      "id": "veh-zil-433362-yorite",
+      "classDisplayTk": "ZIL AWTOULAGLARY"
+    },
+    {
+      "id": "veh-zil-131-yorite",
+      "classDisplayTk": "ZIL AWTOULAGLARY"
+    },
+    {
+      "id": "veh-zil-131-ms-gaz-66-yorite",
+      "classDisplayTk": "ZIL AWTOULAGLARY"
+    },
+    {
+      "id": "veh-zil-131-mrs-at-parm-1-ussahana",
+      "classDisplayTk": "ZIL AWTOULAGLARY"
+    },
+    {
+      "id": "veh-zil-131-mrm-parm-1-ussahana",
+      "classDisplayTk": "ZIL AWTOULAGLARY"
+    },
+    {
+      "id": "veh-zil-131-ta-5-parm-1-ussahana",
+      "classDisplayTk": "ZIL AWTOULAGLARY"
+    },
+    {
+      "id": "veh-zil-131-mrs-at-parm-3-ussahana",
+      "classDisplayTk": "ZIL AWTOULAGLARY"
+    },
+    {
+      "id": "veh-zil-131-ta-parm-3-ussahana",
+      "classDisplayTk": "ZIL AWTOULAGLARY"
+    },
+    {
+      "id": "veh-zil-157-yorite",
+      "classDisplayTk": "ZIL AWTOULAGLARY"
+    },
+    {
+      "id": "veh-zil-137-b-cekiji",
+      "classDisplayTk": "ZIL AWTOULAGLARY"
+    },
+    {
+      "id": "veh-zil-131-yangyn-sonduriji-as-40-yorite",
+      "classDisplayTk": "ZIL AWTOULAGLARY"
+    },
+    {
+      "id": "veh-zil-131-srz-a-parm-3-ussahana",
+      "classDisplayTk": "ZIL AWTOULAGLARY"
+    },
+    {
+      "id": "veh-zil-131-mir-at-parm-3-ussahana",
+      "classDisplayTk": "ZIL AWTOULAGLARY"
+    },
+    {
+      "id": "veh-zil-131-mesp-parm-3-ussahana",
+      "classDisplayTk": "ZIL AWTOULAGLARY"
+    },
+    {
+      "id": "veh-zil-131-gidrokran-parm-3-ussahana",
+      "classDisplayTk": "ZIL AWTOULAGLARY"
+    },
+    {
+      "id": "veh-zil-131-mrm-parm-3-ussahana",
+      "classDisplayTk": "ZIL AWTOULAGLARY"
+    },
+    {
+      "id": "veh-zil-131-ad-30-parm-3-ussahana",
+      "classDisplayTk": "ZIL AWTOULAGLARY"
+    },
+    {
+      "id": "veh-zil-131-mto-at-ussahana",
+      "classDisplayTk": "ZIL AWTOULAGLARY"
+    },
+    {
+      "id": "veh-zil-131-mriw",
+      "classDisplayTk": "ZIL AWTOULAGLARY"
+    },
+    {
+      "id": "veh-zil-131-mto-at-m1-ussahana",
+      "classDisplayTk": "ZIL AWTOULAGLARY"
+    },
+    {
+      "id": "veh-zil-131-mrm-ussahana",
+      "classDisplayTk": "ZIL AWTOULAGLARY"
+    },
+    {
+      "id": "veh-zil-131-mrm-m1-ussahana",
+      "classDisplayTk": "ZIL AWTOULAGLARY"
+    },
+    {
+      "id": "veh-zil-131-ms-a-ussahana",
+      "classDisplayTk": "ZIL AWTOULAGLARY"
+    },
+    {
+      "id": "veh-zil-131-mrs-at-ussahana",
+      "classDisplayTk": "ZIL AWTOULAGLARY"
+    },
+    {
+      "id": "veh-uaz-3151-469-yenil",
+      "classDisplayTk": "UAZ AWTOULAGLARY"
+    },
+    {
+      "id": "veh-uaz-452-yuk",
+      "classDisplayTk": "UAZ AWTOULAGLARY"
+    },
+    {
+      "id": "veh-uaz-469-yorite",
+      "classDisplayTk": "UAZ AWTOULAGLARY"
+    },
+    {
+      "id": "veh-uaz-452-uaz-37411-yorite",
+      "classDisplayTk": "UAZ AWTOULAGLARY"
+    },
+    {
+      "id": "veh-uaz-3962-yorite",
+      "classDisplayTk": "UAZ AWTOULAGLARY"
+    },
+    {
+      "id": "veh-uaz-220695-yorite-awtobus",
+      "classDisplayTk": "UAZ AWTOULAGLARY"
+    },
+    {
+      "id": "veh-uaz-22069-39629-016-sanitar-yorite",
+      "classDisplayTk": "UAZ AWTOULAGLARY"
+    },
+    {
+      "id": "veh-mersedes-benz-sprinter-sanitar",
+      "classDisplayTk": "UAZ AWTOULAGLARY"
+    },
+    {
+      "id": "veh-t34",
+      "classDisplayTk": "Çykarylan gollanma maglumatlarynda elýeterli däl (esasy söweş tanky / taryhy orta agramly tank - bu bölekde görkezilmändir)"
+    },
+    {
+      "id": "veh-is4",
+      "notesTk": "Gollanma tablisasyndaky setir 'IS-4' bilen 'IS-5' arasynda anyk däl — measurements.json faýlyndaky ironChockBootTable belligine serediň."
+    },
+    {
+      "id": "veh-btr50p",
+      "classDisplayTk": "Çykarylan gollanma maglumatlarynda elýeterli däl (esgerleri daşaýan ýaraglanan tanketka - bu bölekde anyk görkezilmändir)"
+    },
+    {
+      "id": "veh-2s4",
+      "classDisplayTk": "Çykarylan gollanma maglumatlarynda elýeterli däl (özi ýöreýän minomýot - bu bölekde anyk görkezilmändir)"
+    },
+    {
+      "id": "veh-2s5",
+      "classDisplayTk": "Çykarylan gollanma maglumatlarynda elýeterli däl (özi ýöreýän artilleriýa - bu bölekde anyk görkezilmändir)"
+    },
+    {
+      "id": "veh-2s7",
+      "classDisplayTk": "Çykarylan gollanma maglumatlarynda elýeterli däl (özi ýöreýän artilleriýa - bu bölekde anyk görkezilmändir)"
+    },
+    {
+      "id": "veh-pts2",
+      "classDisplayTk": "Çykarylan gollanma maglumatlarynda elýeterli däl (gusenisaly daşaýjy - bu bölekde anyk görkezilmändir)",
+      "notesTk": "13-nji tablisanyň belligine görä, 4 jübüt aralyk tagta bilen hem berkidilýär."
+    },
+    {
+      "id": "veh-ptsm",
+      "notesTk": "13-nji tablisanyň belligine görä, 4 jübüt aralyk tagta bilen hem berkidilýär."
+    },
+    {
+      "id": "veh-obj429",
+      "classDisplayTk": "Çykarylan gollanma maglumatlarynda elýeterli däl — gollanma umumy at bermän, diňe zawod obýekt belgisini görkezýär"
+    },
+    {
+      "id": "veh-obj-family-137",
+      "classDisplayTk": "Çykarylan gollanma maglumatlarynda elýeterli däl — gollanma bu obýekt belgilerini bir şpor görnüşiniň astynda toparlaýar, aýry-aýry kimlikler bu bölekde görkezilmändir",
+      "notesTk": "Tassyklanmadyk aýry-aýry tehnikalara bölünmän, bir toparlaşdyrylan ýazgy hökmünde saklanyldy — her tehnika üçin hakyky maglumat elýeterli bolanda bu bölünmelidir."
+    },
+    {
+      "id": "veh-obj118",
+      "notesTk": "13-nji tablisanyň belligine görä, 4 jübüt aralyk tagta bilen hem berkidilýär."
+    },
+    {
+      "id": "veh-t10",
+      "classDisplayTk": "Çykarylan gollanma maglumatlarynda elýeterli däl"
+    },
+    {
+      "id": "veh-t54",
+      "classDisplayTk": "Çykarylan gollanma maglumatlarynda elýeterli däl"
+    },
+    {
+      "id": "veh-t55",
+      "classDisplayTk": "Çykarylan gollanma maglumatlarynda elýeterli däl"
+    },
+    {
+      "id": "veh-pt76",
+      "classDisplayTk": "Çykarylan gollanma maglumatlarynda elýeterli däl"
+    },
+    {
+      "id": "veh-2a6",
+      "classDisplayTk": "Çykarylan gollanma maglumatlarynda elýeterli däl"
+    },
+    {
+      "id": "veh-obj434",
+      "classDisplayTk": "Çykarylan gollanma maglumatlarynda elýeterli däl"
+    },
+    {
+      "id": "veh-obj219",
+      "classDisplayTk": "Çykarylan gollanma maglumatlarynda elýeterli däl"
+    },
+    {
+      "id": "veh-obj78",
+      "classDisplayTk": "Çykarylan gollanma maglumatlarynda elýeterli däl"
+    },
+    {
+      "id": "veh-obj256",
+      "classDisplayTk": "Çykarylan gollanma maglumatlarynda elýeterli däl"
+    },
+    {
+      "id": "veh-obj915",
+      "classDisplayTk": "Çykarylan gollanma maglumatlarynda elýeterli däl"
+    },
+    {
+      "id": "veh-t80u",
+      "classDisplayTk": "Esasy söweş tanky — T-80U, gaz turbinaly. Gollanmanyň sanawynda ýok",
+      "notesTk": "GOLLANMADA ÝOK TEHNIKA. Gollanmanyň 14-nji goşundysyndaky sanawda T-80-iň hiç bir görnüşi ady bilen agzalmaýar, şonuň üçin bu tehnika üçin berkidiliş usuly ady bilen bellenilmeýär. Sanlar — öndürijiniň T-80U üçin çap eden häsiýetnamasy: korpusyň uzynlygy 7,0 m (top öňe gönükdirilende 9,65 m), gapdal ekranlar bilen ini 3,60 m, gusenisalar boýunça ~3,40 m, diňiň üstüne çenli beýikligi 2,20 m, söweş agramy ~46 t, ýerden beýikligi 0,45 m, gusenisanyň ini 580 mm, ýere degýän böleginiň uzynlygy ~4,40 m. 3D model ministrligiň beren tehniki çyzgysyndan gurlan parametrik jisim, gollanma plakatyndan däl. Berkidiş serişdeleri gollanmanyň açyk wagondaky gusenisaly tehnika üçin umumy düzgüni (32-nji bent), her tehnika üçin aýratyn bellenilen däl."
+    }
+  ]
+}
