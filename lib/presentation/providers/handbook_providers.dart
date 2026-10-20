@@ -9,6 +9,7 @@ import '../../data/models/platform.dart';
 import '../../data/models/principle.dart';
 import '../../data/models/vehicle.dart';
 import '../../data/repositories/admin_catalog.dart';
+import '../../data/repositories/system_memory.dart';
 import '../../domain/models/securing_placement.dart';
 import '../../data/models/vehicle_model_asset.dart';
 import '../../data/models/vehicle_photo.dart';
@@ -34,6 +35,32 @@ final adminCatalogStoreProvider =
 final adminCatalogProvider = FutureProvider<AdminCatalog>((ref) {
   return ref.watch(adminCatalogStoreProvider).load();
 });
+
+/// How much memory this machine has, read once.
+final systemMemoryMbProvider =
+    FutureProvider<int?>((ref) => totalSystemMemoryMb());
+
+/// The instructor's choice when they have made one; otherwise decided from the
+/// machine itself. A 2 GB PC cannot afford a 548,889-triangle tank, and finding
+/// that out by watching it swap during an exercise is the wrong way to learn it.
+bool resolveLowMemory({required bool? chosen, required int? memoryMb}) {
+  if (chosen != null) return chosen;
+  if (memoryMb == null) return false;   // cannot tell: leave the models on
+  return memoryMb < kLowMemoryThresholdMb;
+}
+
+/// Whether to leave the imported models on disk, for the screens that only
+/// need to *show* the setting.
+///
+/// Best-effort and synchronous: while the catalogue is still loading it
+/// answers from the machine's memory alone. The mesh loader does NOT use this
+/// — it awaits the real answer, because reading an unresolved value there
+/// would let a 126 MB mesh load on the very machine the setting exists to
+/// protect, during the seconds before the file arrives.
+final lowMemoryModeProvider = Provider<bool>((ref) => resolveLowMemory(
+      chosen: ref.watch(adminCatalogProvider).valueOrNull?.lowMemory,
+      memoryMb: ref.watch(systemMemoryMbProvider).valueOrNull,
+    ));
 
 /// The instructor's own photograph for each piece of securing gear, by kind.
 ///
@@ -175,6 +202,19 @@ final vehicleMeshProvider =
   final vehiclesFuture = ref.watch(vehiclesProvider.future);
   final assetsFuture = ref.watch(vehicleModelAssetsProvider.future);
   final repository = ref.watch(handbookRepositoryProvider);
+  final catalogFuture = ref.watch(adminCatalogProvider.future);
+  final memoryFuture = ref.watch(systemMemoryMbProvider.future);
+
+  // The one gate, and it waits for its answer. Returning null here is the same
+  // answer this provider gives for a vehicle with no model file at all, so
+  // every caller already handles it: the vehicle is drawn from its recorded
+  // dimensions, and nothing measured or marked changes.
+  if (resolveLowMemory(
+    chosen: (await catalogFuture).lowMemory,
+    memoryMb: await memoryFuture,
+  )) {
+    return null;
+  }
 
   final vehicles = await vehiclesFuture;
   final vehicle = vehicles.where((v) => v.id == vehicleId).firstOrNull;

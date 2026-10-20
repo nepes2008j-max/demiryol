@@ -40,6 +40,8 @@ class AdminScreen extends ConsumerWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
+                  const _LowMemoryPanel(),
+                  const SizedBox(height: AppSpace.xl),
                   _AddBar(
                     onVehicle: () => _addVehicle(context, ref, data),
                     onWagon: () => _addWagon(context, ref, data),
@@ -320,6 +322,80 @@ class _CataloguePhotosState extends ConsumerState<_CataloguePhotos> {
     );
     await ref.read(adminCatalogStoreProvider).save(next);
     ref.invalidate(adminCatalogProvider);
+  }
+}
+
+/// Whether this machine should load the imported three-dimensional models.
+///
+/// Shown first on the panel because it is the one setting that decides whether
+/// the program is usable at all on an old PC.
+class _LowMemoryPanel extends ConsumerWidget {
+  const _LowMemoryPanel();
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final catalog = ref.watch(adminCatalogProvider).valueOrNull;
+    final mb = ref.watch(systemMemoryMbProvider).valueOrNull;
+    final on = ref.watch(lowMemoryModeProvider);
+    final chosen = catalog?.lowMemory;
+
+    return Container(
+      padding: const EdgeInsets.all(AppSpace.lg),
+      decoration: BoxDecoration(
+        color: AppColors.panel,
+        border: Border.all(
+            color: on ? AppColors.offNominal : AppColors.hairline),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            children: [
+              Expanded(
+                child: Text(AppStrings.adminLowMemoryTitle,
+                    style: AppText.legend(
+                        size: AppText.cardTitle,
+                        color: AppColors.textPrimary,
+                        tracking: 1.2)),
+              ),
+              Switch(
+                value: on,
+                onChanged: (v) async {
+                  final base = catalog ?? AdminCatalog.empty;
+                  await ref
+                      .read(adminCatalogStoreProvider)
+                      .save(base.withLowMemory(v));
+                  ref.invalidate(adminCatalogProvider);
+                },
+              ),
+            ],
+          ),
+          const SizedBox(height: 4),
+          Text(AppStrings.adminLowMemoryBody,
+              style: AppText.prose(
+                  size: AppText.bodySmall,
+                  color: AppColors.textSecondary,
+                  height: 1.4)),
+          const SizedBox(height: 8),
+          Text(
+            mb == null
+                ? AppStrings.adminLowMemoryUnknownRam
+                : AppStrings.adminLowMemoryRam(mb),
+            style: const TextStyle(
+                fontFamily: AppText.mono,
+                fontSize: AppText.caption,
+                color: AppColors.label),
+          ),
+          Text(
+            chosen == null
+                ? AppStrings.adminLowMemoryAuto
+                : AppStrings.adminLowMemoryManual,
+            style: const TextStyle(
+                fontSize: AppText.caption, color: AppColors.labelDim),
+          ),
+        ],
+      ),
+    );
   }
 }
 

@@ -19,3 +19,6 @@ dist/
 # Local scratch
 .impeccable/
 *.log
+
+# Stray capture files from other tools that landed in this folder.
+*.pcap

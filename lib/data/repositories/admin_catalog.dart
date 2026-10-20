@@ -33,10 +33,24 @@ class AdminCatalog {
   /// absolute path of the copied image file.
   final Map<String, Map<String, String>> photos;
 
+  /// Leave the imported three-dimensional models on disk.
+  ///
+  /// The scenes are the only expensive thing the program draws — a T-72's mesh
+  /// costs about 126 MB of working arrays on top of a 665 MB baseline — so a
+  /// machine with 2 GB spends the exercise swapping. With this on the vehicle
+  /// is drawn from its recorded dimensions instead, which is exactly what the
+  /// hundred-odd vehicles with no model file already do, and every measurement
+  /// and verdict is unchanged.
+  ///
+  /// Null means nobody has chosen: the program decides once from how much
+  /// memory the machine has, and an instructor can override it afterwards.
+  final bool? lowMemory;
+
   const AdminCatalog({
     this.vehicleRows = const [],
     this.platformRows = const [],
     this.photos = const {},
+    this.lowMemory,
   });
 
   static const empty = AdminCatalog();
@@ -53,6 +67,7 @@ class AdminCatalog {
         'vehicles': vehicleRows,
         'platforms': platformRows,
         'photos': photos,
+        if (lowMemory != null) 'lowMemory': lowMemory,
       };
 
   factory AdminCatalog.fromJson(Map<String, dynamic> json) => AdminCatalog(
@@ -72,6 +87,14 @@ class AdminCatalog {
                 view.key as String: view.value as String,
             },
         },
+        lowMemory: json['lowMemory'] as bool?,
+      );
+
+  AdminCatalog withLowMemory(bool? value) => AdminCatalog(
+        vehicleRows: vehicleRows,
+        platformRows: platformRows,
+        photos: photos,
+        lowMemory: value,
       );
 }
 

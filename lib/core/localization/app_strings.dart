@@ -1109,6 +1109,18 @@ class AppStrings {
   static const adminFieldDeckHeight = 'Polunyň beýikligi (sm)';
   static const adminFieldTieDownRings = 'Halkalaryň sany';
 
+  static const adminLowMemoryTitle = 'Ýeňil režim (az ýatly kompýuterler üçin)';
+  static const adminLowMemoryBody =
+      'Üç ölçegli (3D) modeller ýüklenmeýär — tehnika öz ölçegleri boýunça '
+      'çyzylýar. Ähli barlaglar, ölçegler we baha üýtgewsiz galýar. 2 GB ýatly '
+      'kompýuterde bu režimsiz programma haýallaýar.';
+  static String adminLowMemoryRam(int mb) =>
+      'Bu kompýuterde ýat: ${(mb / 1024).toStringAsFixed(1)} GB';
+  static const adminLowMemoryUnknownRam = 'Ýadyň möçberi anyklanyp bilinmedi.';
+  static const adminLowMemoryAuto =
+      'Özi saýlandy — kompýuteriň ýadyna görä.';
+  static const adminLowMemoryManual = 'Siz saýladyňyz.';
+
   static const adminCatalogueHeading = 'GOLLANMADAKY TEHNIKANYŇ SURATLARY';
   static const adminCatalogueIntro =
       'Programma bilen gelen tehnikanyň suratyny hem çalşyp bilersiňiz. Öz '
